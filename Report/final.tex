@@ -1,0 +1,154 @@
+\documentclass[linedtoc,
+               parskip,
+               twoside,
+               longdoc,
+               11pt,
+               noheadingspace,
+               accentcolor=tud1d,
+               bigchapter,
+               %draft,
+               colorback]{tudreport}
+
+%% language
+\usepackage[english,ngerman]{babel}
+%\usepackage[latin1]{inputenc}
+
+\usepackage[ansinew]{inputenc}  % Input-Encodung: ansinew for Windows
+\usepackage{microtype} % optischer Randausgleich bei pdflatex mit Zeichendehnung
+\usepackage{lmodern}
+%% table
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{tabularx}
+
+%% matematics
+\usepackage{amsmath}
+\usepackage{nicefrac}
+\usepackage{icomma}
+
+%% misc
+\usepackage{paralist}% erweiterte Listenumgebung (z.B. compactitem)
+\usepackage{textcomp} % verschiedene Symbole
+\usepackage[nottoc, numbib]{tocbibind}
+\usepackage[ngerman]{hyperref}
+\renewcommand\plparsep{1ex}
+\usepackage{enumerate}
+\usepackage[stable]{footmisc}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{array}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{todonotes}
+\usepackage[acronym,nomain]{glossaries}
+\usepackage[american,arrowmos]{circuitikz}
+\usepackage[]{appendix}
+
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+
+
+\title{Design and Implementation of a Radiation Hardened High Output Current Transconductance Amplifier}
+\subtitle{Master thesis submitted by Raghunandan Chakravarthy\\
+Supervisor: Sreekesh Lakshminarayanan\\
+Start: 21.06.2018 | End: 20.12.2018\\
+Department: Integrated Electronic Systems \hspace*{1cm}
+| \hfill
+Prof. Dr.-Ing. Klaus Hofmann}
+
+%\setinstitutionlogo{"../../Latex Designs/ies_logo"}
+
+
+\begin{document}
+\selectlanguage {english}
+
+%{\setlength{\intextsep}{0pt} % Vertical space above & below [h] floats
+%\setlength{\textfloatsep}{0pt} % Vertical space below (above) [t] ([b]) floats
+%\setlength{\abovecaptionskip}{3pt}
+%\setlength{\belowcaptionskip}{0pt}
+% \setlength\itemsep{1em}
+
+%% Titel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+\cleardoublepage
+
+%% Vorgeplnkel %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{empty}
+\pagenumbering{roman}
+
+%% Inhaltsverzeichnis%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{plain}
+\addcontentsline{toc}{chapter}{Declaration of Authorship}
+\chapter*{Declaration of Authorship}
+
+
+\textbf{Thesis Statement pursuant to \S\enspace 22 paragraph 7 and \S\enspace23 paragraph 7 of APB TU Darmstadt}
+
+I herewith formally declare that I, Raghunandan Chakravarthy, have written the submitted thesis independently pursuant to \S\enspace22 paragraph 7 of APB TU Darmstadt. I did not use any outside support except for the quoted literature and other sources mentioned in the paper. I clearly marked and separately listed all of the literature and all of the other sources which I employed when producing this academic work, either literally or in content. This thesis has not been handed in or published before in the same or similar form.
+
+I am aware, that in case of an attempt at deception based on plagiarism (\S38 Abs. 2 APB), the thesis would be graded with 5,0 and counted as one failed examination attempt. The thesis may only be repeated once.
+
+In the submitted thesis the written copies and the electronic version for archiving are pursuant to \S\enspace23 paragraph 7 of APB identical in content.
+
+
+\noindent\rule{17.5cm}{0.4pt}
+
+
+\textbf{Erkl\"arung zur Abschlussarbeit gem\"a\ss\enspace\S\enspace 22 Abs. 7 und\enspace\S\enspace 23 Abs. 7 APB TU Darmstadt}
+
+Hiermit versichere ich, Raghunandan Chakravarthy, die vorliegende Master-Thesis gem\"a\ss\enspace\S\enspace22 Abs. 7 APB der TU Darmstadt ohne Hilfe Dritter und nur mit den angegebenen Quellen und Hilfsmitteln angefertigt zu haben. Alle Stellen, die Quellen entnommen wurden, sind als solche kenntlich gemacht worden. Diese Arbeit hat in gleicher oder \"ahnlicher Form noch keiner Pr\"ufungsbeh\"orde vorgelegen.
+
+Mir ist bekannt, dass im Falle eines Plagiats (\S38 Abs.2 APB) ein T\"auschungsversuch vorliegt, der dazu f\"uhrt, dass die Arbeit mit 5,0 bewertet und damit ein Pr\"ufungsversuch verbraucht wird. Abschlussarbeiten d\"urfen nur einmal wiederholt werden.
+
+Bei der abgegebenen Thesis stimmen die schriftliche und die zur Archivierung eingereichte elektronische Fassung gem\"a\ss\enspace\S\enspace 23 Abs. 7 APB \"uberein.
+\hfill \break
+
+Darmstadt, 20\textsuperscript{th} December 2018 : $\underset{\text{\normalsize(Signature)}}{\underline{\hspace{10cm}}}$
+
+\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{Abstract}
+%\let\cleardoublepage\clearpage
+
+\addcontentsline{toc}{chapter}{Zusammenfassung}
+\chapter*{Zusammenfassung}
+
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\chapter*{Acknowledgments}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\cleardoublepage
+
+%% Hauptteil %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{headings}
+\pagenumbering{arabic}
+
+\input{introduction}
+
+\input{theory}
+
+\input{design}
+
+\input{results}
+
+\input{conclusion}
+
+\begin{appendices}
+\include{appendix}
+\end{appendices}
+
+
+
+
+\printglossary[type=acronym, title=Acronyms, toctitle=Acronyms]
+%
+%\bibliography{OTA}
+%\bibliographystyle{ieeetr}
+
+\end{document}
