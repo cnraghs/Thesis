@@ -1,0 +1,243 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Thu Nov 22 02:36:20 2018 
+Best design point: 1
+Design specs: 
+	DC	corner	C0_0 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	C0_0 - 
+	AC_Gain_abs		8.898
+	AC_Gain_at_DC		18.99
+	BW_3dB		133.2M
+	PM		62.17	Yes
+	Z_in		3.383M
+	Z_out		1.278k
+	Trans	corner	C0_0 - 
+	Vout_Mid_Point		-38.06m
+	Max_Vout_Sin		811.9m
+	Min_Vout_Sin		-888m
+	SlewRate_Pos		395.2M
+	SlewRate_Neg		-399.8M
+	HD2		-44.58	Yes
+	HD3		-51.07	Yes
+	Vout_Swing		1.7
+	Noise	corner	C0_0 - 
+	In_Ref_noise		45.18n
+	PSRR	corner	C0_0 - 
+	Offset	corner	C0_0 - 
+	DC	corner	C0_1 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	C0_1 - 
+	AC_Gain_abs		11.67
+	AC_Gain_at_DC		21.34
+	BW_3dB		119.2M
+	PM		54.58	Yes
+	Z_in		3.409M
+	Z_out		1.413k
+	Trans	corner	C0_1 - 
+	Vout_Mid_Point		-143.7m
+	Max_Vout_Sin		946.6m
+	Min_Vout_Sin		-1.234
+	SlewRate_Pos		470M
+	SlewRate_Neg		-489.5M
+	HD2		-43.99	Yes
+	HD3		-45.22	Yes
+	Vout_Swing		2.181
+	Noise	corner	C0_1 - 
+	In_Ref_noise		38.79n
+	PSRR	corner	C0_1 - 
+	Offset	corner	C0_1 - 
+	DC	corner	C0_2 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	C0_2 - 
+	AC_Gain_abs		13.51
+	AC_Gain_at_DC		22.61
+	BW_3dB		108.6M
+	PM		50.83	Yes
+	Z_in		3.427M
+	Z_out		1.533k
+	Trans	corner	C0_2 - 
+	Vout_Mid_Point		-217.1m
+	Max_Vout_Sin		1.035
+	Min_Vout_Sin		-1.47
+	SlewRate_Pos		529.3M
+	SlewRate_Neg		-553M
+	HD2		-46.23	Yes
+	HD3		-42.87	Yes
+	Vout_Swing		2.505
+	Noise	corner	C0_2 - 
+	In_Ref_noise		36.19n
+	PSRR	corner	C0_2 - 
+	Offset	corner	C0_2 - 
+	DC	corner	C0_3 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	C0_3 - 
+	AC_Gain_abs		14.78
+	AC_Gain_at_DC		23.4
+	BW_3dB		99.88M
+	PM		48.82	Yes
+	Z_in		3.443M
+	Z_out		1.643k
+	Trans	corner	C0_3 - 
+	Vout_Mid_Point		-269.3m
+	Max_Vout_Sin		1.094
+	Min_Vout_Sin		-1.633
+	SlewRate_Pos		570.3M
+	SlewRate_Neg		-592.8M
+	HD2		-52.38	Yes
+	HD3		-41.41	Yes
+	Vout_Swing		2.727
+	Noise	corner	C0_3 - 
+	In_Ref_noise		34.81n
+	PSRR	corner	C0_3 - 
+	Offset	corner	C0_3 - 
+	DC	corner	C0_4 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	C0_4 - 
+	AC_Gain_abs		15.74
+	AC_Gain_at_DC		23.94
+	BW_3dB		93.96M
+	PM		47.58	Yes
+	Z_in		3.456M
+	Z_out		1.744k
+	Trans	corner	C0_4 - 
+	Vout_Mid_Point		-307.4m
+	Max_Vout_Sin		1.138
+	Min_Vout_Sin		-1.753
+	SlewRate_Pos		595.7M
+	SlewRate_Neg		-615.3M
+	HD2		-64.26	Yes
+	HD3		-40.26	Yes
+	Vout_Swing		2.89
+	Noise	corner	C0_4 - 
+	In_Ref_noise		33.91n
+	PSRR	corner	C0_4 - 
+	Offset	corner	C0_4 - 
+	DC	corner	C0_5 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	C0_5 - 
+	AC_Gain_abs		16.51
+	AC_Gain_at_DC		24.36
+	BW_3dB		89.06M
+	PM		46.69	Yes
+	Z_in		3.468M
+	Z_out		1.84k
+	Trans	corner	C0_5 - 
+	Vout_Mid_Point		-336.1m
+	Max_Vout_Sin		1.172
+	Min_Vout_Sin		-1.845
+	SlewRate_Pos		609.5M
+	SlewRate_Neg		-627.4M
+	HD2		-48.53	Yes
+	HD3		-39.29	Yes
+	Vout_Swing		3.017
+	Noise	corner	C0_5 - 
+	In_Ref_noise		33.26n
+	PSRR	corner	C0_5 - 
+	Offset	corner	C0_5 - 
+	DC	corner	Nominal - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Nominal - 
+	AC_Gain_abs		12.98
+	AC_Gain_at_DC		22.26
+	BW_3dB		111.9M
+	PM		51.81	Yes
+	Z_in		3.422M
+	Z_out		1.494k
+	Trans	corner	Nominal - 
+	Vout_Mid_Point		-195.5m
+	Max_Vout_Sin		1.01
+	Min_Vout_Sin		-1.401
+	SlewRate_Pos		511.2M
+	SlewRate_Neg		-534.6M
+	HD2		-45.17	Yes
+	HD3		-43.49	Yes
+	Vout_Swing		2.411
+	Noise	corner	Nominal - 
+	In_Ref_noise		36.86n
+	PSRR	corner	Nominal - 
+	Offset	corner	Nominal - 
+Design parameters: 
+	dc_off		0
+	CL		50f
+	AmpTr		100m
+	finTr		1M
+	iBias		2.6m
+	Vcm		1.95
+	mul_bias		8
+	mul_n		18
+	mul_p		3
+	mul_in		5
+	mul_load		1
+	W5		28u
+	W8		33u
+	Rb		2k
+
+Interactive.151
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.151 completed. 
+Current time: Thu Nov 22 02:39:03 2018 

@@ -1,0 +1,324 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Wed Sep  5 18:47:27 2018 
+Best design point: 1
+Design specs: 
+	DC	corner	C_load_0 - 
+	M1 Region		2
+	M2 Region		2
+	M3 Region		2
+	M4 Region		2
+	M5 Region		2
+	M6 Region		2
+	M7 Region		2
+	M8 Region		2
+	MnB1 Region		2
+	MnB2 Region		2
+	AC	corner	C_load_0 - 
+	AC_Gain_at_DC		28.24
+	PM		50.3
+	GBW		211M
+	Trans	corner	C_load_0 - 
+	Max_Iout_Sin		12.51u
+	Min_Iout_Sin		-10u
+	Max_Iout_Slew		56.12u
+	Min_Iout_Slew		-30.17u
+	Max_Vin_Slew		1.75
+	Min_Vin_Slew		1.25
+	Max_Vout_Slew		5.008
+	Min_Vout_Slew		-4.904m
+	Max_Vout_Sin		3.054
+	Min_Vout_Sin		56.39m
+	SlewRate_Pos		300.5M
+	SlewRate_Neg		-542.5M
+	DC	corner	C_load_1 - 
+	M1 Region		2
+	M2 Region		2
+	M3 Region		2
+	M4 Region		2
+	M5 Region		2
+	M6 Region		2
+	M7 Region		2
+	M8 Region		2
+	MnB1 Region		2
+	MnB2 Region		2
+	AC	corner	C_load_1 - 
+	AC_Gain_at_DC		28.24
+	PM		59.93
+	GBW		146.7M
+	Trans	corner	C_load_1 - 
+	Max_Iout_Sin		18.16u
+	Min_Iout_Sin		-15.25u
+	Max_Iout_Slew		73.08u
+	Min_Iout_Slew		-39.41u
+	Max_Vin_Slew		1.75
+	Min_Vin_Slew		1.25
+	Max_Vout_Slew		5.007
+	Min_Vout_Slew		-3.006m
+	Max_Vout_Sin		2.513
+	Min_Vout_Sin		57.05m
+	SlewRate_Pos		196.1M
+	SlewRate_Neg		-357M
+	DC	corner	C_load_2 - 
+	M1 Region		2
+	M2 Region		2
+	M3 Region		2
+	M4 Region		2
+	M5 Region		2
+	M6 Region		2
+	M7 Region		2
+	M8 Region		2
+	MnB1 Region		2
+	MnB2 Region		2
+	AC	corner	C_load_2 - 
+	AC_Gain_at_DC		28.24
+	PM		66.65
+	GBW		113.4M
+	Trans	corner	C_load_2 - 
+	Max_Iout_Sin		20.8u
+	Min_Iout_Sin		-18.48u
+	Max_Iout_Slew		81.55u
+	Min_Iout_Slew		-44.04u
+	Max_Vin_Slew		1.75
+	Min_Vin_Slew		1.25
+	Max_Vout_Slew		5.006
+	Min_Vout_Slew		-1.743m
+	Max_Vout_Sin		2.135
+	Min_Vout_Sin		61.02m
+	SlewRate_Pos		145.8M
+	SlewRate_Neg		-266.6M
+	DC	corner	C_load_3 - 
+	M1 Region		2
+	M2 Region		2
+	M3 Region		2
+	M4 Region		2
+	M5 Region		2
+	M6 Region		2
+	M7 Region		2
+	M8 Region		2
+	MnB1 Region		2
+	MnB2 Region		2
+	AC	corner	C_load_3 - 
+	AC_Gain_at_DC		28.24
+	PM		70.99
+	GBW		91.6M
+	Trans	corner	C_load_3 - 
+	Max_Iout_Sin		22.15u
+	Min_Iout_Sin		-20.7u
+	Max_Iout_Slew		86.69u
+	Min_Iout_Slew		-46.86u
+	Max_Vin_Slew		1.75
+	Min_Vin_Slew		1.25
+	Max_Vout_Slew		5.005
+	Min_Vout_Slew		-673.7u
+	Max_Vout_Sin		1.87
+	Min_Vout_Sin		70.04m
+	SlewRate_Pos		116.2M
+	SlewRate_Neg		-212.3M
+	DC	corner	C_load_4 - 
+	M1 Region		2
+	M2 Region		2
+	M3 Region		2
+	M4 Region		2
+	M5 Region		2
+	M6 Region		2
+	M7 Region		2
+	M8 Region		2
+	MnB1 Region		2
+	MnB2 Region		2
+	AC	corner	C_load_4 - 
+	AC_Gain_at_DC		28.24
+	PM		74.24
+	GBW		77.22M
+	Trans	corner	C_load_4 - 
+	Max_Iout_Sin		22.97u
+	Min_Iout_Sin		-22.33u
+	Max_Iout_Slew		90.18u
+	Min_Iout_Slew		-48.79u
+	Max_Vin_Slew		1.75
+	Min_Vin_Slew		1.25
+	Max_Vout_Slew		5.005
+	Min_Vout_Slew		-4.529u
+	Max_Vout_Sin		1.693
+	Min_Vout_Sin		86.03m
+	SlewRate_Pos		96.66M
+	SlewRate_Neg		-161M
+	DC	corner	C_load_5 - 
+	M1 Region		2
+	M2 Region		2
+	M3 Region		2
+	M4 Region		2
+	M5 Region		2
+	M6 Region		2
+	M7 Region		2
+	M8 Region		2
+	MnB1 Region		2
+	MnB2 Region		2
+	AC	corner	C_load_5 - 
+	AC_Gain_at_DC		28.24
+	PM		76.43
+	GBW		65.18M
+	Trans	corner	C_load_5 - 
+	Max_Iout_Sin		23.56u
+	Min_Iout_Sin		-23.56u
+	Max_Iout_Slew		92.7u
+	Min_Iout_Slew		-50.22u
+	Max_Vin_Slew		1.75
+	Min_Vin_Slew		1.25
+	Max_Vout_Slew		5.004
+	Min_Vout_Slew		569u
+	Max_Vout_Sin		1.57
+	Min_Vout_Sin		112m
+	SlewRate_Pos		82.17M
+	SlewRate_Neg		-127.5M
+	DC	corner	C_load_6 - 
+	M1 Region		2
+	M2 Region		2
+	M3 Region		2
+	M4 Region		2
+	M5 Region		2
+	M6 Region		2
+	M7 Region		2
+	M8 Region		2
+	MnB1 Region		2
+	MnB2 Region		2
+	AC	corner	C_load_6 - 
+	AC_Gain_at_DC		28.24
+	PM		78.44
+	GBW		58.06M
+	Trans	corner	C_load_6 - 
+	Max_Iout_Sin		23.98u
+	Min_Iout_Sin		-24.45u
+	Max_Iout_Slew		94.61u
+	Min_Iout_Slew		-51.3u
+	Max_Vin_Slew		1.75
+	Min_Vin_Slew		1.25
+	Max_Vout_Slew		5.004
+	Min_Vout_Slew		1.882m
+	Max_Vout_Sin		1.478
+	Min_Vout_Sin		149.2m
+	SlewRate_Pos		67.88M
+	SlewRate_Neg		-108.2M
+	DC	corner	C_load_7 - 
+	M1 Region		2
+	M2 Region		2
+	M3 Region		2
+	M4 Region		2
+	M5 Region		2
+	M6 Region		2
+	M7 Region		2
+	M8 Region		2
+	MnB1 Region		2
+	MnB2 Region		2
+	AC	corner	C_load_7 - 
+	AC_Gain_at_DC		28.24
+	PM		79.92
+	GBW		51.86M
+	Trans	corner	C_load_7 - 
+	Max_Iout_Sin		24.3u
+	Min_Iout_Sin		-25.07u
+	Max_Iout_Slew		96.14u
+	Min_Iout_Slew		-52.15u
+	Max_Vin_Slew		1.75
+	Min_Vin_Slew		1.25
+	Max_Vout_Slew		5.003
+	Min_Vout_Slew		6.061m
+	Max_Vout_Sin		1.408
+	Min_Vout_Sin		192.9m
+	SlewRate_Pos		57.26M
+	SlewRate_Neg		-95.17M
+	DC	corner	C_load_8 - 
+	M1 Region		2
+	M2 Region		2
+	M3 Region		2
+	M4 Region		2
+	M5 Region		2
+	M6 Region		2
+	M7 Region		2
+	M8 Region		2
+	MnB1 Region		2
+	MnB2 Region		2
+	AC	corner	C_load_8 - 
+	AC_Gain_at_DC		28.24
+	PM		81.06
+	GBW		46.34M
+	Trans	corner	C_load_8 - 
+	Max_Iout_Sin		24.55u
+	Min_Iout_Sin		-25.51u
+	Max_Iout_Slew		97.36u
+	Min_Iout_Slew		-52.81u
+	Max_Vin_Slew		1.75
+	Min_Vin_Slew		1.25
+	Max_Vout_Slew		5.003
+	Min_Vout_Slew		15.33m
+	Max_Vout_Sin		1.353
+	Min_Vout_Sin		236.5m
+	SlewRate_Pos		49.46M
+	SlewRate_Neg		-85.32M
+	DC	corner	C_load_9 - 
+	M1 Region		2
+	M2 Region		2
+	M3 Region		2
+	M4 Region		2
+	M5 Region		2
+	M6 Region		2
+	M7 Region		2
+	M8 Region		2
+	MnB1 Region		2
+	MnB2 Region		2
+	AC	corner	C_load_9 - 
+	AC_Gain_at_DC		28.24
+	PM		82
+	GBW		41.69M
+	Trans	corner	C_load_9 - 
+	Max_Iout_Sin		24.76u
+	Min_Iout_Sin		-25.82u
+	Max_Iout_Slew		98.37u
+	Min_Iout_Slew		-53.3u
+	Max_Vin_Slew		1.75
+	Min_Vin_Slew		1.25
+	Max_Vout_Slew		5.003
+	Min_Vout_Slew		30.41m
+	Max_Vout_Sin		1.308
+	Min_Vout_Sin		277.2m
+	SlewRate_Pos		43.38M
+	SlewRate_Neg		-77.55M
+	DC	corner	Nominal - 
+	M1 Region		2
+	M2 Region		2
+	M3 Region		2
+	M4 Region		2
+	M5 Region		2
+	M6 Region		2
+	M7 Region		2
+	M8 Region		2
+	MnB1 Region		2
+	MnB2 Region		2
+	AC	corner	Nominal - 
+	AC_Gain_at_DC		28.24
+	PM		74.24
+	GBW		77.22M
+	Trans	corner	Nominal - 
+	Max_Iout_Sin		22.97u
+	Min_Iout_Sin		-22.33u
+	Max_Iout_Slew		90.18u
+	Min_Iout_Slew		-48.79u
+	Max_Vin_Slew		1.75
+	Min_Vin_Slew		1.25
+	Max_Vout_Slew		5.005
+	Min_Vout_Slew		-4.529u
+	Max_Vout_Sin		1.693
+	Min_Vout_Sin		86.03m
+	SlewRate_Pos		96.66M
+	SlewRate_Neg		-161M
+Design parameters: 
+	dc_off		-250u
+	RL		50k
+	Win		30u
+	CL		500f
+
+Interactive.11
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.11 completed. 
+Current time: Wed Sep  5 18:47:49 2018 

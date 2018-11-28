@@ -1,0 +1,5832 @@
+<?xml version="1.0"?>
+<setupdb version="5">data
+	<active>Active Setup
+		<corners>
+			<corner enabled="1">_default</corner>
+			<corner enabled="0">iBias
+				<vars>
+					<var>iBias
+						<value>600u:200u:2.4m</value>
+					</var>
+				</vars>
+			</corner>
+			<corner enabled="0">CL
+				<vars>
+					<var>iBias
+						<value>800u:200u:2.4m</value>
+					</var>
+					<var>CL
+						<value>5f 20f 50f 75f 100f 200f</value>
+					</var>
+				</vars>
+			</corner>
+			<corner enabled="1">GBW
+				<vars>
+					<var>gbw
+						<value>10M:5M:40M</value>
+					</var>
+				</vars>
+			</corner>
+			<corner enabled="0">finTr
+				<vars>
+					<var>finTr
+						<value>10K 100K 500K 1M 2M 3M 5M 7M 10M 20M 50M 100M</value>
+					</var>
+				</vars>
+			</corner>
+			<corner enabled="0">Gain1
+				<vars>
+					<var>gain
+						<value>20:5:45</value>
+					</var>
+				</vars>
+			</corner>
+			<corner enabled="0">Gain2
+				<vars>
+					<var>gain
+						<value>50:10:90</value>
+					</var>
+				</vars>
+			</corner>
+			<corner enabled="0">Gain3
+				<vars>
+					<var>gain
+						<value>100:50:500</value>
+					</var>
+				</vars>
+			</corner>
+		</corners>
+		<extensions>
+			<extension>Parasitics
+				<callback>_parSetupDBExtensionCB</callback>
+				<iconvalue></iconvalue>
+				<icontype></icontype>
+			</extension>
+		</extensions>
+		<currentmode>Single Run, Sweeps and Corners</currentmode>
+		<overwritehistory>0</overwritehistory>
+		<tests>
+			<test enabled="1">DC
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>OTA_OPAMP_BJT_Test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>DC_active</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>OTA_OPAMP_BJT_Test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+			</test>
+			<test enabled="1">AC
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>OTA_OPAMP_BJT_Test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>AC_active</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>OTA_OPAMP_BJT_Test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+			</test>
+			<test enabled="1">Trans
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>OTA_OPAMP_BJT_Test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>Trans_active</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>OTA_OPAMP_BJT_Test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+			</test>
+			<test enabled="1">Noise
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>OTA_OPAMP_BJT_Test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>Noise_active</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>OTA_OPAMP_BJT_Test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+			</test>
+			<test enabled="1">PSRR
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>OTA_OPAMP_BJT_Test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>PSRR_active</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>OTA_OPAMP_BJT_Test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+			</test>
+		</tests>
+		<vars>
+			<var>CL
+				<value>50f</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>dc_off
+				<value>-100u</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>iBias
+				<value>600u 2.4m</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>mul_bias
+				<value>7</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>mul_in
+				<value>2</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>mul_load
+				<value>1</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>mul_n
+				<value>12</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>mul_p
+				<value>2</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>ampTr
+				<value>50m</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>finTr
+				<value>1M</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>RL
+				<value>12</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>Vcm
+				<value>2</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>gain
+				<value>300</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>gbw
+				<value>20M</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>ibias
+				<value>0</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>rin
+				<value>10M</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>rout
+				<value>10</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>sr
+				<value>1G</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>R1
+				<value>100</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>R2
+				<value>100</value>
+				<dependentTests>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>Cc
+				<value>20n</value>
+				<dependentTests>
+					<dependentTest omitted="0">DC</dependentTest>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+			<var>RE
+				<value>12</value>
+				<dependentTests>
+					<dependentTest omitted="0">DC</dependentTest>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Noise</dependentTest>
+					<dependentTest omitted="0">PSRR</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+				</dependentTests>
+			</var>
+		</vars>
+		<disabledtests>
+			<test>Noise</test>
+			<test>Trans</test>
+			<test>PSRR</test>
+			<test>AC</test>
+		</disabledtests>
+		<overwritehistoryname>Interactive.0</overwritehistoryname>
+		<plottingoptions>
+			<plottingoption>plottype
+				<value>None</value>
+			</plottingoption>
+			<plottingoption>usewaveformtemplate
+				<value>no</value>
+			</plottingoption>
+			<plottingoption>waveformtemplate
+				<value></value>
+			</plottingoption>
+		</plottingoptions>
+		<allparametersdisabled>1</allparametersdisabled>
+		<allcornersenabled>1</allcornersenabled>
+		<jobpolicyname>ADE XL Default</jobpolicyname>
+		<distributeoptions>
+			<genusjoblimits>
+				<genusjoblimit>ICRP
+					<value>0</value>
+				</genusjoblimit>
+			</genusjoblimits>
+			<specifyjoblimit>0</specifyjoblimit>
+			<parallelrun>1</parallelrun>
+		</distributeoptions>
+		<specs>
+			<spec>AC.PM
+				<testname>AC</testname>
+				<resname>PM</resname>
+				<specType>lt</specType>
+				<min></min>
+				<max>90</max>
+				<target></target>
+				<tol></tol>
+			</spec>
+		</specs>
+	</active>
+	<history>History
+		<historyentry>Interactive.82
+			<checkpoint>
+				<corners>
+					<corner enabled="0">_default</corner>
+					<corner enabled="0">iBias
+						<vars>
+							<var>iBias
+								<value>600u:200u:2.4m</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">CL
+						<vars>
+							<var>iBias
+								<value>800u:200u:2.4m</value>
+							</var>
+							<var>CL
+								<value>5f 20f 50f 75f 100f 200f</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">GBW
+						<vars>
+							<var>gbw
+								<value>10M:5M:40M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="1">finTr
+						<vars>
+							<var>finTr
+								<value>10K 100K 500K 1M 2M 3M 5M 7M 10M 20M 50M 100M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain1
+						<vars>
+							<var>gain
+								<value>20:5:45</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain2
+						<vars>
+							<var>gain
+								<value>50:10:90</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain3
+						<vars>
+							<var>gain
+								<value>100:50:500</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.82</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.82</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.82</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Noise
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Noise_none_Interactive.82</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">PSRR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>PSRR_none_Interactive.82</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>CL
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>-100u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>iBias
+						<value>600u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_bias
+						<value>7</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_load
+						<value>1</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_n
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_p
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>50m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>finTr
+						<value>1M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gain
+						<value>300</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gbw
+						<value>20M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ibias
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rin
+						<value>10M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rout
+						<value>10</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>sr
+						<value>1G</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R1
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R2
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Cc
+						<value>20n</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RE
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>DC</test>
+					<test>Noise</test>
+					<test>AC</test>
+					<test>PSRR</test>
+				</disabledtests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<allparametersdisabled>1</allparametersdisabled>
+				<allcornersenabled>1</allcornersenabled>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>0</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>0</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+				<specs>
+					<spec>AC.PM
+						<testname>AC</testname>
+						<resname>PM</resname>
+						<specType>lt</specType>
+						<min></min>
+						<max>90</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Fri Nov 2 17:51:16 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.82.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.82.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/talentix_raghunan_175117331</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.82</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.82</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.82.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.82.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.83
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="1">iBias
+						<vars>
+							<var>iBias
+								<value>600u:200u:2.4m</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">CL
+						<vars>
+							<var>iBias
+								<value>800u:200u:2.4m</value>
+							</var>
+							<var>CL
+								<value>5f 20f 50f 75f 100f 200f</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">GBW
+						<vars>
+							<var>gbw
+								<value>10M:5M:40M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">finTr
+						<vars>
+							<var>finTr
+								<value>10K 100K 500K 1M 2M 3M 5M 7M 10M 20M 50M 100M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain1
+						<vars>
+							<var>gain
+								<value>20:5:45</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain2
+						<vars>
+							<var>gain
+								<value>50:10:90</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain3
+						<vars>
+							<var>gain
+								<value>100:50:500</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.83</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.83</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.83</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Noise
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Noise_none_Interactive.83</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">PSRR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>PSRR_none_Interactive.83</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>CL
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>-100u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>iBias
+						<value>600u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_bias
+						<value>7</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_load
+						<value>1</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_n
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_p
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>50m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>finTr
+						<value>1M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gain
+						<value>300</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gbw
+						<value>20M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ibias
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rin
+						<value>10M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rout
+						<value>10</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>sr
+						<value>1G</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R1
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R2
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Cc
+						<value>20n</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RE
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>DC</test>
+					<test>Noise</test>
+					<test>AC</test>
+					<test>PSRR</test>
+				</disabledtests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<allparametersdisabled>1</allparametersdisabled>
+				<allcornersenabled>1</allcornersenabled>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>0</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>0</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+				<specs>
+					<spec>AC.PM
+						<testname>AC</testname>
+						<resname>PM</resname>
+						<specType>lt</specType>
+						<min></min>
+						<max>90</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Fri Nov 2 18:00:16 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.83.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.83.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/talentix_raghunan_180017178</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.83</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.83</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.83.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.83.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.84
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="1">iBias
+						<vars>
+							<var>iBias
+								<value>600u:200u:2.4m</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">CL
+						<vars>
+							<var>iBias
+								<value>800u:200u:2.4m</value>
+							</var>
+							<var>CL
+								<value>5f 20f 50f 75f 100f 200f</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">GBW
+						<vars>
+							<var>gbw
+								<value>10M:5M:40M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">finTr
+						<vars>
+							<var>finTr
+								<value>10K 100K 500K 1M 2M 3M 5M 7M 10M 20M 50M 100M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain1
+						<vars>
+							<var>gain
+								<value>20:5:45</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain2
+						<vars>
+							<var>gain
+								<value>50:10:90</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain3
+						<vars>
+							<var>gain
+								<value>100:50:500</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.84</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.84</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.84</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Noise
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Noise_none_Interactive.84</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">PSRR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>PSRR_none_Interactive.84</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>CL
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>-100u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>iBias
+						<value>600u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_bias
+						<value>7</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_load
+						<value>1</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_n
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_p
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>50m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>finTr
+						<value>1M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gain
+						<value>300</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gbw
+						<value>20M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ibias
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rin
+						<value>10M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rout
+						<value>10</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>sr
+						<value>1G</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R1
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R2
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Cc
+						<value>20n</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RE
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>DC</test>
+					<test>Noise</test>
+					<test>AC</test>
+					<test>PSRR</test>
+				</disabledtests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<allparametersdisabled>1</allparametersdisabled>
+				<allcornersenabled>1</allcornersenabled>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>0</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>0</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+				<specs>
+					<spec>AC.PM
+						<testname>AC</testname>
+						<resname>PM</resname>
+						<specType>lt</specType>
+						<min></min>
+						<max>90</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Fri Nov 2 18:00:50 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.84.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.84.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/talentix_raghunan_180051420</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.84</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.84</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.84.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.84.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.85
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="1">iBias
+						<vars>
+							<var>iBias
+								<value>600u:200u:2.4m</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">CL
+						<vars>
+							<var>iBias
+								<value>800u:200u:2.4m</value>
+							</var>
+							<var>CL
+								<value>5f 20f 50f 75f 100f 200f</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">GBW
+						<vars>
+							<var>gbw
+								<value>10M:5M:40M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">finTr
+						<vars>
+							<var>finTr
+								<value>10K 100K 500K 1M 2M 3M 5M 7M 10M 20M 50M 100M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain1
+						<vars>
+							<var>gain
+								<value>20:5:45</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain2
+						<vars>
+							<var>gain
+								<value>50:10:90</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain3
+						<vars>
+							<var>gain
+								<value>100:50:500</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.85</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.85</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.85</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Noise
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Noise_none_Interactive.85</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">PSRR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>PSRR_none_Interactive.85</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>CL
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>44m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>iBias
+						<value>600u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_bias
+						<value>7</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_load
+						<value>1</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_n
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_p
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>50m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>finTr
+						<value>1M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gain
+						<value>300</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gbw
+						<value>20M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ibias
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rin
+						<value>10M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rout
+						<value>10</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>sr
+						<value>1G</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R1
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R2
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Cc
+						<value>20n</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RE
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>DC</test>
+					<test>Noise</test>
+					<test>AC</test>
+					<test>PSRR</test>
+				</disabledtests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<allparametersdisabled>1</allparametersdisabled>
+				<allcornersenabled>1</allcornersenabled>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>0</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>0</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+				<specs>
+					<spec>AC.PM
+						<testname>AC</testname>
+						<resname>PM</resname>
+						<specType>lt</specType>
+						<min></min>
+						<max>90</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Fri Nov 2 18:02:43 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.85.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.85.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/talentix_raghunan_180245273</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.85</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.85</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.85.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.85.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.86
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="1">iBias
+						<vars>
+							<var>iBias
+								<value>600u:200u:2.4m</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">CL
+						<vars>
+							<var>iBias
+								<value>800u:200u:2.4m</value>
+							</var>
+							<var>CL
+								<value>5f 20f 50f 75f 100f 200f</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">GBW
+						<vars>
+							<var>gbw
+								<value>10M:5M:40M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">finTr
+						<vars>
+							<var>finTr
+								<value>10K 100K 500K 1M 2M 3M 5M 7M 10M 20M 50M 100M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain1
+						<vars>
+							<var>gain
+								<value>20:5:45</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain2
+						<vars>
+							<var>gain
+								<value>50:10:90</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain3
+						<vars>
+							<var>gain
+								<value>100:50:500</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.86</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.86</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.86</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Noise
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Noise_none_Interactive.86</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">PSRR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>PSRR_none_Interactive.86</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>CL
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>22m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>iBias
+						<value>600u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_bias
+						<value>7</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_load
+						<value>1</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_n
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_p
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>50m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>finTr
+						<value>1M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gain
+						<value>300</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gbw
+						<value>20M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ibias
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rin
+						<value>10M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rout
+						<value>10</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>sr
+						<value>1G</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R1
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R2
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Cc
+						<value>20n</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RE
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>DC</test>
+					<test>Noise</test>
+					<test>AC</test>
+					<test>PSRR</test>
+				</disabledtests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<allparametersdisabled>1</allparametersdisabled>
+				<allcornersenabled>1</allcornersenabled>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>0</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>0</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+				<specs>
+					<spec>AC.PM
+						<testname>AC</testname>
+						<resname>PM</resname>
+						<specType>lt</specType>
+						<min></min>
+						<max>90</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Fri Nov 2 18:03:48 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.86.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.86.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/talentix_raghunan_180349580</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.86</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.86</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.86.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.86.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.87
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="1">iBias
+						<vars>
+							<var>iBias
+								<value>600u:200u:2.4m</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">CL
+						<vars>
+							<var>iBias
+								<value>800u:200u:2.4m</value>
+							</var>
+							<var>CL
+								<value>5f 20f 50f 75f 100f 200f</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">GBW
+						<vars>
+							<var>gbw
+								<value>10M:5M:40M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">finTr
+						<vars>
+							<var>finTr
+								<value>10K 100K 500K 1M 2M 3M 5M 7M 10M 20M 50M 100M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain1
+						<vars>
+							<var>gain
+								<value>20:5:45</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain2
+						<vars>
+							<var>gain
+								<value>50:10:90</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain3
+						<vars>
+							<var>gain
+								<value>100:50:500</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.87</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.87</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.87</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Noise
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Noise_none_Interactive.87</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">PSRR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>PSRR_none_Interactive.87</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>CL
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>22m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>iBias
+						<value>600u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_bias
+						<value>7</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_load
+						<value>1</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_n
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_p
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>50m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>finTr
+						<value>1M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gain
+						<value>300</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gbw
+						<value>20M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ibias
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rin
+						<value>10M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rout
+						<value>10</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>sr
+						<value>1G</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R1
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R2
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Cc
+						<value>20n</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RE
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>DC</test>
+					<test>Noise</test>
+					<test>AC</test>
+					<test>Trans</test>
+				</disabledtests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<allparametersdisabled>1</allparametersdisabled>
+				<allcornersenabled>1</allcornersenabled>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>0</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>0</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+				<specs>
+					<spec>AC.PM
+						<testname>AC</testname>
+						<resname>PM</resname>
+						<specType>lt</specType>
+						<min></min>
+						<max>90</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Sat Nov 3 01:50:43 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.87.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.87.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/talentix_raghunan_015044420</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.87</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.87</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.87.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.87.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.88
+			<checkpoint>
+				<corners>
+					<corner enabled="0">_default</corner>
+					<corner enabled="1">iBias
+						<vars>
+							<var>iBias
+								<value>600u:200u:2.4m</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">CL
+						<vars>
+							<var>iBias
+								<value>800u:200u:2.4m</value>
+							</var>
+							<var>CL
+								<value>5f 20f 50f 75f 100f 200f</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">GBW
+						<vars>
+							<var>gbw
+								<value>10M:5M:40M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">finTr
+						<vars>
+							<var>finTr
+								<value>10K 100K 500K 1M 2M 3M 5M 7M 10M 20M 50M 100M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain1
+						<vars>
+							<var>gain
+								<value>20:5:45</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain2
+						<vars>
+							<var>gain
+								<value>50:10:90</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain3
+						<vars>
+							<var>gain
+								<value>100:50:500</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.88</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.88</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.88</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Noise
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Noise_none_Interactive.88</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">PSRR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>PSRR_none_Interactive.88</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>CL
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>22m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>iBias
+						<value>600u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_bias
+						<value>7</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_load
+						<value>1</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_n
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_p
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>50m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>finTr
+						<value>1M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gain
+						<value>300</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gbw
+						<value>20M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ibias
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rin
+						<value>10M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rout
+						<value>10</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>sr
+						<value>1G</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R1
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R2
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Cc
+						<value>20n</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RE
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>Noise</test>
+					<test>AC</test>
+					<test>Trans</test>
+					<test>PSRR</test>
+				</disabledtests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<allparametersdisabled>1</allparametersdisabled>
+				<allcornersenabled>1</allcornersenabled>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>0</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>0</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+				<specs>
+					<spec>AC.PM
+						<testname>AC</testname>
+						<resname>PM</resname>
+						<specType>lt</specType>
+						<min></min>
+						<max>90</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Sat Nov 3 02:49:28 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.88.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.88.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/talentix_raghunan_024929923</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.88</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.88</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.88.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.88.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.89
+			<checkpoint>
+				<corners>
+					<corner enabled="0">_default</corner>
+					<corner enabled="1">iBias
+						<vars>
+							<var>iBias
+								<value>600u:200u:2.4m</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">CL
+						<vars>
+							<var>iBias
+								<value>800u:200u:2.4m</value>
+							</var>
+							<var>CL
+								<value>5f 20f 50f 75f 100f 200f</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">GBW
+						<vars>
+							<var>gbw
+								<value>10M:5M:40M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">finTr
+						<vars>
+							<var>finTr
+								<value>10K 100K 500K 1M 2M 3M 5M 7M 10M 20M 50M 100M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain1
+						<vars>
+							<var>gain
+								<value>20:5:45</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain2
+						<vars>
+							<var>gain
+								<value>50:10:90</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain3
+						<vars>
+							<var>gain
+								<value>100:50:500</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.89</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.89</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.89</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Noise
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Noise_none_Interactive.89</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">PSRR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>PSRR_none_Interactive.89</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>CL
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>22m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>iBias
+						<value>600u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_bias
+						<value>7</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_load
+						<value>1</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_n
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_p
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>50m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>finTr
+						<value>1M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gain
+						<value>300</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gbw
+						<value>20M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ibias
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rin
+						<value>10M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rout
+						<value>10</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>sr
+						<value>1G</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R1
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R2
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Cc
+						<value>20n</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RE
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>Noise</test>
+					<test>AC</test>
+					<test>Trans</test>
+					<test>PSRR</test>
+				</disabledtests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<allparametersdisabled>1</allparametersdisabled>
+				<allcornersenabled>1</allcornersenabled>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>0</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>0</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+				<specs>
+					<spec>AC.PM
+						<testname>AC</testname>
+						<resname>PM</resname>
+						<specType>lt</specType>
+						<min></min>
+						<max>90</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Sat Nov 3 02:51:25 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.89.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.89.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/talentix_raghunan_025127015</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.89</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.89</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.89.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.89.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.90
+			<checkpoint>
+				<corners>
+					<corner enabled="0">_default</corner>
+					<corner enabled="0">iBias
+						<vars>
+							<var>iBias
+								<value>600u:200u:2.4m</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">CL
+						<vars>
+							<var>iBias
+								<value>800u:200u:2.4m</value>
+							</var>
+							<var>CL
+								<value>5f 20f 50f 75f 100f 200f</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="1">GBW
+						<vars>
+							<var>gbw
+								<value>10M:5M:40M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">finTr
+						<vars>
+							<var>finTr
+								<value>10K 100K 500K 1M 2M 3M 5M 7M 10M 20M 50M 100M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain1
+						<vars>
+							<var>gain
+								<value>20:5:45</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain2
+						<vars>
+							<var>gain
+								<value>50:10:90</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain3
+						<vars>
+							<var>gain
+								<value>100:50:500</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.90</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.90</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.90</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Noise
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Noise_none_Interactive.90</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">PSRR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>PSRR_none_Interactive.90</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>CL
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>-100u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>iBias
+						<value>600u 2.4m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_bias
+						<value>7</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_load
+						<value>1</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_n
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_p
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>50m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>finTr
+						<value>1M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gain
+						<value>300</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gbw
+						<value>20M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ibias
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rin
+						<value>10M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rout
+						<value>10</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>sr
+						<value>1G</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R1
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R2
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Cc
+						<value>20n</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RE
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>Noise</test>
+					<test>Trans</test>
+					<test>PSRR</test>
+					<test>DC</test>
+				</disabledtests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<allparametersdisabled>1</allparametersdisabled>
+				<allcornersenabled>1</allcornersenabled>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>0</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>0</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+				<specs>
+					<spec>AC.PM
+						<testname>AC</testname>
+						<resname>PM</resname>
+						<specType>lt</specType>
+						<min></min>
+						<max>90</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Sun Nov 4 19:11:14 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.90.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.90.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/talentix_raghunan_191115175</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.90</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.90</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.90.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.90.log</runlogfile>
+			<schematicpoint>
+				<vars>
+					<var>iBias
+						<value>200u</value>
+					</var>
+				</vars>
+			</schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.91
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">iBias
+						<vars>
+							<var>iBias
+								<value>600u:200u:2.4m</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">CL
+						<vars>
+							<var>iBias
+								<value>800u:200u:2.4m</value>
+							</var>
+							<var>CL
+								<value>5f 20f 50f 75f 100f 200f</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="1">GBW
+						<vars>
+							<var>gbw
+								<value>10M:5M:40M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">finTr
+						<vars>
+							<var>finTr
+								<value>10K 100K 500K 1M 2M 3M 5M 7M 10M 20M 50M 100M</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain1
+						<vars>
+							<var>gain
+								<value>20:5:45</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain2
+						<vars>
+							<var>gain
+								<value>50:10:90</value>
+							</var>
+						</vars>
+					</corner>
+					<corner enabled="0">Gain3
+						<vars>
+							<var>gain
+								<value>100:50:500</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.91</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.91</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.91</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Noise
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Noise_none_Interactive.91</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">PSRR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>PSRR_none_Interactive.91</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OTA_OPAMP_BJT_Test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>CL
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>-100u</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>iBias
+						<value>600u 2.4m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_bias
+						<value>7</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_load
+						<value>1</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_n
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_p
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>50m</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>finTr
+						<value>1M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gain
+						<value>300</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>gbw
+						<value>20M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ibias
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rin
+						<value>10M</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>rout
+						<value>10</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>sr
+						<value>1G</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R1
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R2
+						<value>100</value>
+						<dependentTests>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Cc
+						<value>20n</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RE
+						<value>12</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Noise</dependentTest>
+							<dependentTest omitted="0">PSRR</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<disabledtests>
+					<test>Noise</test>
+					<test>Trans</test>
+					<test>PSRR</test>
+					<test>AC</test>
+				</disabledtests>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<allparametersdisabled>1</allparametersdisabled>
+				<allcornersenabled>1</allcornersenabled>
+				<distributeoptions>
+					<genusjoblimits>
+						<genusjoblimit>ICRP
+							<value>0</value>
+						</genusjoblimit>
+					</genusjoblimits>
+					<specifyjoblimit>0</specifyjoblimit>
+					<parallelrun>1</parallelrun>
+				</distributeoptions>
+				<specs>
+					<spec>AC.PM
+						<testname>AC</testname>
+						<resname>PM</resname>
+						<specType>lt</specType>
+						<min></min>
+						<max>90</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Thu Nov  8 02:37:54 2018
+</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.91.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.91.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/talentix_raghunan_023755954</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.91</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.91</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OTA_OPAMP_BJT_Test/adexl/results/data/Interactive.91.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.91.log</runlogfile>
+			<schematicpoint>
+				<vars>
+					<var>iBias
+						<value>200u</value>
+					</var>
+				</vars>
+			</schematicpoint>
+			<test>all</test>
+		</historyentry>
+	</history>
+</setupdb>

@@ -1,0 +1,83 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Sun Nov  4 19:11:16 2018 
+Best design point: 1
+Design specs: 
+	AC	corner	GBW_0 - 
+	DC Gain		18.65
+	PM		59.65	Yes
+	GBW		57.13M
+	Z_Out		310.3m
+	Z_In		12.62M
+	BW_3dB		6.688M
+	AC	corner	GBW_1 - 
+	DC Gain		18.64
+	PM		50.8	Yes
+	GBW		84.62M
+	Z_Out		208m
+	Z_In		12.62M
+	BW_3dB		9.906M
+	AC	corner	GBW_2 - 
+	DC Gain		18.64
+	PM		44.79	Yes
+	GBW		111.9M
+	Z_Out		156.5m
+	Z_In		12.62M
+	BW_3dB		13.1M
+	AC	corner	GBW_3 - 
+	DC Gain		18.64
+	PM		39.46	Yes
+	GBW		136.5M
+	Z_Out		125.4m
+	Z_In		12.62M
+	BW_3dB		15.97M
+	AC	corner	GBW_4 - 
+	DC Gain		18.63
+	PM		37.47	Yes
+	GBW		162M
+	Z_Out		104.7m
+	Z_In		12.62M
+	BW_3dB		18.96M
+	AC	corner	GBW_5 - 
+	DC Gain		18.63
+	PM		35.1	Yes
+	GBW		184.3M
+	Z_Out		89.95m
+	Z_In		12.62M
+	BW_3dB		21.58M
+	AC	corner	GBW_6 - 
+	DC Gain		18.63
+	PM		32.4	Yes
+	GBW		205.4M
+	Z_Out		78.88m
+	Z_In		12.62M
+	BW_3dB		24.04M
+Design parameters: 
+	CL		50f
+	dc_off		-100u
+	iBias		600u
+	mul_bias		7
+	mul_in		2
+	mul_load		1
+	mul_n		12
+	mul_p		2
+	ampTr		50m
+	finTr		1M
+	RL		12
+	Vcm		2
+	gain		300
+	gbw		10M
+	ibias		0
+	rin		10M
+	rout		10
+	sr		1G
+	R1		100
+	R2		100
+	Cc		20n
+	RE		12
+
+Interactive.90
+Number of points completed: 2
+Number of simulation errors: 0
+Interactive.90 completed. 
+Current time: Sun Nov  4 19:11:50 2018 

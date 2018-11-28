@@ -1,0 +1,110 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Mon Nov 26 02:59:37 2018 
+Best design point: 1
+Design specs: 
+	PSRR	corner	Vbias_0 - 
+	PS_P @1MHz		16.21m
+	PS_N @1MHz		15.54m
+	Iout_1MHz		165.8m
+	PSRR_P		97.76m
+	PSRR_N		93.69m
+	PSRR	corner	Vbias_1 - 
+	PS_P @1MHz		16.39m
+	PS_N @1MHz		15.68m
+	Iout_1MHz		182.9m
+	PSRR_P		89.66m
+	PSRR_N		85.77m
+	PSRR	corner	Vbias_2 - 
+	PS_P @1MHz		16.58m
+	PS_N @1MHz		15.83m
+	Iout_1MHz		200.1m
+	PSRR_P		82.86m
+	PSRR_N		79.11m
+	PSRR	corner	Vbias_3 - 
+	PS_P @1MHz		16.77m
+	PS_N @1MHz		15.97m
+	Iout_1MHz		217m
+	PSRR_P		77.26m
+	PSRR_N		73.59m
+	PSRR	corner	Vbias_4 - 
+	PS_P @1MHz		16.96m
+	PS_N @1MHz		16.11m
+	Iout_1MHz		233.4m
+	PSRR_P		72.68m
+	PSRR_N		69.04m
+	PSRR	corner	Vbias_5 - 
+	PS_P @1MHz		17.16m
+	PS_N @1MHz		16.25m
+	Iout_1MHz		248.9m
+	PSRR_P		68.93m
+	PSRR_N		65.28m
+	PSRR	corner	Vbias_6 - 
+	PS_P @1MHz		17.36m
+	PS_N @1MHz		16.39m
+	Iout_1MHz		263.6m
+	PSRR_P		65.84m
+	PSRR_N		62.16m
+	PSRR	corner	Vbias_7 - 
+	PS_P @1MHz		17.56m
+	PS_N @1MHz		16.52m
+	Iout_1MHz		277.5m
+	PSRR_P		63.27m
+	PSRR_N		59.53m
+	PSRR	corner	Vbias_8 - 
+	PS_P @1MHz		17.77m
+	PS_N @1MHz		16.65m
+	Iout_1MHz		290.8m
+	PSRR_P		61.1m
+	PSRR_N		57.26m
+	PSRR	corner	Vbias_9 - 
+	PS_P @1MHz		17.98m
+	PS_N @1MHz		16.79m
+	Iout_1MHz		303.6m
+	PSRR_P		59.22m
+	PSRR_N		55.28m
+	PSRR	corner	Vbias_10 - 
+	PS_P @1MHz		18.2m
+	PS_N @1MHz		16.92m
+	Iout_1MHz		316.1m
+	PSRR_P		57.59m
+	PSRR_N		53.52m
+	PSRR	corner	Vbias_11 - 
+	PS_P @1MHz		18.43m
+	PS_N @1MHz		17.05m
+	Iout_1MHz		328.3m
+	PSRR_P		56.13m
+	PSRR_N		51.92m
+	PSRR	corner	Nominal - 
+	PS_P @1MHz		16.04m
+	PS_N @1MHz		15.39m
+	Iout_1MHz		149.5m
+	PSRR_P		107.2m
+	PSRR_N		102.9m
+Design parameters: 
+	AmpTr		100m
+	CL_OTA		5f
+	dc_off		0
+	finTr		1M
+	iBias		1.5m
+	idc		50u
+	mul_bias		8
+	mul_in		5
+	mul_load		1
+	mul_n		18
+	mul_p		3
+	RL		50
+	Vcm		1.95
+	W5		27u
+	W8		33u
+	mul_in_oa		2
+	Cc		500f
+	R		1
+	Rb		2k
+	V_bias		100m
+
+Interactive.7
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.7 completed. 
+Current time: Mon Nov 26 03:00:17 2018 

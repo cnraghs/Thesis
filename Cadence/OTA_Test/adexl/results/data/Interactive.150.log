@@ -1,0 +1,103 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Thu Nov 22 02:35:28 2018 
+Best design point: 1
+Design specs: 
+	DC	corner	C0_0 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC	corner	C0_1 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC	corner	C0_2 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC	corner	C0_3 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC	corner	C0_4 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC	corner	C0_5 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC	corner	Nominal - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+Design parameters: 
+	dc_off		0
+	CL		50f
+	AmpTr		100m
+	finTr		1M
+	iBias		2.6m
+	Vcm		1.95
+	mul_bias		8
+	mul_n		18
+	mul_p		3
+	mul_in		5
+	mul_load		1
+	W5		28u
+	W8		33u
+	Rb		2k
+
+Interactive.150
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.150 completed. 
+Current time: Thu Nov 22 02:35:44 2018 

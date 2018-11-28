@@ -1,0 +1,279 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Sun Oct 21 22:35:30 2018 
+Best design point: 1
+Design specs: 
+	DC	corner	iBias_0 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC_Bias_Output		2.003
+	AC	corner	iBias_0 - 
+	AC_Gain_abs		21.85
+	AC_Gain_at_DC		26.79
+	BW_3dB		70.91M
+	PM		52.93	Yes
+	Z_in		11.24M
+	Z_out		13.63k
+	Trans	corner	iBias_0 - 
+	Vout_Mid_Point		2.053
+	Max_Vout_Sin		3.01
+	Min_Vout_Sin		1.096
+	SlewRate_Pos		-52.03M
+	SlewRate_Neg		51.41M
+	HD_Carrier		-10.55
+	HD2		-42.26
+	HD3		-40.13
+	Vout_Swing		1.914
+	Noise	corner	iBias_0 - 
+	In_Ref_noise		216.1n
+	Offset	corner	iBias_0 - 
+	DC	corner	iBias_1 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC_Bias_Output		2.144
+	AC	corner	iBias_1 - 
+	AC_Gain_abs		19.83
+	AC_Gain_at_DC		25.95
+	BW_3dB		80.29M
+	PM		53.77	Yes
+	Z_in		11.24M
+	Z_out		12.06k
+	Trans	corner	iBias_1 - 
+	Vout_Mid_Point		2.148
+	Max_Vout_Sin		3.041
+	Min_Vout_Sin		1.256
+	SlewRate_Pos		-52.63M
+	SlewRate_Neg		55.15M
+	HD_Carrier		-11.21
+	HD2		-62.53
+	HD3		-42.76
+	Vout_Swing		1.785
+	Noise	corner	iBias_1 - 
+	In_Ref_noise		221.2n
+	Offset	corner	iBias_1 - 
+	DC	corner	iBias_2 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC_Bias_Output		2.279
+	AC	corner	iBias_2 - 
+	AC_Gain_abs		17.91
+	AC_Gain_at_DC		25.06
+	BW_3dB		89.87M
+	PM		54.68	Yes
+	Z_in		11.24M
+	Z_out		10.71k
+	Trans	corner	iBias_2 - 
+	Vout_Mid_Point		2.251
+	Max_Vout_Sin		3.077
+	Min_Vout_Sin		1.425
+	SlewRate_Pos		-58.06M
+	SlewRate_Neg		58.91M
+	HD_Carrier		-11.94
+	HD2		-47.64
+	HD3		-45.84
+	Vout_Swing		1.652
+	Noise	corner	iBias_2 - 
+	In_Ref_noise		226.9n
+	Offset	corner	iBias_2 - 
+	DC	corner	iBias_3 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC_Bias_Output		2.408
+	AC	corner	iBias_3 - 
+	AC_Gain_abs		16.08
+	AC_Gain_at_DC		24.12
+	BW_3dB		100.4M
+	PM		55.69	Yes
+	Z_in		11.24M
+	Z_out		9.528k
+	Trans	corner	iBias_3 - 
+	Vout_Mid_Point		2.359
+	Max_Vout_Sin		3.116
+	Min_Vout_Sin		1.602
+	SlewRate_Pos		-56.24M
+	SlewRate_Neg		56.71M
+	HD_Carrier		-12.74
+	HD2		-42.75
+	HD3		-49.38
+	Vout_Swing		1.514
+	Noise	corner	iBias_3 - 
+	In_Ref_noise		232.9n
+	Offset	corner	iBias_3 - 
+	DC	corner	iBias_4 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC_Bias_Output		2.532
+	AC	corner	iBias_4 - 
+	AC_Gain_abs		14.35
+	AC_Gain_at_DC		23.14
+	BW_3dB		113.9M
+	PM		56.83	Yes
+	Z_in		11.24M
+	Z_out		8.47k
+	Trans	corner	iBias_4 - 
+	Vout_Mid_Point		2.472
+	Max_Vout_Sin		3.159
+	Min_Vout_Sin		1.785
+	SlewRate_Pos		-58.37M
+	SlewRate_Neg		59.97M
+	HD_Carrier		-13.63
+	HD2		-40.9
+	HD3		-53.4
+	Vout_Swing		1.374
+	Noise	corner	iBias_4 - 
+	In_Ref_noise		239.3n
+	Offset	corner	iBias_4 - 
+	DC	corner	iBias_5 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC_Bias_Output		2.651
+	AC	corner	iBias_5 - 
+	AC_Gain_abs		12.72
+	AC_Gain_at_DC		22.09
+	BW_3dB		127.9M
+	PM		58.13	Yes
+	Z_in		11.24M
+	Z_out		7.518k
+	Trans	corner	iBias_5 - 
+	Vout_Mid_Point		2.587
+	Max_Vout_Sin		3.204
+	Min_Vout_Sin		1.97
+	SlewRate_Pos		-54.15M
+	SlewRate_Neg		56.32M
+	HD_Carrier		-14.59
+	HD2		-40.29
+	HD3		-58.03
+	Vout_Swing		1.234
+	Noise	corner	iBias_5 - 
+	In_Ref_noise		246.1n
+	Offset	corner	iBias_5 - 
+	DC	corner	iBias_6 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC_Bias_Output		2.766
+	AC	corner	iBias_6 - 
+	AC_Gain_abs		11.2
+	AC_Gain_at_DC		20.98
+	BW_3dB		143.1M
+	PM		59.62	Yes
+	Z_in		11.24M
+	Z_out		6.657k
+	Trans	corner	iBias_6 - 
+	Vout_Mid_Point		2.702
+	Max_Vout_Sin		3.25
+	Min_Vout_Sin		2.154
+	SlewRate_Pos		-53.57M
+	SlewRate_Neg		56.94M
+	HD_Carrier		-15.64
+	HD2		-40.37
+	HD3		-63.51
+	Vout_Swing		1.097
+	Noise	corner	iBias_6 - 
+	In_Ref_noise		253.2n
+	Offset	corner	iBias_6 - 
+	DC	corner	iBias_7 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	DC_Bias_Output		2.876
+	AC	corner	iBias_7 - 
+	AC_Gain_abs		9.784
+	AC_Gain_at_DC		19.81
+	BW_3dB		161.9M
+	PM		61.31	Yes
+	Z_in		11.24M
+	Z_out		5.876k
+	Trans	corner	iBias_7 - 
+	Vout_Mid_Point		2.816
+	Max_Vout_Sin		3.299
+	Min_Vout_Sin		2.334
+	SlewRate_Pos		-48.43M
+	SlewRate_Neg		54.03M
+	HD_Carrier		-16.77
+	HD2		-40.92
+	HD3		-70.59
+	Vout_Swing		965m
+	Noise	corner	iBias_7 - 
+	In_Ref_noise		260.6n
+	Offset	corner	iBias_7 - 
+Design parameters: 
+	dc_off		-100u
+	CL		100f
+	AmpTr		50m
+	finTr		1M
+	iBias		1m
+	Vcm		4
+	mul_bias		7
+	mul_n		1
+	mul_p		2
+	mul_in		2
+	mul_load		1
+
+Interactive.26
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.26 completed. 
+Current time: Sun Oct 21 22:36:24 2018 

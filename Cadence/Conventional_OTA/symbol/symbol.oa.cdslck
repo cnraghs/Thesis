@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      raghunan
+HostName                       postrohrix.ies.e-technik.tu-darmstadt.de
+ProcessIdentifier              14933
+ProcessCreationTime_UTC        1539864036
+ProcessCreationTime_Readable   Thu Oct 18 14:00:36 2018 CEST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/raghunan/work/Cadence/xt018/OTA/Conventional_OTA/symbol/symbol.oa.cdslck.dirlck
+TimeEditLocked                 Thu Oct 18 14:02:50 2018 CEST

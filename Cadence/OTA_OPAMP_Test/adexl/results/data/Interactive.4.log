@@ -1,0 +1,71 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Fri Nov 23 15:15:40 2018 
+Best design point: 1
+Design specs: 
+	PSRR	corner	Vbias_0 - 
+	PSRR_P @1MHz		16.21m
+	PSRR_N @1MHz		15.54m
+	PSRR	corner	Vbias_1 - 
+	PSRR_P @1MHz		16.39m
+	PSRR_N @1MHz		15.68m
+	PSRR	corner	Vbias_2 - 
+	PSRR_P @1MHz		16.58m
+	PSRR_N @1MHz		15.83m
+	PSRR	corner	Vbias_3 - 
+	PSRR_P @1MHz		16.77m
+	PSRR_N @1MHz		15.97m
+	PSRR	corner	Vbias_4 - 
+	PSRR_P @1MHz		16.96m
+	PSRR_N @1MHz		16.11m
+	PSRR	corner	Vbias_5 - 
+	PSRR_P @1MHz		17.16m
+	PSRR_N @1MHz		16.25m
+	PSRR	corner	Vbias_6 - 
+	PSRR_P @1MHz		17.36m
+	PSRR_N @1MHz		16.39m
+	PSRR	corner	Vbias_7 - 
+	PSRR_P @1MHz		17.56m
+	PSRR_N @1MHz		16.52m
+	PSRR	corner	Vbias_8 - 
+	PSRR_P @1MHz		17.77m
+	PSRR_N @1MHz		16.65m
+	PSRR	corner	Vbias_9 - 
+	PSRR_P @1MHz		17.98m
+	PSRR_N @1MHz		16.79m
+	PSRR	corner	Vbias_10 - 
+	PSRR_P @1MHz		18.2m
+	PSRR_N @1MHz		16.92m
+	PSRR	corner	Vbias_11 - 
+	PSRR_P @1MHz		18.43m
+	PSRR_N @1MHz		17.05m
+	PSRR	corner	Nominal - 
+	PSRR_P @1MHz		16.04m
+	PSRR_N @1MHz		15.39m
+Design parameters: 
+	AmpTr		100m
+	CL_OTA		5f
+	dc_off		0
+	finTr		1M
+	iBias		1.5m
+	idc		50u
+	mul_bias		8
+	mul_in		5
+	mul_load		1
+	mul_n		18
+	mul_p		3
+	RL		50
+	Vcm		1.95
+	W5		27u
+	W8		33u
+	mul_in_oa		2
+	Cc		500f
+	R		1
+	Rb		2k
+	V_bias		100m
+
+Interactive.4
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.4 completed. 
+Current time: Fri Nov 23 15:15:47 2018 

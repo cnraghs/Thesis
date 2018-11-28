@@ -1,0 +1,74 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Sat Nov  3 02:51:29 2018 
+Best design point: 1
+Design specs: 
+	DC	corner	iBias_0 - 
+	DC_Bias_Output		-1.405
+	DC_Bias_OTA_Out		-1.398
+	DC_Bias_OPAMP_Out		-438.3m
+	DC	corner	iBias_1 - 
+	DC_Bias_Output		-1.404
+	DC_Bias_OTA_Out		-1.397
+	DC_Bias_OPAMP_Out		-437.2m
+	DC	corner	iBias_2 - 
+	DC_Bias_Output		-1.402
+	DC_Bias_OTA_Out		-1.394
+	DC_Bias_OPAMP_Out		-434.8m
+	DC	corner	iBias_3 - 
+	DC_Bias_Output		-1.399
+	DC_Bias_OTA_Out		-1.392
+	DC_Bias_OPAMP_Out		-431.7m
+	DC	corner	iBias_4 - 
+	DC_Bias_Output		-1.396
+	DC_Bias_OTA_Out		-1.389
+	DC_Bias_OPAMP_Out		-428.4m
+	DC	corner	iBias_5 - 
+	DC_Bias_Output		-1.393
+	DC_Bias_OTA_Out		-1.386
+	DC_Bias_OPAMP_Out		-425.1m
+	DC	corner	iBias_6 - 
+	DC_Bias_Output		-1.39
+	DC_Bias_OTA_Out		-1.383
+	DC_Bias_OPAMP_Out		-421.8m
+	DC	corner	iBias_7 - 
+	DC_Bias_Output		-1.387
+	DC_Bias_OTA_Out		-1.38
+	DC_Bias_OPAMP_Out		-418.6m
+	DC	corner	iBias_8 - 
+	DC_Bias_Output		-1.384
+	DC_Bias_OTA_Out		-1.377
+	DC_Bias_OPAMP_Out		-415.5m
+	DC	corner	iBias_9 - 
+	DC_Bias_Output		-1.381
+	DC_Bias_OTA_Out		-1.374
+	DC_Bias_OPAMP_Out		-412.4m
+Design parameters: 
+	CL		50f
+	dc_off		22m
+	iBias		600u
+	mul_bias		7
+	mul_in		2
+	mul_load		1
+	mul_n		12
+	mul_p		2
+	ampTr		50m
+	finTr		1M
+	RL		12
+	Vcm		2
+	gain		300
+	gbw		20M
+	ibias		0
+	rin		10M
+	rout		10
+	sr		1G
+	R1		100
+	R2		100
+	Cc		20n
+	RE		12
+
+Interactive.89
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.89 completed. 
+Current time: Sat Nov  3 02:51:34 2018 

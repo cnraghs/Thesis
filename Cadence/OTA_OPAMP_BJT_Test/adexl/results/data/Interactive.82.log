@@ -1,0 +1,166 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Fri Nov  2 17:51:18 2018 
+Best design point: 1
+Design specs: 
+	Trans	corner	finTr_0 - 
+	Iout_Max		543.2u
+	Iout_Min		-178.7u
+	Vout_Max		-1.142
+	Vout_Min		-1.6
+	HD2		-47.57
+	HD3		-51.09
+	SR_Pos		3.256M
+	SR_Neg		891.8k
+	Vout_Swing		458.7m
+	Iout_p2p		721.9u
+	Trans	corner	finTr_1 - 
+	Iout_Max		5.365m
+	Iout_Min		-5.364m
+	Vout_Max		-1.141
+	Vout_Min		-1.981
+	HD2		-98.04
+	HD3		-98.13
+	SR_Pos		3.256M
+	SR_Neg		891.8k
+	Vout_Swing		839.8m
+	Iout_p2p		10.73m
+	Trans	corner	finTr_2 - 
+	Iout_Max		21.76m
+	Iout_Min		-21.21m
+	Vout_Max		-1.14
+	Vout_Min		-1.982
+	HD2		-78.86
+	HD3		-83.88
+	SR_Pos		3.256M
+	SR_Neg		891.8k
+	Vout_Swing		841.8m
+	Iout_p2p		42.98m
+	Trans	corner	finTr_3 - 
+	Iout_Max		30.35m
+	Iout_Min		-29.52m
+	Vout_Max		-1.14
+	Vout_Min		-1.983
+	HD2		-34.22
+	HD3		-57.1
+	SR_Pos		3.256M
+	SR_Neg		891.7k
+	Vout_Swing		842.8m
+	Iout_p2p		59.87m
+	Trans	corner	finTr_4 - 
+	Iout_Max		34.39m
+	Iout_Min		-33.85m
+	Vout_Max		-1.144
+	Vout_Min		-1.981
+	HD2		-7.545
+	HD3		-71.52
+	SR_Pos		3.256M
+	SR_Neg		893.6k
+	Vout_Swing		836.7m
+	Iout_p2p		68.24m
+	Trans	corner	finTr_5 - 
+	Iout_Max		34.81m
+	Iout_Min		-34.24m
+	Vout_Max		-1.152
+	Vout_Min		-1.975
+	HD2		-68.53
+	HD3		-7.67
+	SR_Pos		3.256M
+	SR_Neg		886.6k
+	Vout_Swing		823.6m
+	Iout_p2p		69.06m
+	Trans	corner	finTr_6 - 
+	Iout_Max		33.63m
+	Iout_Min		-32.9m
+	Vout_Max		-1.172
+	Vout_Min		-1.96
+	HD2		-64.98
+	HD3		-65
+	SR_Pos		3.256M
+	SR_Neg		868.3k
+	Vout_Swing		787.5m
+	Iout_p2p		66.53m
+	Trans	corner	finTr_7 - 
+	Iout_Max		31.65m
+	Iout_Min		-30.88m
+	Vout_Max		-1.196
+	Vout_Min		-1.94
+	HD2		-63.1
+	HD3		-63.35
+	SR_Pos		3.256M
+	SR_Neg		877.1k
+	Vout_Swing		744.4m
+	Iout_p2p		62.53m
+	Trans	corner	finTr_8 - 
+	Iout_Max		28.61m
+	Iout_Min		-27.55m
+	Vout_Max		-1.23
+	Vout_Min		-1.906
+	HD2		-61.78
+	HD3		-62.05
+	SR_Pos		3.256M
+	SR_Neg		875.7k
+	Vout_Swing		675.9m
+	Iout_p2p		56.17m
+	Trans	corner	finTr_9 - 
+	Iout_Max		22.26m
+	Iout_Min		-18.45m
+	Vout_Max		-1.322
+	Vout_Min		-1.804
+	HD2		-62.83
+	HD3		-62.92
+	SR_Pos		3.256M
+	SR_Neg		858.4k
+	Vout_Swing		482.3m
+	Iout_p2p		40.71m
+	Trans	corner	finTr_10 - 
+	Iout_Max		11.95m
+	Iout_Min		-7.283m
+	Vout_Max		-1.454
+	Vout_Min		-1.675
+	HD2		-70.48
+	HD3		-70.46
+	SR_Pos		3.264M
+	SR_Neg		856.2k
+	Vout_Swing		221m
+	Iout_p2p		19.24m
+	Trans	corner	finTr_11 - 
+	Iout_Max		5.859m
+	Iout_Min		-2.592m
+	Vout_Max		-1.529
+	Vout_Min		-1.625
+	HD2		-78.85
+	HD3		-78.96
+	SR_Pos		3.265M
+	SR_Neg		855.5k
+	Vout_Swing		95.85m
+	Iout_p2p		8.451m
+Design parameters: 
+	CL		50f
+	dc_off		-100u
+	iBias		600u
+	mul_bias		7
+	mul_in		2
+	mul_load		1
+	mul_n		12
+	mul_p		2
+	ampTr		50m
+	finTr		10k
+	RL		12
+	Vcm		2
+	gain		300
+	gbw		20M
+	ibias		0
+	rin		10M
+	rout		10
+	sr		1G
+	R1		100
+	R2		100
+	Cc		20n
+	RE		12
+
+Interactive.82
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.82 completed. 
+Current time: Fri Nov  2 17:54:44 2018 

@@ -1,0 +1,46 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Thu Sep 27 18:06:16 2018 
+Best design point: 1
+Design specs: 
+	DC	corner	Nominal - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Nominal - 
+	AC_Gain_at_DC		27.71
+	GBW		47.02M
+	PM		82.15	Yes
+	Z_in		2.872M
+	Z_out		1.772k
+	BW_3dB		2.715M
+	Trans	corner	Nominal - 
+	Max_Iout_Sin		5.981m
+	Min_Iout_Sin		-6.707m
+	Max_Vout_Sin		4.134
+	Min_Vout_Sin		1.374
+	SlewRate_Pos		33.16M
+	SlewRate_Neg		4.473
+Design parameters: 
+	dc_off		-300u
+	CL		100p
+	AmpTr		200m
+	finTr		10M
+	iBias		1m
+	mul_bias		20
+	mul_n		1
+	mul_p		20
+	Vcm		1.5
+
+Interactive.1
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.1 completed. 
+Current time: Thu Sep 27 18:07:31 2018 
