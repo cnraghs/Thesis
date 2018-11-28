@@ -1,0 +1,45 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Sat Nov  3 01:50:46 2018 
+Best design point: 1
+Design specs: 
+	PSRR	corner	iBias_0 - 
+	PSRR	corner	iBias_1 - 
+	PSRR	corner	iBias_2 - 
+	PSRR	corner	iBias_3 - 
+	PSRR	corner	iBias_4 - 
+	PSRR	corner	iBias_5 - 
+	PSRR	corner	iBias_6 - 
+	PSRR	corner	iBias_7 - 
+	PSRR	corner	iBias_8 - 
+	PSRR	corner	iBias_9 - 
+	PSRR	corner	Nominal - 
+Design parameters: 
+	CL		50f
+	dc_off		22m
+	iBias		600u
+	mul_bias		7
+	mul_in		2
+	mul_load		1
+	mul_n		12
+	mul_p		2
+	ampTr		50m
+	finTr		1M
+	RL		12
+	Vcm		2
+	gain		300
+	gbw		20M
+	ibias		0
+	rin		10M
+	rout		10
+	sr		1G
+	R1		100
+	R2		100
+	Cc		20n
+	RE		12
+
+Interactive.87
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.87 completed. 
+Current time: Sat Nov  3 01:51:10 2018 

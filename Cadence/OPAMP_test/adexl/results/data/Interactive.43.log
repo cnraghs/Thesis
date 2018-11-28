@@ -1,0 +1,31 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Thu Nov 22 14:04:27 2018 
+Best design point: 1
+Design specs: 
+	DC	corner	Nominal - 
+	M1_Region		2	Yes
+	M2_Region		2	Yes
+	M3_Region		2	Yes
+	M4_Region		2	Yes
+	M5_Region		2	Yes
+	M6_Region		2	Yes
+	M7_Region		1	No
+	M8_Region		2	Yes
+	M9_Region		2	Yes
+Design parameters: 
+	Cc		50f
+	dc_off		0
+	idc		50u
+	RL		50
+	vcm		0
+	ampTr		1.5
+	mul_in_oa		2
+	Vcm		0
+	R		2
+
+Interactive.43
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.43 completed. 
+Current time: Thu Nov 22 14:04:30 2018 

@@ -1,0 +1,4221 @@
+<?xml version="1.0"?>
+<setupdb version="5">data
+	<active>Active Setup
+		<corners>
+			<corner enabled="1">_default</corner>
+			<corner enabled="0">Amp
+				<vars>
+					<var>ampTr
+						<value>1:0.1:1.3</value>
+					</var>
+				</vars>
+			</corner>
+		</corners>
+		<extensions>
+			<extension>Parasitics
+				<callback>_parSetupDBExtensionCB</callback>
+				<iconvalue></iconvalue>
+				<icontype></icontype>
+			</extension>
+		</extensions>
+		<currentmode>Single Run, Sweeps and Corners</currentmode>
+		<overwritehistory>0</overwritehistory>
+		<tests>
+			<test enabled="1">DC
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>OPAMP_test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>DC_active</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>OPAMP_test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+			</test>
+			<test enabled="1">AC
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>OPAMP_test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>AC_active</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>OPAMP_test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+			</test>
+			<test enabled="1">Trans
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>OPAMP_test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>Trans_active</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>OPAMP_test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+			</test>
+			<test enabled="1">ICMR
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>OPAMP_test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>ICMR_active</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>OPAMP_test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+			</test>
+			<test enabled="1">PSRR
+				<tool>ADE</tool>
+				<tooloptions>
+					<option>cell
+						<value>OPAMP_test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+					<option>path
+						<value>$AXL_SETUPDB_DIR/test_states</value>
+					</option>
+					<option>state
+						<value>PSRR_active</value>
+					</option>
+				</tooloptions>
+				<origoptions>
+					<option>cell
+						<value>OPAMP_test</value>
+					</option>
+					<option>lib
+						<value>OTA</value>
+					</option>
+					<option>sim
+						<value>spectre</value>
+					</option>
+					<option>view
+						<value>schematic</value>
+					</option>
+				</origoptions>
+			</test>
+		</tests>
+		<vars>
+			<var>Cc
+				<value>50f</value>
+				<dependentTests>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+					<dependentTest omitted="0">ICMR</dependentTest>
+					<dependentTest enabled="1">PSRR</dependentTest>
+				</dependentTests>
+			</var>
+			<var>dc_off
+				<value>0</value>
+				<dependentTests>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+					<dependentTest enabled="1">ICMR</dependentTest>
+					<dependentTest enabled="1">PSRR</dependentTest>
+				</dependentTests>
+			</var>
+			<var>idc
+				<value>50u</value>
+				<dependentTests>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+					<dependentTest enabled="1">ICMR</dependentTest>
+				</dependentTests>
+			</var>
+			<var>RL
+				<value>50</value>
+				<dependentTests>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest enabled="1">Trans</dependentTest>
+					<dependentTest enabled="1">ICMR</dependentTest>
+					<dependentTest enabled="1">PSRR</dependentTest>
+				</dependentTests>
+			</var>
+			<var>vcm
+				<value>0</value>
+				<dependentTests>
+					<dependentTest enabled="1">DC</dependentTest>
+					<dependentTest omitted="0">AC</dependentTest>
+				</dependentTests>
+			</var>
+			<var>ampTr
+				<value>1.5</value>
+				<dependentTests>
+					<dependentTest omitted="0">Trans</dependentTest>
+					<dependentTest omitted="0">DC</dependentTest>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest enabled="1">ICMR</dependentTest>
+					<dependentTest enabled="1">PSRR</dependentTest>
+				</dependentTests>
+			</var>
+			<var>mul_in_oa
+				<value>2</value>
+				<dependentTests>
+					<dependentTest omitted="0">DC</dependentTest>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Trans</dependentTest>
+					<dependentTest enabled="1">ICMR</dependentTest>
+					<dependentTest enabled="1">PSRR</dependentTest>
+				</dependentTests>
+			</var>
+			<var>Vcm
+				<value>0</value>
+				<dependentTests>
+					<dependentTest omitted="0">DC</dependentTest>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Trans</dependentTest>
+					<dependentTest enabled="1">ICMR</dependentTest>
+					<dependentTest enabled="1">PSRR</dependentTest>
+				</dependentTests>
+			</var>
+			<var>R
+				<value>2</value>
+				<dependentTests>
+					<dependentTest omitted="0">DC</dependentTest>
+					<dependentTest omitted="0">AC</dependentTest>
+					<dependentTest omitted="0">Trans</dependentTest>
+					<dependentTest omitted="0">ICMR</dependentTest>
+					<dependentTest enabled="1">PSRR</dependentTest>
+				</dependentTests>
+			</var>
+		</vars>
+		<overwritehistoryname>Interactive.0</overwritehistoryname>
+		<plottingoptions>
+			<plottingoption>plottype
+				<value>None</value>
+			</plottingoption>
+			<plottingoption>usewaveformtemplate
+				<value>no</value>
+			</plottingoption>
+			<plottingoption>waveformtemplate
+				<value></value>
+			</plottingoption>
+		</plottingoptions>
+		<disabledtests>
+			<test>DC</test>
+			<test>AC</test>
+			<test>Trans</test>
+			<test>ICMR</test>
+		</disabledtests>
+		<jobpolicyname>ADE XL Default</jobpolicyname>
+		<specs>
+			<spec>DC.M1_Region
+				<testname>DC</testname>
+				<resname>M1_Region</resname>
+				<specType>range</specType>
+				<min>1.9</min>
+				<max>2.1</max>
+				<target></target>
+				<tol></tol>
+			</spec>
+			<spec>DC.M2_Region
+				<testname>DC</testname>
+				<resname>M2_Region</resname>
+				<specType>range</specType>
+				<min>1.9</min>
+				<max>2.1</max>
+				<target></target>
+				<tol></tol>
+			</spec>
+			<spec>DC.M3_Region
+				<testname>DC</testname>
+				<resname>M3_Region</resname>
+				<specType>range</specType>
+				<min>1.9</min>
+				<max>2.1</max>
+				<target></target>
+				<tol></tol>
+			</spec>
+			<spec>DC.M4_Region
+				<testname>DC</testname>
+				<resname>M4_Region</resname>
+				<specType>range</specType>
+				<min>1.9</min>
+				<max>2.1</max>
+				<target></target>
+				<tol></tol>
+			</spec>
+			<spec>DC.M5_Region
+				<testname>DC</testname>
+				<resname>M5_Region</resname>
+				<specType>range</specType>
+				<min>1.9</min>
+				<max>2.1</max>
+				<target></target>
+				<tol></tol>
+			</spec>
+			<spec>DC.M6_Region
+				<testname>DC</testname>
+				<resname>M6_Region</resname>
+				<specType>range</specType>
+				<min>1.9</min>
+				<max>2.1</max>
+				<target></target>
+				<tol></tol>
+			</spec>
+			<spec>DC.M7_Region
+				<testname>DC</testname>
+				<resname>M7_Region</resname>
+				<specType>range</specType>
+				<min>1.9</min>
+				<max>2.1</max>
+				<target></target>
+				<tol></tol>
+			</spec>
+			<spec>DC.nil
+				<testname>DC</testname>
+				<resname>nil</resname>
+				<specType>range</specType>
+				<min>1.9</min>
+				<max>2.1</max>
+				<target></target>
+				<tol></tol>
+			</spec>
+			<spec>DC.M9_Region
+				<testname>DC</testname>
+				<resname>M9_Region</resname>
+				<specType>range</specType>
+				<min>1.9</min>
+				<max>2.1</max>
+				<target></target>
+				<tol></tol>
+			</spec>
+			<spec>DC.M10_Region
+				<testname>DC</testname>
+				<resname>M10_Region</resname>
+				<specType>range</specType>
+				<min>1.9</min>
+				<max>2.1</max>
+				<target></target>
+				<tol></tol>
+			</spec>
+			<spec>DC.M8_Region
+				<testname>DC</testname>
+				<resname>M8_Region</resname>
+				<specType>range</specType>
+				<min>1.9</min>
+				<max>2.1</max>
+				<target></target>
+				<tol></tol>
+			</spec>
+		</specs>
+		<allparametersdisabled>1</allparametersdisabled>
+	</active>
+	<history>History
+		<historyentry>Interactive.41
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">Amp
+						<vars>
+							<var>ampTr
+								<value>1:0.3:1.9</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.41</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.41</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.41</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">ICMR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>ICMR_none_Interactive.41</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>Cc
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>idc
+						<value>50u</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>50</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>1.5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in_oa
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>AC</test>
+					<test>Trans</test>
+					<test>ICMR</test>
+				</disabledtests>
+				<specs>
+					<spec>DC.M1_Region
+						<testname>DC</testname>
+						<resname>M1_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M2_Region
+						<testname>DC</testname>
+						<resname>M2_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M3_Region
+						<testname>DC</testname>
+						<resname>M3_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M4_Region
+						<testname>DC</testname>
+						<resname>M4_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M5_Region
+						<testname>DC</testname>
+						<resname>M5_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M6_Region
+						<testname>DC</testname>
+						<resname>M6_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M7_Region
+						<testname>DC</testname>
+						<resname>M7_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M9_Region
+						<testname>DC</testname>
+						<resname>M9_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M8_Region
+						<testname>DC</testname>
+						<resname>M8_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<allparametersdisabled>1</allparametersdisabled>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Thu Nov 22 14:03:08 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.41.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.41.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/postrohrix_raghunan_140309019</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OPAMP_test/adexl/results/data/Interactive.41</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OPAMP_test/adexl/results/data/Interactive.41</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.41.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.41.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.42
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">Amp
+						<vars>
+							<var>ampTr
+								<value>1:0.3:1.9</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.42</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.42</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.42</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">ICMR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>ICMR_none_Interactive.42</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>Cc
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>idc
+						<value>50u</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>50</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>1.5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in_oa
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>AC</test>
+					<test>Trans</test>
+					<test>ICMR</test>
+				</disabledtests>
+				<specs>
+					<spec>DC.M1_Region
+						<testname>DC</testname>
+						<resname>M1_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M2_Region
+						<testname>DC</testname>
+						<resname>M2_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M3_Region
+						<testname>DC</testname>
+						<resname>M3_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M4_Region
+						<testname>DC</testname>
+						<resname>M4_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M5_Region
+						<testname>DC</testname>
+						<resname>M5_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M6_Region
+						<testname>DC</testname>
+						<resname>M6_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M7_Region
+						<testname>DC</testname>
+						<resname>M7_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M9_Region
+						<testname>DC</testname>
+						<resname>M9_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M8_Region
+						<testname>DC</testname>
+						<resname>M8_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<allparametersdisabled>1</allparametersdisabled>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Thu Nov 22 14:03:40 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.42.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.42.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/postrohrix_raghunan_140340897</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OPAMP_test/adexl/results/data/Interactive.42</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OPAMP_test/adexl/results/data/Interactive.42</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.42.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.42.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.43
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">Amp
+						<vars>
+							<var>ampTr
+								<value>1:0.3:1.9</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.43</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.43</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.43</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">ICMR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>ICMR_none_Interactive.43</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>Cc
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>idc
+						<value>50u</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>50</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>1.5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in_oa
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>AC</test>
+					<test>Trans</test>
+					<test>ICMR</test>
+				</disabledtests>
+				<specs>
+					<spec>DC.M1_Region
+						<testname>DC</testname>
+						<resname>M1_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M2_Region
+						<testname>DC</testname>
+						<resname>M2_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M3_Region
+						<testname>DC</testname>
+						<resname>M3_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M4_Region
+						<testname>DC</testname>
+						<resname>M4_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M5_Region
+						<testname>DC</testname>
+						<resname>M5_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M6_Region
+						<testname>DC</testname>
+						<resname>M6_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M7_Region
+						<testname>DC</testname>
+						<resname>M7_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M9_Region
+						<testname>DC</testname>
+						<resname>M9_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M8_Region
+						<testname>DC</testname>
+						<resname>M8_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<allparametersdisabled>1</allparametersdisabled>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Thu Nov 22 14:04:25 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.43.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.43.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/postrohrix_raghunan_140426332</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OPAMP_test/adexl/results/data/Interactive.43</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OPAMP_test/adexl/results/data/Interactive.43</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.43.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.43.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.44
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">Amp
+						<vars>
+							<var>ampTr
+								<value>1:0.3:1.9</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.44</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.44</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.44</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">ICMR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>ICMR_none_Interactive.44</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>Cc
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>idc
+						<value>50u</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>50</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>1.5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in_oa
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>AC</test>
+					<test>Trans</test>
+					<test>ICMR</test>
+				</disabledtests>
+				<specs>
+					<spec>DC.M1_Region
+						<testname>DC</testname>
+						<resname>M1_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M2_Region
+						<testname>DC</testname>
+						<resname>M2_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M3_Region
+						<testname>DC</testname>
+						<resname>M3_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M4_Region
+						<testname>DC</testname>
+						<resname>M4_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M5_Region
+						<testname>DC</testname>
+						<resname>M5_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M6_Region
+						<testname>DC</testname>
+						<resname>M6_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M7_Region
+						<testname>DC</testname>
+						<resname>M7_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M9_Region
+						<testname>DC</testname>
+						<resname>M9_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M8_Region
+						<testname>DC</testname>
+						<resname>M8_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<allparametersdisabled>1</allparametersdisabled>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Thu Nov 22 14:04:45 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.44.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.44.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/postrohrix_raghunan_140445553</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OPAMP_test/adexl/results/data/Interactive.44</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OPAMP_test/adexl/results/data/Interactive.44</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.44.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.44.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.45
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">Amp
+						<vars>
+							<var>ampTr
+								<value>1:0.3:1.9</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.45</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.45</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.45</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">ICMR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>ICMR_none_Interactive.45</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>Cc
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>idc
+						<value>50u</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>50</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>1.5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in_oa
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>AC</test>
+					<test>Trans</test>
+					<test>ICMR</test>
+				</disabledtests>
+				<specs>
+					<spec>DC.M1_Region
+						<testname>DC</testname>
+						<resname>M1_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M2_Region
+						<testname>DC</testname>
+						<resname>M2_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M3_Region
+						<testname>DC</testname>
+						<resname>M3_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M4_Region
+						<testname>DC</testname>
+						<resname>M4_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M5_Region
+						<testname>DC</testname>
+						<resname>M5_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M6_Region
+						<testname>DC</testname>
+						<resname>M6_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M7_Region
+						<testname>DC</testname>
+						<resname>M7_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M9_Region
+						<testname>DC</testname>
+						<resname>M9_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M8_Region
+						<testname>DC</testname>
+						<resname>M8_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<allparametersdisabled>1</allparametersdisabled>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Thu Nov 22 14:04:58 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.45.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.45.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/postrohrix_raghunan_140458912</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OPAMP_test/adexl/results/data/Interactive.45</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OPAMP_test/adexl/results/data/Interactive.45</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.45.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.45.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.46
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">Amp
+						<vars>
+							<var>ampTr
+								<value>1:0.3:1.9</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.46</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.46</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.46</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">ICMR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>ICMR_none_Interactive.46</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>Cc
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>idc
+						<value>50u</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>50</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>1.5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in_oa
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>AC</test>
+					<test>Trans</test>
+					<test>ICMR</test>
+				</disabledtests>
+				<specs>
+					<spec>DC.M1_Region
+						<testname>DC</testname>
+						<resname>M1_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M2_Region
+						<testname>DC</testname>
+						<resname>M2_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M3_Region
+						<testname>DC</testname>
+						<resname>M3_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M4_Region
+						<testname>DC</testname>
+						<resname>M4_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M5_Region
+						<testname>DC</testname>
+						<resname>M5_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M6_Region
+						<testname>DC</testname>
+						<resname>M6_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M7_Region
+						<testname>DC</testname>
+						<resname>M7_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M9_Region
+						<testname>DC</testname>
+						<resname>M9_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M8_Region
+						<testname>DC</testname>
+						<resname>M8_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<allparametersdisabled>1</allparametersdisabled>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Thu Nov 22 14:05:24 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.46.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.46.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/postrohrix_raghunan_140524790</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OPAMP_test/adexl/results/data/Interactive.46</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OPAMP_test/adexl/results/data/Interactive.46</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.46.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.46.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.47
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">Amp
+						<vars>
+							<var>ampTr
+								<value>1:0.3:1.9</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.47</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.47</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.47</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">ICMR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>ICMR_none_Interactive.47</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>Cc
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>idc
+						<value>50u</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>50</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>1.5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in_oa
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests></disabledtests>
+				<specs>
+					<spec>DC.M1_Region
+						<testname>DC</testname>
+						<resname>M1_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M2_Region
+						<testname>DC</testname>
+						<resname>M2_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M3_Region
+						<testname>DC</testname>
+						<resname>M3_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M4_Region
+						<testname>DC</testname>
+						<resname>M4_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M5_Region
+						<testname>DC</testname>
+						<resname>M5_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M6_Region
+						<testname>DC</testname>
+						<resname>M6_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M7_Region
+						<testname>DC</testname>
+						<resname>M7_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M9_Region
+						<testname>DC</testname>
+						<resname>M9_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M8_Region
+						<testname>DC</testname>
+						<resname>M8_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<allparametersdisabled>1</allparametersdisabled>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Thu Nov 22 14:05:36 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.47.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.47.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/postrohrix_raghunan_140536636</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OPAMP_test/adexl/results/data/Interactive.47</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OPAMP_test/adexl/results/data/Interactive.47</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.47.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.47.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.48
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">Amp
+						<vars>
+							<var>ampTr
+								<value>1:0.3:1.9</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.48</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.48</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.48</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">ICMR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>ICMR_none_Interactive.48</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>Cc
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>idc
+						<value>50u</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>50</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>1.5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in_oa
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests></disabledtests>
+				<specs>
+					<spec>DC.M1_Region
+						<testname>DC</testname>
+						<resname>M1_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M2_Region
+						<testname>DC</testname>
+						<resname>M2_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M3_Region
+						<testname>DC</testname>
+						<resname>M3_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M4_Region
+						<testname>DC</testname>
+						<resname>M4_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M5_Region
+						<testname>DC</testname>
+						<resname>M5_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M6_Region
+						<testname>DC</testname>
+						<resname>M6_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M7_Region
+						<testname>DC</testname>
+						<resname>M7_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M9_Region
+						<testname>DC</testname>
+						<resname>M9_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M8_Region
+						<testname>DC</testname>
+						<resname>M8_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<allparametersdisabled>1</allparametersdisabled>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Thu Nov 22 14:07:38 2018</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.48.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.48.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/postrohrix_raghunan_140739303</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OPAMP_test/adexl/results/data/Interactive.48</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OPAMP_test/adexl/results/data/Interactive.48</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.48.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.48.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.49
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">Amp
+						<vars>
+							<var>ampTr
+								<value>1:0.3:1.9</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.49</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.49</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.49</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">ICMR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>ICMR_none_Interactive.49</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">PSRR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>PSRR_none_Interactive.49</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>Cc
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>idc
+						<value>50u</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>50</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>1.5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in_oa
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>DC</test>
+					<test>AC</test>
+					<test>Trans</test>
+					<test>ICMR</test>
+				</disabledtests>
+				<specs>
+					<spec>DC.M1_Region
+						<testname>DC</testname>
+						<resname>M1_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M2_Region
+						<testname>DC</testname>
+						<resname>M2_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M3_Region
+						<testname>DC</testname>
+						<resname>M3_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M4_Region
+						<testname>DC</testname>
+						<resname>M4_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M5_Region
+						<testname>DC</testname>
+						<resname>M5_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M6_Region
+						<testname>DC</testname>
+						<resname>M6_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M7_Region
+						<testname>DC</testname>
+						<resname>M7_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.nil
+						<testname>DC</testname>
+						<resname>nil</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M9_Region
+						<testname>DC</testname>
+						<resname>M9_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M10_Region
+						<testname>DC</testname>
+						<resname>M10_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M8_Region
+						<testname>DC</testname>
+						<resname>M8_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<allparametersdisabled>1</allparametersdisabled>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Fri Nov 23 15:02:16 2018
+</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.49.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.49.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/postrohrix_raghunan_150216800</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OPAMP_test/adexl/results/data/Interactive.49</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OPAMP_test/adexl/results/data/Interactive.49</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.49.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.49.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+		<historyentry>Interactive.50
+			<checkpoint>
+				<corners>
+					<corner enabled="1">_default</corner>
+					<corner enabled="0">Amp
+						<vars>
+							<var>ampTr
+								<value>1:0.1:1.3</value>
+							</var>
+						</vars>
+					</corner>
+				</corners>
+				<extensions>
+					<extension>Parasitics
+						<callback>_parSetupDBExtensionCB</callback>
+						<iconvalue></iconvalue>
+						<icontype></icontype>
+					</extension>
+				</extensions>
+				<currentmode>Single Run, Sweeps and Corners</currentmode>
+				<overwritehistory>0</overwritehistory>
+				<tests>
+					<test enabled="1">DC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>DC_none_Interactive.50</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">AC
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>AC_none_Interactive.50</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">Trans
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>Trans_none_Interactive.50</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">ICMR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>ICMR_none_Interactive.50</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+					<test enabled="1">PSRR
+						<tool>ADE</tool>
+						<tooloptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+							<option>path
+								<value>$AXL_SETUPDB_DIR/test_states</value>
+							</option>
+							<option>state
+								<value>PSRR_none_Interactive.50</value>
+							</option>
+						</tooloptions>
+						<origoptions>
+							<option>cell
+								<value>OPAMP_test</value>
+							</option>
+							<option>lib
+								<value>OTA</value>
+							</option>
+							<option>sim
+								<value>spectre</value>
+							</option>
+							<option>view
+								<value>schematic</value>
+							</option>
+						</origoptions>
+					</test>
+				</tests>
+				<vars>
+					<var>Cc
+						<value>50f</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>dc_off
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>idc
+						<value>50u</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>RL
+						<value>50</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest enabled="1">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+						</dependentTests>
+					</var>
+					<var>ampTr
+						<value>1.5</value>
+						<dependentTests>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>mul_in_oa
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>Vcm
+						<value>0</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest enabled="1">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+					<var>R
+						<value>2</value>
+						<dependentTests>
+							<dependentTest omitted="0">DC</dependentTest>
+							<dependentTest omitted="0">AC</dependentTest>
+							<dependentTest omitted="0">Trans</dependentTest>
+							<dependentTest omitted="0">ICMR</dependentTest>
+							<dependentTest enabled="1">PSRR</dependentTest>
+						</dependentTests>
+					</var>
+				</vars>
+				<overwritehistoryname>Interactive.0</overwritehistoryname>
+				<plottingoptions>
+					<plottingoption>plottype
+						<value>None</value>
+					</plottingoption>
+					<plottingoption>usewaveformtemplate
+						<value>no</value>
+					</plottingoption>
+					<plottingoption>waveformtemplate
+						<value></value>
+					</plottingoption>
+				</plottingoptions>
+				<disabledtests>
+					<test>DC</test>
+					<test>AC</test>
+					<test>Trans</test>
+					<test>ICMR</test>
+				</disabledtests>
+				<specs>
+					<spec>DC.M1_Region
+						<testname>DC</testname>
+						<resname>M1_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M2_Region
+						<testname>DC</testname>
+						<resname>M2_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M3_Region
+						<testname>DC</testname>
+						<resname>M3_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M4_Region
+						<testname>DC</testname>
+						<resname>M4_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M5_Region
+						<testname>DC</testname>
+						<resname>M5_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M6_Region
+						<testname>DC</testname>
+						<resname>M6_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M7_Region
+						<testname>DC</testname>
+						<resname>M7_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.nil
+						<testname>DC</testname>
+						<resname>nil</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M9_Region
+						<testname>DC</testname>
+						<resname>M9_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M10_Region
+						<testname>DC</testname>
+						<resname>M10_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+					<spec>DC.M8_Region
+						<testname>DC</testname>
+						<resname>M8_Region</resname>
+						<specType>range</specType>
+						<min>1.9</min>
+						<max>2.1</max>
+						<target></target>
+						<tol></tol>
+					</spec>
+				</specs>
+				<allparametersdisabled>1</allparametersdisabled>
+				<sortVariableValues>0</sortVariableValues>
+			</checkpoint>
+			<timestamp>Fri Nov 23 15:22:33 2018
+</timestamp>
+			<resultsname>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.50.rdb</resultsname>
+			<simresults>$AXL_SETUPDB_DIR/results/data/Interactive.50.rdb</simresults>
+			<rawdatadelstrategy>SaveAll</rawdatadelstrategy>
+			<netlistdelstrategy>SaveAll</netlistdelstrategy>
+			<uselocalpsfdir>false</uselocalpsfdir>
+			<localpsfdir>/tmp/postrohrix_raghunan_152234374</localpsfdir>
+			<psfdir>/home/raghunan/work/Cadence/xt018/Sim/OTA/OPAMP_test/adexl/results/data/Interactive.50</psfdir>
+			<simdir>$AXL_PROJECT_DIR/OTA/OPAMP_test/adexl/results/data/Interactive.50</simdir>
+			<gendatasheetplotsonsimulation>1</gendatasheetplotsonsimulation>
+			<runlog>/home/raghunan/work/Cadence/xt018/OTA/OPAMP_test/adexl/results/data/Interactive.50.log</runlog>
+			<runlogfile>$AXL_SETUPDB_DIR/results/data/Interactive.50.log</runlogfile>
+			<schematicpoint></schematicpoint>
+			<test>all</test>
+		</historyentry>
+	</history>
+</setupdb>

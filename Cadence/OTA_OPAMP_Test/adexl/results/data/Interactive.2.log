@@ -1,0 +1,305 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Fri Nov 23 14:39:26 2018 
+Best design point: 1
+Design specs: 
+	DC	corner	Vbias_0 - 
+	DC_Bias_Output		180.1m
+	AC	corner	Vbias_0 - 
+	DC_Gain_dB		18.5
+	BW_3dB		14.43M
+	PM		55.49
+	Zin@1MHz		3.394M
+	Zout@1MHz		941.5m
+	Trans	corner	Vbias_0 - 
+	HD2		-37.14
+	HD3		-48.17
+	Iout_p2p		31.77m
+	Gm		158.8m
+	Iout_Sin_Max		18.43m
+	Iout_Sin_Min		-13.34m
+	SR_Pos		6.985M
+	SR_Neg		-8.737M
+	Noise	corner	Vbias_0 - 
+	In_Ref_Noise		46.64n
+	PSRR	corner	Vbias_0 - 
+	PSRR @1MHz		11.08m
+	DC	corner	Vbias_1 - 
+	DC_Bias_Output		148.4m
+	AC	corner	Vbias_1 - 
+	DC_Gain_dB		19.34
+	BW_3dB		14.38M
+	PM		51.37
+	Zin@1MHz		3.402M
+	Zout@1MHz		943.4m
+	Trans	corner	Vbias_1 - 
+	HD2		-36.32
+	HD3		-45.67
+	Iout_p2p		34.72m
+	Gm		173.6m
+	Iout_Sin_Max		19.17m
+	Iout_Sin_Min		-15.55m
+	SR_Pos		7.511M
+	SR_Neg		-9.779M
+	Noise	corner	Vbias_1 - 
+	In_Ref_Noise		43.93n
+	PSRR	corner	Vbias_1 - 
+	PSRR @1MHz		11.08m
+	DC	corner	Vbias_2 - 
+	DC_Bias_Output		115.8m
+	AC	corner	Vbias_2 - 
+	DC_Gain_dB		20.13
+	BW_3dB		14.34M
+	PM		47.76
+	Zin@1MHz		3.41M
+	Zout@1MHz		945.3m
+	Trans	corner	Vbias_2 - 
+	HD2		-35.65
+	HD3		-43.65
+	Iout_p2p		37.7m
+	Gm		188.5m
+	Iout_Sin_Max		19.93m
+	Iout_Sin_Min		-17.77m
+	SR_Pos		8.042M
+	SR_Neg		-10.69M
+	Noise	corner	Vbias_2 - 
+	In_Ref_Noise		41.71n
+	PSRR	corner	Vbias_2 - 
+	PSRR @1MHz		11.08m
+	DC	corner	Vbias_3 - 
+	DC_Bias_Output		82.28m
+	AC	corner	Vbias_3 - 
+	DC_Gain_dB		20.83
+	BW_3dB		14.29M
+	PM		45.08
+	Zin@1MHz		3.418M
+	Zout@1MHz		947.4m
+	Trans	corner	Vbias_3 - 
+	HD2		-35.15
+	HD3		-42.07
+	Iout_p2p		40.64m
+	Gm		203.2m
+	Iout_Sin_Max		20.67m
+	Iout_Sin_Min		-19.97m
+	SR_Pos		8.581M
+	SR_Neg		-11.33M
+	Noise	corner	Vbias_3 - 
+	In_Ref_Noise		39.91n
+	PSRR	corner	Vbias_3 - 
+	PSRR @1MHz		11.09m
+	DC	corner	Vbias_4 - 
+	DC_Bias_Output		47.83m
+	AC	corner	Vbias_4 - 
+	DC_Gain_dB		21.46
+	BW_3dB		14.24M
+	PM		42.55
+	Zin@1MHz		3.425M
+	Zout@1MHz		949.5m
+	Trans	corner	Vbias_4 - 
+	HD2		-34.84
+	HD3		-40.83
+	Iout_p2p		43.49m
+	Gm		217.5m
+	Iout_Sin_Max		21.38m
+	Iout_Sin_Min		-22.12m
+	SR_Pos		9.095M
+	SR_Neg		-11.66M
+	Noise	corner	Vbias_4 - 
+	In_Ref_Noise		38.46n
+	PSRR	corner	Vbias_4 - 
+	PSRR @1MHz		11.1m
+	DC	corner	Vbias_5 - 
+	DC_Bias_Output		12.45m
+	AC	corner	Vbias_5 - 
+	DC_Gain_dB		22.02
+	BW_3dB		14.19M
+	PM		40.19
+	Zin@1MHz		3.433M
+	Zout@1MHz		951.7m
+	Trans	corner	Vbias_5 - 
+	HD2		-34.72
+	HD3		-39.85
+	Iout_p2p		46.23m
+	Gm		231.2m
+	Iout_Sin_Max		22.04m
+	Iout_Sin_Min		-24.19m
+	SR_Pos		9.561M
+	SR_Neg		-11.7M
+	Noise	corner	Vbias_5 - 
+	In_Ref_Noise		37.29n
+	PSRR	corner	Vbias_5 - 
+	PSRR @1MHz		11.11m
+	DC	corner	Vbias_6 - 
+	DC_Bias_Output		-23.86m
+	AC	corner	Vbias_6 - 
+	DC_Gain_dB		22.52
+	BW_3dB		14.14M
+	PM		38
+	Zin@1MHz		3.44M
+	Zout@1MHz		954.1m
+	Trans	corner	Vbias_6 - 
+	HD2		-34.8
+	HD3		-39.01
+	Iout_p2p		48.83m
+	Gm		244.2m
+	Iout_Sin_Max		22.66m
+	Iout_Sin_Min		-26.17m
+	SR_Pos		9.954M
+	SR_Neg		-11.6M
+	Noise	corner	Vbias_6 - 
+	In_Ref_Noise		36.33n
+	PSRR	corner	Vbias_6 - 
+	PSRR @1MHz		11.13m
+	DC	corner	Vbias_7 - 
+	DC_Bias_Output		-61.08m
+	AC	corner	Vbias_7 - 
+	DC_Gain_dB		22.97
+	BW_3dB		14.08M
+	PM		35.97
+	Zin@1MHz		3.448M
+	Zout@1MHz		956.5m
+	Trans	corner	Vbias_7 - 
+	HD2		-35.08
+	HD3		-38.24
+	Iout_p2p		51.29m
+	Gm		256.4m
+	Iout_Sin_Max		23.24m
+	Iout_Sin_Min		-28.05m
+	SR_Pos		10.27M
+	SR_Neg		-11.45M
+	Noise	corner	Vbias_7 - 
+	In_Ref_Noise		35.52n
+	PSRR	corner	Vbias_7 - 
+	PSRR @1MHz		11.15m
+	DC	corner	Vbias_8 - 
+	DC_Bias_Output		-99.24m
+	AC	corner	Vbias_8 - 
+	DC_Gain_dB		23.38
+	BW_3dB		14.01M
+	PM		34.08
+	Zin@1MHz		3.456M
+	Zout@1MHz		959.1m
+	Trans	corner	Vbias_8 - 
+	HD2		-35.54
+	HD3		-37.42
+	Iout_p2p		53.6m
+	Gm		268m
+	Iout_Sin_Max		23.77m
+	Iout_Sin_Min		-29.83m
+	SR_Pos		10.49M
+	SR_Neg		-11.3M
+	Noise	corner	Vbias_8 - 
+	In_Ref_Noise		34.82n
+	PSRR	corner	Vbias_8 - 
+	PSRR @1MHz		11.18m
+	DC	corner	Vbias_9 - 
+	DC_Bias_Output		-138.3m
+	AC	corner	Vbias_9 - 
+	DC_Gain_dB		23.75
+	BW_3dB		13.95M
+	PM		32.31
+	Zin@1MHz		3.464M
+	Zout@1MHz		961.8m
+	Trans	corner	Vbias_9 - 
+	HD2		-36.13
+	HD3		-36.47
+	Iout_p2p		55.79m
+	Gm		278.9m
+	Iout_Sin_Max		24.28m
+	Iout_Sin_Min		-31.51m
+	SR_Pos		10.65M
+	SR_Neg		-11.14M
+	Noise	corner	Vbias_9 - 
+	In_Ref_Noise		34.21n
+	PSRR	corner	Vbias_9 - 
+	PSRR @1MHz		11.21m
+	DC	corner	Vbias_10 - 
+	DC_Bias_Output		-178.4m
+	AC	corner	Vbias_10 - 
+	DC_Gain_dB		24.1
+	BW_3dB		13.88M
+	PM		30.63
+	Zin@1MHz		3.473M
+	Zout@1MHz		964.6m
+	Trans	corner	Vbias_10 - 
+	HD2		-36.61
+	HD3		-35.24
+	Iout_p2p		57.83m
+	Gm		289.1m
+	Iout_Sin_Max		24.76m
+	Iout_Sin_Min		-33.07m
+	SR_Pos		10.76M
+	SR_Neg		-10.99M
+	Noise	corner	Vbias_10 - 
+	In_Ref_Noise		33.66n
+	PSRR	corner	Vbias_10 - 
+	PSRR @1MHz		11.25m
+	DC	corner	Vbias_11 - 
+	DC_Bias_Output		-219.3m
+	AC	corner	Vbias_11 - 
+	DC_Gain_dB		24.43
+	BW_3dB		13.8M
+	PM		29.02
+	Zin@1MHz		3.482M
+	Zout@1MHz		967.5m
+	Trans	corner	Vbias_11 - 
+	HD2		-36.44
+	HD3		-33.61
+	Iout_p2p		59.71m
+	Gm		298.5m
+	Iout_Sin_Max		25.24m
+	Iout_Sin_Min		-34.47m
+	SR_Pos		10.82M
+	SR_Neg		-10.84M
+	Noise	corner	Vbias_11 - 
+	In_Ref_Noise		33.16n
+	PSRR	corner	Vbias_11 - 
+	PSRR @1MHz		11.29m
+	DC	corner	Nominal - 
+	DC_Bias_Output		210.9m
+	AC	corner	Nominal - 
+	DC_Gain_dB		17.6
+	BW_3dB		14.47M
+	PM		59.54
+	Zin@1MHz		3.385M
+	Zout@1MHz		939.8m
+	Trans	corner	Nominal - 
+	HD2		-38.09
+	HD3		-51.18
+	Iout_p2p		28.9m
+	Gm		144.5m
+	Iout_Sin_Max		17.71m
+	Iout_Sin_Min		-11.18m
+	SR_Pos		6.5M
+	SR_Neg		-7.707M
+	Noise	corner	Nominal - 
+	In_Ref_Noise		49.88n
+	PSRR	corner	Nominal - 
+	PSRR @1MHz		11.08m
+Design parameters: 
+	AmpTr		100m
+	CL_OTA		5f
+	dc_off		0
+	finTr		1M
+	iBias		1.5m
+	idc		50u
+	mul_bias		8
+	mul_in		5
+	mul_load		1
+	mul_n		18
+	mul_p		3
+	RL		50
+	Vcm		1.95
+	W5		27u
+	W8		33u
+	mul_in_oa		2
+	Cc		500f
+	R		1
+	Rb		2k
+	V_bias		100m
+
+Interactive.2
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.2 completed. 
+Current time: Fri Nov 23 14:40:21 2018 

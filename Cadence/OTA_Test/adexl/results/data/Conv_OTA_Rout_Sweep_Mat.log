@@ -1,0 +1,304 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Mon Oct  1 18:04:55 2018 
+Best design point: 1
+Design specs: 
+	DC	corner	Rout_0 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		1	No
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Rout_0 - 
+	AC_Gain_abs		1.621	Yes
+	AC_Gain_at_DC		4.198
+	GBW		166.3M
+	PM		Error	No
+	Z_in		2.872M
+	Z_out		648.6
+	BW_3dB		73.84M
+	Trans	corner	Rout_0 - 
+	Max_Iout_Sin		-1.133m
+	Min_Iout_Sin		-8.658m
+	Max_Vout_Sin		865.8m
+	Min_Vout_Sin		113.3m
+	SlewRate_Pos		20.54M
+	SlewRate_Neg		-5.449M
+	Noise	corner	Rout_0 - 
+	In_Ref_noise		72.81n
+	DC	corner	Rout_1 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Rout_1 - 
+	AC_Gain_abs		13.4	Near
+	AC_Gain_at_DC		22.54
+	GBW		585.7M
+	PM		83	Yes
+	Z_in		2.872M
+	Z_out		648.6
+	BW_3dB		100.1M
+	Trans	corner	Rout_1 - 
+	Max_Iout_Sin		-136.8u
+	Min_Iout_Sin		-3.855m
+	Max_Vout_Sin		3.855
+	Min_Vout_Sin		136.8m
+	SlewRate_Pos		-5.498M
+	SlewRate_Neg		-1.575M
+	Noise	corner	Rout_1 - 
+	In_Ref_noise		68.65n
+	DC	corner	Rout_2 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Rout_2 - 
+	AC_Gain_abs		22.8	No
+	AC_Gain_at_DC		27.16
+	GBW		634.3M
+	PM		74.24	Yes
+	Z_in		2.872M
+	Z_out		648.6
+	BW_3dB		83.08M
+	Trans	corner	Rout_2 - 
+	Max_Iout_Sin		-27.9u
+	Min_Iout_Sin		-920.5u
+	Max_Vout_Sin		4.603
+	Min_Vout_Sin		139.5m
+	SlewRate_Pos		-14.52M
+	SlewRate_Neg		-3.175M
+	Noise	corner	Rout_2 - 
+	In_Ref_noise		68.82n
+	DC	corner	Rout_3 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Rout_3 - 
+	AC_Gain_abs		24.83	No
+	AC_Gain_at_DC		27.9
+	GBW		640.3M
+	PM		73.12	Yes
+	Z_in		2.872M
+	Z_out		648.6
+	BW_3dB		80.1M
+	Trans	corner	Rout_3 - 
+	Max_Iout_Sin		-13.98u
+	Min_Iout_Sin		-464.2u
+	Max_Vout_Sin		4.642
+	Min_Vout_Sin		139.8m
+	SlewRate_Pos		-15.99M
+	SlewRate_Neg		-3.29M
+	Noise	corner	Rout_3 - 
+	In_Ref_noise		68.86n
+	DC	corner	Rout_4 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Rout_4 - 
+	AC_Gain_abs		26.69	No
+	AC_Gain_at_DC		28.53
+	GBW		645.3M
+	PM		72.22	Yes
+	Z_in		2.872M
+	Z_out		648.6
+	BW_3dB		77.52M
+	Trans	corner	Rout_4 - 
+	Max_Iout_Sin		-2.802u
+	Min_Iout_Sin		-93.35u
+	Max_Vout_Sin		4.668
+	Min_Vout_Sin		140.1m
+	SlewRate_Pos		-17.24M
+	SlewRate_Neg		-3.551M
+	Noise	corner	Rout_4 - 
+	In_Ref_noise		68.9n
+	DC	corner	Rout_5 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Rout_5 - 
+	AC_Gain_abs		26.95	No
+	AC_Gain_at_DC		28.61
+	GBW		645.9M
+	PM		72.11	Yes
+	Z_in		2.872M
+	Z_out		648.6
+	BW_3dB		77.19M
+	Trans	corner	Rout_5 - 
+	Max_Iout_Sin		-1.402u
+	Min_Iout_Sin		-46.71u
+	Max_Vout_Sin		4.671
+	Min_Vout_Sin		140.2m
+	SlewRate_Pos		-17.4M
+	SlewRate_Neg		-3.624M
+	Noise	corner	Rout_5 - 
+	In_Ref_noise		68.91n
+	DC	corner	Rout_6 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Rout_6 - 
+	AC_Gain_abs		27.15	No
+	AC_Gain_at_DC		28.67
+	GBW		646.4M
+	PM		72.02	Yes
+	Z_in		2.873M
+	Z_out		648.6
+	BW_3dB		76.92M
+	Trans	corner	Rout_6 - 
+	Max_Iout_Sin		-280.4n
+	Min_Iout_Sin		-9.346u
+	Max_Vout_Sin		4.673
+	Min_Vout_Sin		140.2m
+	SlewRate_Pos		-17.54M
+	SlewRate_Neg		-3.65M
+	Noise	corner	Rout_6 - 
+	In_Ref_noise		68.91n
+	DC	corner	Rout_7 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Rout_7 - 
+	AC_Gain_abs		27.17	No
+	AC_Gain_at_DC		28.68
+	GBW		646.5M
+	PM		72.01	Yes
+	Z_in		2.873M
+	Z_out		648.6
+	BW_3dB		76.89M
+	Trans	corner	Rout_7 - 
+	Max_Iout_Sin		-140.2n
+	Min_Iout_Sin		-4.673u
+	Max_Vout_Sin		4.673
+	Min_Vout_Sin		140.2m
+	SlewRate_Pos		-17.55M
+	SlewRate_Neg		-3.67M
+	Noise	corner	Rout_7 - 
+	In_Ref_noise		68.91n
+	DC	corner	Rout_8 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Rout_8 - 
+	AC_Gain_abs		27.2	No
+	AC_Gain_at_DC		28.69
+	GBW		646.6M
+	PM		72	Yes
+	Z_in		2.873M
+	Z_out		648.6
+	BW_3dB		76.85M
+	Trans	corner	Rout_8 - 
+	Max_Iout_Sin		-14.02n
+	Min_Iout_Sin		-467.4n
+	Max_Vout_Sin		4.674
+	Min_Vout_Sin		140.2m
+	SlewRate_Pos		-17.61M
+	SlewRate_Neg		-3.626M
+	Noise	corner	Rout_8 - 
+	In_Ref_noise		68.91n
+	DC	corner	Nominal - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Nominal - 
+	AC_Gain_abs		27.07	No
+	AC_Gain_at_DC		28.65
+	GBW		646.2M
+	PM		72.06	Yes
+	Z_in		2.872M
+	Z_out		648.6
+	BW_3dB		77.02M
+	Trans	corner	Nominal - 
+	Max_Iout_Sin		-700.8n
+	Min_Iout_Sin		-23.36u
+	Max_Vout_Sin		4.672
+	Min_Vout_Sin		140.2m
+	SlewRate_Pos		-17.49M
+	SlewRate_Neg		-3.608M
+	Noise	corner	Nominal - 
+	In_Ref_noise		68.91n
+Design parameters: 
+	dc_off		-300u
+	CL		80p
+	AmpTr		200m
+	finTr		15M
+	iBias		1m
+	Vcm		2.5
+	mul_bias		12
+	mul_n		20
+	mul_p		20
+	mul_in		1
+	mul_load		1
+	RL		200k
+
+Interactive.0
+Number of points completed: 1
+Number of simulation errors: 1
+Interactive.0 completed. 
+Current time: Mon Oct  1 18:06:22 2018 

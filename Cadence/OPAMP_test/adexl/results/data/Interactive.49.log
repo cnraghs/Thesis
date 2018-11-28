@@ -1,0 +1,22 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Fri Nov 23 15:02:17 2018 
+Best design point: 1
+Design specs: 
+	PSRR	corner	Nominal - 
+Design parameters: 
+	Cc		50f
+	dc_off		0
+	idc		50u
+	RL		50
+	vcm		0
+	ampTr		1.5
+	mul_in_oa		2
+	Vcm		0
+	R		2
+
+Interactive.49
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.49 completed. 
+Current time: Fri Nov 23 15:02:21 2018 

@@ -1,0 +1,66 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Thu Nov  8 02:37:58 2018 
+Best design point: 1
+Design specs: 
+	DC	corner	GBW_0 - 
+	DC_Bias_Output		-1.564
+	DC_Bias_OTA_Out		-1.557
+	DC_Bias_OPAMP_Out		-613.7m
+	DC	corner	GBW_1 - 
+	DC_Bias_Output		-1.564
+	DC_Bias_OTA_Out		-1.557
+	DC_Bias_OPAMP_Out		-613.7m
+	DC	corner	GBW_2 - 
+	DC_Bias_Output		-1.564
+	DC_Bias_OTA_Out		-1.557
+	DC_Bias_OPAMP_Out		-613.7m
+	DC	corner	GBW_3 - 
+	DC_Bias_Output		-1.564
+	DC_Bias_OTA_Out		-1.557
+	DC_Bias_OPAMP_Out		-613.7m
+	DC	corner	GBW_4 - 
+	DC_Bias_Output		-1.564
+	DC_Bias_OTA_Out		-1.557
+	DC_Bias_OPAMP_Out		-613.7m
+	DC	corner	GBW_5 - 
+	DC_Bias_Output		-1.564
+	DC_Bias_OTA_Out		-1.557
+	DC_Bias_OPAMP_Out		-613.7m
+	DC	corner	GBW_6 - 
+	DC_Bias_Output		-1.564
+	DC_Bias_OTA_Out		-1.557
+	DC_Bias_OPAMP_Out		-613.7m
+	DC	corner	Nominal - 
+	DC_Bias_Output		-1.564
+	DC_Bias_OTA_Out		-1.557
+	DC_Bias_OPAMP_Out		-613.7m
+Design parameters: 
+	CL		50f
+	dc_off		-100u
+	iBias		600u
+	mul_bias		7
+	mul_in		2
+	mul_load		1
+	mul_n		12
+	mul_p		2
+	ampTr		50m
+	finTr		1M
+	RL		12
+	Vcm		2
+	gain		300
+	gbw		20M
+	ibias		0
+	rin		10M
+	rout		10
+	sr		1G
+	R1		100
+	R2		100
+	Cc		20n
+	RE		12
+
+Interactive.91
+Number of points completed: 2
+Number of simulation errors: 0
+Interactive.91 completed. 
+Current time: Thu Nov  8 02:38:23 2018 

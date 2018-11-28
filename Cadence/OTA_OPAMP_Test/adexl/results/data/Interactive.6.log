@@ -1,0 +1,149 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Mon Nov 26 02:32:47 2018 
+Best design point: 1
+Design specs: 
+	AC	corner	Vbias_0 - 
+	DC_Gain_dB		18.5
+	BW_3dB		14.43M
+	PM		55.49
+	Zin@1MHz		3.394M
+	Zout@1MHz		941.5m
+	PSRR	corner	Vbias_0 - 
+	PSRR_P @1MHz		16.21m
+	PSRR_N @1MHz		15.54m
+	AC	corner	Vbias_1 - 
+	DC_Gain_dB		19.34
+	BW_3dB		14.38M
+	PM		51.37
+	Zin@1MHz		3.402M
+	Zout@1MHz		943.4m
+	PSRR	corner	Vbias_1 - 
+	PSRR_P @1MHz		16.39m
+	PSRR_N @1MHz		15.68m
+	AC	corner	Vbias_2 - 
+	DC_Gain_dB		20.13
+	BW_3dB		14.34M
+	PM		47.76
+	Zin@1MHz		3.41M
+	Zout@1MHz		945.3m
+	PSRR	corner	Vbias_2 - 
+	PSRR_P @1MHz		16.58m
+	PSRR_N @1MHz		15.83m
+	AC	corner	Vbias_3 - 
+	DC_Gain_dB		20.83
+	BW_3dB		14.29M
+	PM		45.08
+	Zin@1MHz		3.418M
+	Zout@1MHz		947.4m
+	PSRR	corner	Vbias_3 - 
+	PSRR_P @1MHz		16.77m
+	PSRR_N @1MHz		15.97m
+	AC	corner	Vbias_4 - 
+	DC_Gain_dB		21.46
+	BW_3dB		14.24M
+	PM		42.55
+	Zin@1MHz		3.425M
+	Zout@1MHz		949.5m
+	PSRR	corner	Vbias_4 - 
+	PSRR_P @1MHz		16.96m
+	PSRR_N @1MHz		16.11m
+	AC	corner	Vbias_5 - 
+	DC_Gain_dB		22.02
+	BW_3dB		14.19M
+	PM		40.19
+	Zin@1MHz		3.433M
+	Zout@1MHz		951.7m
+	PSRR	corner	Vbias_5 - 
+	PSRR_P @1MHz		17.16m
+	PSRR_N @1MHz		16.25m
+	AC	corner	Vbias_6 - 
+	DC_Gain_dB		22.52
+	BW_3dB		14.14M
+	PM		38
+	Zin@1MHz		3.44M
+	Zout@1MHz		954.1m
+	PSRR	corner	Vbias_6 - 
+	PSRR_P @1MHz		17.36m
+	PSRR_N @1MHz		16.39m
+	AC	corner	Vbias_7 - 
+	DC_Gain_dB		22.97
+	BW_3dB		14.08M
+	PM		35.97
+	Zin@1MHz		3.448M
+	Zout@1MHz		956.5m
+	PSRR	corner	Vbias_7 - 
+	PSRR_P @1MHz		17.56m
+	PSRR_N @1MHz		16.52m
+	AC	corner	Vbias_8 - 
+	DC_Gain_dB		23.38
+	BW_3dB		14.01M
+	PM		34.08
+	Zin@1MHz		3.456M
+	Zout@1MHz		959.1m
+	PSRR	corner	Vbias_8 - 
+	PSRR_P @1MHz		17.77m
+	PSRR_N @1MHz		16.65m
+	AC	corner	Vbias_9 - 
+	DC_Gain_dB		23.75
+	BW_3dB		13.95M
+	PM		32.31
+	Zin@1MHz		3.464M
+	Zout@1MHz		961.8m
+	PSRR	corner	Vbias_9 - 
+	PSRR_P @1MHz		17.98m
+	PSRR_N @1MHz		16.79m
+	AC	corner	Vbias_10 - 
+	DC_Gain_dB		24.1
+	BW_3dB		13.88M
+	PM		30.63
+	Zin@1MHz		3.473M
+	Zout@1MHz		964.6m
+	PSRR	corner	Vbias_10 - 
+	PSRR_P @1MHz		18.2m
+	PSRR_N @1MHz		16.92m
+	AC	corner	Vbias_11 - 
+	DC_Gain_dB		24.43
+	BW_3dB		13.8M
+	PM		29.02
+	Zin@1MHz		3.482M
+	Zout@1MHz		967.5m
+	PSRR	corner	Vbias_11 - 
+	PSRR_P @1MHz		18.43m
+	PSRR_N @1MHz		17.05m
+	AC	corner	Nominal - 
+	DC_Gain_dB		17.6
+	BW_3dB		14.47M
+	PM		59.54
+	Zin@1MHz		3.385M
+	Zout@1MHz		939.8m
+	PSRR	corner	Nominal - 
+	PSRR_P @1MHz		16.04m
+	PSRR_N @1MHz		15.39m
+Design parameters: 
+	AmpTr		100m
+	CL_OTA		5f
+	dc_off		0
+	finTr		1M
+	iBias		1.5m
+	idc		50u
+	mul_bias		8
+	mul_in		5
+	mul_load		1
+	mul_n		18
+	mul_p		3
+	RL		50
+	Vcm		1.95
+	W5		27u
+	W8		33u
+	mul_in_oa		2
+	Cc		500f
+	R		1
+	Rb		2k
+	V_bias		100m
+
+Interactive.6
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.6 completed. 
+Current time: Mon Nov 26 02:33:45 2018 

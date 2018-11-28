@@ -1,0 +1,19 @@
+EVcdFile ""
+EVcdInfoFile ""
+VcdFile ""
+VcdInfoFile ""
+VectorFile nil
+allDefinitionFiles ((t "/home/raghunan/work/Cadence/xt018/OTA/Gm_Id_NMOS/save.scs"))
+allDspfFiles nil
+allIncludedPaths nil
+allPspiceFiles nil
+allSpefFiles nil
+allStimulusFiles nil
+allVectorFiles nil
+definitionFiles ("/home/raghunan/work/Cadence/xt018/OTA/Gm_Id_NMOS/save.scs")
+dspfFile nil
+hlcheck "off"
+includePath ""
+pspiceFile nil
+spefFile nil
+stimulusFile nil

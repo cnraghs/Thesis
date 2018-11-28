@@ -1,0 +1,48 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Fri Nov 23 15:32:06 2018 
+Best design point: 1
+Design specs: 
+	PSRR	corner	C0_0 - 
+	PSRR_P@1MHz		236.9n
+	PSRR_N@1MHz		256.5n
+	PSRR	corner	C0_1 - 
+	PSRR_P@1MHz		236.9n
+	PSRR_N@1MHz		256.5n
+	PSRR	corner	C0_2 - 
+	PSRR_P@1MHz		236.9n
+	PSRR_N@1MHz		256.5n
+	PSRR	corner	C0_3 - 
+	PSRR_P@1MHz		236.9n
+	PSRR_N@1MHz		256.5n
+	PSRR	corner	C0_4 - 
+	PSRR_P@1MHz		236.9n
+	PSRR_N@1MHz		256.5n
+	PSRR	corner	C0_5 - 
+	PSRR_P@1MHz		236.9n
+	PSRR_N@1MHz		256.5n
+	PSRR	corner	Nominal - 
+	PSRR_P@1MHz		236.9n
+	PSRR_N@1MHz		256.5n
+Design parameters: 
+	dc_off		0
+	CL		50f
+	AmpTr		100m
+	finTr		1M
+	iBias		2.2m
+	Vcm		1.95
+	mul_bias		8
+	mul_n		18
+	mul_p		3
+	mul_in		5
+	mul_load		1
+	W5		28u
+	W8		33u
+	Rb		2k
+	V_bias		200m
+
+Interactive.159
+Number of points completed: 3
+Number of simulation errors: 0
+Interactive.159 completed. 
+Current time: Fri Nov 23 15:32:26 2018 

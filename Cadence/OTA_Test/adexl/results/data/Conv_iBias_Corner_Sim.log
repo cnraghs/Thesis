@@ -1,0 +1,159 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Thu Sep 13 15:24:14 2018 
+Best design point: 1
+Design specs: 
+	DC	corner	iBias_0 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	iBias_0 - 
+	Z_in		3.827M
+	Z_out		8.946k
+	AC_Gain_at_DC		27.87
+	PM		72.78	Yes
+	GBW		23.51M
+	AC_Gain_abs		24.75
+	Trans	corner	iBias_0 - 
+	Max_Iout_Sin		410.8u
+	Min_Iout_Sin		-441u
+	Max_Iout_Slew		852.5u
+	Min_Iout_Slew		-438.8u
+	Max_Vin_Slew		1.6
+	Min_Vin_Slew		1.4
+	Max_Vin_Sine		1.6
+	Min_Vin_Sine		1.4
+	Max_Vout_Slew		4.94
+	Min_Vout_Slew		331.2m
+	Max_Vout_Sin		1.167
+	Min_Vout_Sin		136.5m
+	SlewRate_Pos		-6.98M
+	SlewRate_Neg		-16.79M
+	Noise	corner	iBias_0 - 
+	In_Ref_noise		4.019u
+	DC	corner	iBias_1 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	iBias_1 - 
+	Z_in		3.827M
+	Z_out		6.001k
+	AC_Gain_at_DC		29.12
+	PM		71.38	Yes
+	GBW		38.12M
+	AC_Gain_abs		28.56
+	Trans	corner	iBias_1 - 
+	Max_Iout_Sin		773.7u
+	Min_Iout_Sin		-793u
+	Max_Iout_Slew		1.358m
+	Min_Iout_Slew		-824.7u
+	Max_Vin_Slew		1.6
+	Min_Vin_Slew		1.4
+	Max_Vin_Sine		1.6
+	Min_Vin_Sine		1.4
+	Max_Vout_Slew		4.934
+	Min_Vout_Slew		110.1m
+	Max_Vout_Sin		1.609
+	Min_Vout_Sin		44.46m
+	SlewRate_Pos		18.57M
+	SlewRate_Neg		-43.24M
+	Noise	corner	iBias_1 - 
+	In_Ref_noise		3.847u
+	DC	corner	iBias_2 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	iBias_2 - 
+	Z_in		3.827M
+	Z_out		4.229k
+	AC_Gain_at_DC		29.78
+	PM		70.49	Yes
+	GBW		56.44M
+	AC_Gain_abs		30.84
+	Trans	corner	iBias_2 - 
+	Max_Iout_Sin		1.316m
+	Min_Iout_Sin		-1.273m
+	Max_Iout_Slew		2.046m
+	Min_Iout_Slew		-1.397m
+	Max_Vin_Slew		1.6
+	Min_Vin_Slew		1.4
+	Max_Vin_Sine		1.6
+	Min_Vin_Sine		1.4
+	Max_Vout_Slew		4.909
+	Min_Vout_Slew		45.12m
+	Max_Vout_Sin		2.256
+	Min_Vout_Sin		43.25m
+	SlewRate_Pos		54.84M
+	SlewRate_Neg		-80.39M
+	Noise	corner	iBias_2 - 
+	In_Ref_noise		2.633u
+	DC	corner	Nominal - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Nominal - 
+	Z_in		3.827M
+	Z_out		4.229k
+	AC_Gain_at_DC		29.78
+	PM		70.49	Yes
+	GBW		56.44M
+	AC_Gain_abs		30.84
+	Trans	corner	Nominal - 
+	Max_Iout_Sin		1.316m
+	Min_Iout_Sin		-1.273m
+	Max_Iout_Slew		2.046m
+	Min_Iout_Slew		-1.397m
+	Max_Vin_Slew		1.6
+	Min_Vin_Slew		1.4
+	Max_Vin_Sine		1.6
+	Min_Vin_Sine		1.4
+	Max_Vout_Slew		4.909
+	Min_Vout_Slew		45.12m
+	Max_Vout_Sin		2.256
+	Min_Vout_Sin		43.25m
+	SlewRate_Pos		54.84M
+	SlewRate_Neg		-80.39M
+	Noise	corner	Nominal - 
+	In_Ref_noise		2.633u
+Design parameters: 
+	dc_off		-250u
+	RL		50k
+	CL		20p
+	AmpTr		200m
+	finTr		10M
+	mul		10
+	iBias		200u
+
+Interactive.1
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.1 completed. 
+Current time: Thu Sep 13 15:24:48 2018 

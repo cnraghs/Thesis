@@ -1,0 +1,152 @@
+Starting Single Run, Sweeps and Corners...
+
+Current time: Tue Sep 25 13:50:30 2018 
+Best design point: 1
+Design specs: 
+	DC	corner	AmpTr_0 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	AmpTr_0 - 
+	AC_Gain_at_DC		21.09
+	GBW		139.4M
+	PM		71.38	Yes
+	Trans	corner	AmpTr_0 - 
+	Max_Iout_Sin		109.3u
+	Min_Iout_Sin		-107.1u
+	SlewRate_Pos		40.21M
+	SlewRate_Neg		-44.52M
+	Noise	corner	AmpTr_0 - 
+	In_Ref_noise		53.48n
+	DC	corner	AmpTr_1 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	AmpTr_1 - 
+	AC_Gain_at_DC		21.09
+	GBW		139.4M
+	PM		71.38	Yes
+	Trans	corner	AmpTr_1 - 
+	Max_Iout_Sin		222.4u
+	Min_Iout_Sin		-206.4u
+	SlewRate_Pos		74.36M
+	SlewRate_Neg		-92.44M
+	Noise	corner	AmpTr_1 - 
+	In_Ref_noise		53.48n
+	DC	corner	AmpTr_2 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	AmpTr_2 - 
+	AC_Gain_at_DC		21.09
+	GBW		139.4M
+	PM		71.38	Yes
+	Trans	corner	AmpTr_2 - 
+	Max_Iout_Sin		457.8u
+	Min_Iout_Sin		-385.2u
+	SlewRate_Pos		116.3M
+	SlewRate_Neg		-196.4M
+	Noise	corner	AmpTr_2 - 
+	In_Ref_noise		53.48n
+	DC	corner	AmpTr_3 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	AmpTr_3 - 
+	AC_Gain_at_DC		21.09
+	GBW		139.4M
+	PM		71.38	Yes
+	Trans	corner	AmpTr_3 - 
+	Max_Iout_Sin		693u
+	Min_Iout_Sin		-554.5u
+	SlewRate_Pos		149.2M
+	SlewRate_Neg		-300M
+	Noise	corner	AmpTr_3 - 
+	In_Ref_noise		53.48n
+	DC	corner	AmpTr_4 - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	AmpTr_4 - 
+	AC_Gain_at_DC		21.09
+	GBW		139.4M
+	PM		71.38	Yes
+	Trans	corner	AmpTr_4 - 
+	Max_Iout_Sin		911.5u
+	Min_Iout_Sin		-702.8u
+	SlewRate_Pos		174M
+	SlewRate_Neg		-359.1M
+	Noise	corner	AmpTr_4 - 
+	In_Ref_noise		53.48n
+	DC	corner	Nominal - 
+	M1 Region		2	Yes
+	M2 Region		2	Yes
+	M3 Region		2	Yes
+	M4 Region		2	Yes
+	M5 Region		2	Yes
+	M6 Region		2	Yes
+	M7 Region		2	Yes
+	M8 Region		2	Yes
+	MnB1 Region		2	Yes
+	MnB2 Region		2	Yes
+	AC	corner	Nominal - 
+	AC_Gain_at_DC		21.09
+	GBW		139.4M
+	PM		71.38	Yes
+	Trans	corner	Nominal - 
+	Max_Iout_Sin		911.5u
+	Min_Iout_Sin		-702.8u
+	SlewRate_Pos		174M
+	SlewRate_Neg		-359.1M
+	Noise	corner	Nominal - 
+	In_Ref_noise		53.48n
+Design parameters: 
+	dc_off		-300u
+	CL		5p
+	AmpTr		200m
+	finTr		10M
+	iBias		200u
+	mul_bias		2
+	mul_n		18
+	mul_p		8
+
+Interactive.5
+Number of points completed: 1
+Number of simulation errors: 0
+Interactive.5 completed. 
+Current time: Tue Sep 25 13:51:25 2018 
