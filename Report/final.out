@@ -24,17 +24,17 @@
 \BOOKMARK [2][-]{subsection.3.3.2}{Test Setup}{section.3.3}% 24
 \BOOKMARK [1][-]{section.3.4}{The Complete Design}{chapter.3}% 25
 \BOOKMARK [2][-]{subsection.3.4.1}{Schematic}{section.3.4}% 26
-\BOOKMARK [2][-]{subsection.3.4.2}{Test Setup}{section.3.4}% 27
-\BOOKMARK [0][-]{chapter.4}{Simulation Results}{}% 28
-\BOOKMARK [1][-]{section.4.1}{DC Analysis}{chapter.4}% 29
-\BOOKMARK [1][-]{section.4.2}{AC Analysis}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.3}{Transient Analysis}{chapter.4}% 31
-\BOOKMARK [1][-]{section.4.4}{Noise Analysis}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.5}{Corner Simulation}{chapter.4}% 33
-\BOOKMARK [2][-]{subsection.4.5.1}{Process Variation}{section.4.5}% 34
-\BOOKMARK [2][-]{subsection.4.5.2}{Process and Supply Variation}{section.4.5}% 35
-\BOOKMARK [2][-]{subsection.4.5.3}{Process, Voltage and Temperature \(PVT\) variation}{section.4.5}% 36
-\BOOKMARK [2][-]{subsection.4.5.4}{Summary of PVT Corner Analysis}{section.4.5}% 37
+\BOOKMARK [0][-]{chapter.4}{Simulation Results}{}% 27
+\BOOKMARK [1][-]{section.4.1}{DC Analysis}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{AC Analysis}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.3}{Transient Analysis}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.4}{Noise Analysis}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.5}{Pragrammable Load}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.6}{Corner Simulation}{chapter.4}% 33
+\BOOKMARK [2][-]{subsection.4.6.1}{Process Variation}{section.4.6}% 34
+\BOOKMARK [2][-]{subsection.4.6.2}{Process and Supply Variation}{section.4.6}% 35
+\BOOKMARK [2][-]{subsection.4.6.3}{Process, Voltage and Temperature \(PVT\) variation}{section.4.6}% 36
+\BOOKMARK [2][-]{subsection.4.6.4}{Summary of PVT Corner Analysis}{section.4.6}% 37
 \BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 38
 \BOOKMARK [1][-]{section.5.1}{Summary of Results}{chapter.5}% 39
 \BOOKMARK [1][-]{section.5.2}{Outlook}{chapter.5}% 40
