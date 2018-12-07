@@ -3,9 +3,27 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Dimensions of the Transistors of the designed OTA\relax }}{7}{table.caption.27}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Dimensions of the Transistors of the designed OPAMP\relax }}{13}{table.caption.38}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Dimensions of the Transistors of the designed OTA\relax }}{8}{table.caption.27}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Output DC Bias Point of the OTA\relax }}{8}{table.caption.30}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Open Loop Gain, Phase Margin and Bandwidth of the OTA\relax }}{9}{table.caption.33}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Absolute values of DC Gain of the OTA\relax }}{10}{table.caption.35}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Input Referred Noise of the OTA\relax }}{10}{table.caption.37}
+\contentsline {table}{\numberline {3.6}{\ignorespaces Transient Parameters of the OTA\relax }}{12}{table.caption.41}
+\contentsline {table}{\numberline {3.7}{\ignorespaces Slew Rate of the OTA\relax }}{12}{table.caption.44}
+\contentsline {table}{\numberline {3.8}{\ignorespaces Power Supply Rejection Ratio of the OTA\relax }}{13}{table.caption.47}
+\contentsline {table}{\numberline {3.9}{\ignorespaces Input Impedance of the OTA\relax }}{14}{table.caption.50}
+\contentsline {table}{\numberline {3.10}{\ignorespaces Output Impedance of the OTA\relax }}{14}{table.caption.53}
+\contentsline {table}{\numberline {3.11}{\ignorespaces Dimensions of the Transistors of the designed OPAMP\relax }}{15}{table.caption.55}
+\contentsline {table}{\numberline {3.12}{\ignorespaces Simlation Results of the OPAMP\relax }}{22}{table.caption.68}
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces DC Bias Point at the output of the circuit\relax }}{25}{table.caption.73}
+\contentsline {table}{\numberline {4.2}{\ignorespaces DC Gain, Bandwidth and Phase Margin of the Overall System\relax }}{26}{table.caption.75}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Input Impedance of the Overall System\relax }}{27}{table.caption.77}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Output Impedance of the Overall System\relax }}{28}{table.caption.79}
+\contentsline {table}{\numberline {4.5}{\ignorespaces PSRR of the Overall System\relax }}{29}{table.caption.81}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Transient Parameters of the Overall System\relax }}{31}{table.caption.84}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Transconductance Gain of the Overall System\relax }}{32}{table.caption.86}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Slew Rate of the Overall System\relax }}{33}{table.caption.88}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 

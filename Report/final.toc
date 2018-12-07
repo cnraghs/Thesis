@@ -24,24 +24,32 @@
 \contentsline {section}{\numberline {3.2}OTA Design}{7}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Schematic}{7}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Test Setup}{8}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}OP AMP Design}{12}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Schematic}{12}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Test Setup}{13}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}The Complete Design}{19}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Schematic}{20}{subsection.3.4.1}
-\contentsline {chapter}{\numberline {4}Simulation Results}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}DC Analysis}{21}{section.4.1}
-\contentsline {section}{\numberline {4.2}AC Analysis}{22}{section.4.2}
-\contentsline {section}{\numberline {4.3}Transient Analysis}{24}{section.4.3}
-\contentsline {section}{\numberline {4.4}Noise Analysis}{26}{section.4.4}
-\contentsline {section}{\numberline {4.5}Pragrammable Load}{26}{section.4.5}
-\contentsline {section}{\numberline {4.6}Corner Simulation}{27}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Process Variation}{27}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Process and Supply Variation}{27}{subsection.4.6.2}
-\contentsline {subsection}{\numberline {4.6.3}Process, Voltage and Temperature (PVT) variation}{27}{subsection.4.6.3}
-\contentsline {subsection}{\numberline {4.6.4}Summary of PVT Corner Analysis}{27}{subsection.4.6.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}Summary of Results}{29}{section.5.1}
-\contentsline {section}{\numberline {5.2}Outlook}{29}{section.5.2}
-\contentsline {chapter}{\numberline {A}Appendix}{31}{Appendix.1.A}
+\contentsline {subsubsection}{DC Analysis}{8}{subsubsection*.28}
+\contentsline {subsubsection}{AC Analysis}{9}{subsubsection*.31}
+\contentsline {subsubsection}{Noise Analysis}{10}{subsubsection*.36}
+\contentsline {subsubsection}{Transient Analysis - Sine Input}{11}{subsubsection*.38}
+\contentsline {subsubsection}{Transient Analysis - Square Input}{12}{subsubsection*.42}
+\contentsline {subsubsection}{AC Analysis - PSRR}{13}{subsubsection*.45}
+\contentsline {subsubsection}{AC Analysis - Input Impedance}{13}{subsubsection*.48}
+\contentsline {subsubsection}{AC Analysis - Output Impedance}{14}{subsubsection*.51}
+\contentsline {section}{\numberline {3.3}OP AMP Design}{14}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Schematic}{15}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Test Setup}{16}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}The Complete Design}{22}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Schematic}{23}{subsection.3.4.1}
+\contentsline {chapter}{\numberline {4}Simulation Results}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}DC Analysis}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}AC Analysis}{26}{section.4.2}
+\contentsline {section}{\numberline {4.3}Transient Analysis}{30}{section.4.3}
+\contentsline {section}{\numberline {4.4}Noise Analysis}{33}{section.4.4}
+\contentsline {section}{\numberline {4.5}Pragrammable Load}{34}{section.4.5}
+\contentsline {section}{\numberline {4.6}Corner Simulation}{34}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Process Variation}{35}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Process and Supply Variation}{35}{subsection.4.6.2}
+\contentsline {subsection}{\numberline {4.6.3}Process, Voltage and Temperature (PVT) variation}{35}{subsection.4.6.3}
+\contentsline {subsection}{\numberline {4.6.4}Summary of PVT Corner Analysis}{35}{subsection.4.6.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Summary of Results}{37}{section.5.1}
+\contentsline {section}{\numberline {5.2}Outlook}{37}{section.5.2}
+\contentsline {chapter}{\numberline {A}Appendix}{39}{Appendix.1.A}
 \contentsfinish 
