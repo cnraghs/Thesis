@@ -1,11 +1,18 @@
 \chapter{Simulation Results}
+
+In this chapter, the simulation results for the overall system designed are discussed. And also the behavior of the amplifier for process variation, power supply variation and  temperature variation is discussed. 
+
 \section{DC Analysis}
+The test bench to perform the DC analysis is as shown in the Figure.\ref{fig:TB_ACDC}. 
+
+$V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV;  $V_{ac}$ = 1V; $R_{L}$ = 50$\Omega$.
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Test_Benches/Overall/ACDC.pdf}
 \caption{Test setup for DC Analysis}
+\label{fig:TB_ACDC}
 \end{figure}
-
+The DC Bias point at the output of the system is tabulated in the Table.\ref{tab:DC}. Output DC bias points are almost symmetric around 0V and vary from 180.1mV to -219.3mV.
 \begin{table} [H]
 \centering
 \begin{tabular}{@{}cc@{}}
@@ -26,17 +33,23 @@ Vbias (mV)			& Output DC Bias (mV)	\\ \midrule
 \bottomrule
 \end{tabular}
 \caption{DC Bias Point at the output of the circuit}
+\label{tab:DC}
 \end{table}
 
 
 \section{AC Analysis}
 
+The test bench is Figure.\ref{fig:TB_ACDC} is used for the AC analysis too. The magnitude of the AC source is set to 1V and as mentioned in the previous chapter, the voltage at the output will be the gain of the overall system.
+
+The plot of gain for different values of $V_{bias}$ is as shown in the Figure.\ref{fig:Gain}. The value of the open loop gain is between 18dB and 25dB.
+
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Plots/Ov_Gain.pdf}
 \caption{Plot of Gain vs Frequency for different Vbias}
+\label{fig:Gain}
 \end{figure}
-
+The results of the AC analysis are tabulated below in Table.\ref{tab:GAIN_GBW_PM}. The bandwidth is fairly constant at around 14MHz. But the phase margin starting to drop just a tad below 30 with a $V_{bias}$ of 700mV and beyond. 
 \begin{table} [H]
 \centering
 \begin{tabular}{@{}cccc@{}}
@@ -57,12 +70,14 @@ Vbias (mV)			& DC Gain (dB) 	& Bandwidth (MHz) 	& Phase Margin \\ \midrule
 \bottomrule
 \end{tabular}
 \caption{DC Gain, Bandwidth and Phase Margin of the Overall System}
+\label{tab:GAIN_GBW_PM}
 \end{table}
 
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Test_Benches/Overall/ZIN.pdf}
 \caption{Test setup to measure Input Impedance}
+\label{fig:TB_ZIN}
 \end{figure}
 
 \begin{table} [H]
@@ -85,12 +100,14 @@ Vbias (mV)			& Input Impedance (Mega Ohms)	\\ \midrule
 \bottomrule
 \end{tabular}
 \caption{Input Impedance of the Overall System}
+\label{tab:ZIN}
 \end{table}
 
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Test_Benches/Overall/ZOUT.pdf}
 \caption{Test setup to measure Output Impedance}
+\label{fig:TB_ZOUT}
 \end{figure}
 
 \begin{table} [H]
@@ -113,12 +130,14 @@ Vbias (mV)			& Output Impedance (Ohms)	\\ \midrule
 \bottomrule
 \end{tabular}
 \caption{Output Impedance of the Overall System}
+\label{tab:ZOUT}
 \end{table}
 
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Test_Benches/Overall/PSRR.pdf}
 \caption{Test setup to measure PSRR}
+\label{fig:TB_PSRR}
 \end{figure}
 
 \begin{table} [H]
@@ -141,6 +160,7 @@ Vbias (mV)			& PSRR (VDD)(uA/V)			& PSRR (VSS)(uA/V)	 \\ \midrule
 \bottomrule
 \end{tabular}
 \caption{PSRR of the Overall System}
+\label{tab:PSRR}
 \end{table}
 
 \section{Transient Analysis}
@@ -267,16 +287,81 @@ Vbias (mV)			& Input Referred Noise (nV/sqrt(Hz))	\\ \midrule
 
 \section{Programmable Load}
 
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}ccccccc@{}}
+\toprule
+RL (Ohms)		& DC Gain(dB)		& Bandwidth(MHz)		& Phase Margin			& Transconductance(mA/V)\\ \midrule
+35		& 22.2 		& 13.13		& 40.97		& 338.9		\\
+40		& 22.22 	& 13.55		& 40.22		& 296.8		\\
+45		& 22.25 	& 13.88		& 39.6		& 264		\\
+50		& 22.28 	& 14.16		& 39.08		& 237.7		\\
+55		& 22.3 		& 14.4		& 38.63		& 216.2		\\
+60		& 22.32 	& 14.6		& 38.24		& 198.3		\\
+65		& 22.34 	& 14.77		& 37.9	 	& 183.1		\\
+70		& 22.35 	& 14.92		& 37.6		& 170		\\
+\bottomrule
+\end{tabular}
+\caption{AC Parameters of the Overall System for a programmable load - 1}
+\end{table}
+
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}cc@{}}
+\toprule
+Parameter							& Value		\\ \midrule
+Input Impedance (Mega Ohms)			& 3.436 	\\
+Output Impedance (Ohms)				& 0.953 	\\
+PSRR (VDD)(uA/V)					& 67.32 	\\
+PSRR (VSS)(uA/V)					& 63.65 	\\
+Input Referred Noise (nV/sqrt(Hz))	& 36.79		\\
+\bottomrule
+\end{tabular}
+\caption{AC Parameters of the Overall System for a programmable load - 2}
+\end{table}
+
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Plots/Ov_Sine_RL.pdf}
 \caption{Plot of Output Current vs Time for different RL}
 \end{figure}
 
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}cccc@{}}
+\toprule
+RL (Ohms)			& Iout(max)(mA)		& Iout(min)(mA)		& Iout(p2p)(mA) \\ \midrule
+35					& 31.89 			& -35.89			& 67.77			\\
+40					& 27.92 			& -31.44			& 59.36			\\
+45					& 24.83 			& -27.97			& 52.8			\\
+50					& 22.36 			& -25.19			& 47.55			\\
+55					& 20.33 			& -22.91			& 43.24			\\
+60					& 18.65 			& -21.01			& 39.65			\\
+65					& 17.22 			& -19.4				& 36.61 		\\
+70					& 15.99 			& -18.02			& 34.01			\\
+\bottomrule
+\end{tabular}
+\caption{Maximum and Minimum Output Currents for a programmable load}
+\end{table}
+
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}cc@{}}
+\toprule
+Parameter							& Value		\\ \midrule
+HD2 (dBc)							& -34.6 			\\
+HD3 (dBc)							& -39.4 			\\
+Slew Rate (Rising Edge)(V/us)		& 10.28 			\\
+Slew Rate (Falling Edge)(V/us)		& -10.45 			\\
+\bottomrule
+\end{tabular}
+\caption{Transient Parameters of the Overall System for a programmable load}
+\end{table}
+
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Plots/Ov_Gm_RL.pdf}
-\caption{Plot of Output Current vs time for different RL}
+\caption{Plot of Transconductance vs RL}
 \end{figure}
 
 \section{Corner Simulation}
