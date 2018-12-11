@@ -1,34 +1,36 @@
 \select@language {ngerman}
 \select@language {english}
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces Specifications of the Design\relax }}{3}{table.caption.23}
+\contentsline {table}{\numberline {1.2}{\ignorespaces Components used as part of XT018 technology\relax }}{4}{table.caption.24}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Dimensions of the Transistors of the designed OTA\relax }}{8}{table.caption.27}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Output DC Bias Point of the OTA\relax }}{9}{table.caption.30}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Open Loop Gain, Phase Margin and Bandwidth of the OTA\relax }}{10}{table.caption.33}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Absolute values of DC Gain of the OTA\relax }}{11}{table.caption.35}
-\contentsline {table}{\numberline {3.5}{\ignorespaces Input Referred Noise of the OTA\relax }}{12}{table.caption.37}
-\contentsline {table}{\numberline {3.6}{\ignorespaces Transient Parameters of the OTA\relax }}{13}{table.caption.41}
-\contentsline {table}{\numberline {3.7}{\ignorespaces Slew Rate of the OTA\relax }}{14}{table.caption.44}
-\contentsline {table}{\numberline {3.8}{\ignorespaces Power Supply Rejection Ratio of the OTA\relax }}{15}{table.caption.47}
-\contentsline {table}{\numberline {3.9}{\ignorespaces Input Impedance of the OTA\relax }}{16}{table.caption.50}
-\contentsline {table}{\numberline {3.10}{\ignorespaces Output Impedance of the OTA\relax }}{17}{table.caption.53}
-\contentsline {table}{\numberline {3.11}{\ignorespaces Dimensions of the Transistors of the designed OPAMP\relax }}{18}{table.caption.55}
-\contentsline {table}{\numberline {3.12}{\ignorespaces Simlation Results of the OPAMP\relax }}{26}{table.caption.71}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Dimensions of the Transistors of the designed OTA\relax }}{8}{table.caption.30}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Output DC Bias Point of the OTA\relax }}{9}{table.caption.33}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Open Loop Gain, Phase Margin and Bandwidth of the OTA\relax }}{10}{table.caption.36}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Absolute values of DC Gain of the OTA\relax }}{11}{table.caption.38}
+\contentsline {table}{\numberline {3.5}{\ignorespaces Input Referred Noise of the OTA\relax }}{12}{table.caption.40}
+\contentsline {table}{\numberline {3.6}{\ignorespaces Transient Parameters of the OTA\relax }}{13}{table.caption.44}
+\contentsline {table}{\numberline {3.7}{\ignorespaces Slew Rate of the OTA\relax }}{14}{table.caption.47}
+\contentsline {table}{\numberline {3.8}{\ignorespaces Power Supply Rejection Ratio of the OTA\relax }}{15}{table.caption.50}
+\contentsline {table}{\numberline {3.9}{\ignorespaces Input Impedance of the OTA\relax }}{16}{table.caption.53}
+\contentsline {table}{\numberline {3.10}{\ignorespaces Output Impedance of the OTA\relax }}{17}{table.caption.56}
+\contentsline {table}{\numberline {3.11}{\ignorespaces Dimensions of the Transistors of the designed OPAMP\relax }}{18}{table.caption.58}
+\contentsline {table}{\numberline {3.12}{\ignorespaces Simlation Results of the OPAMP\relax }}{26}{table.caption.74}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces DC Bias Point at the output of the circuit\relax }}{30}{table.caption.76}
-\contentsline {table}{\numberline {4.2}{\ignorespaces DC Gain, Bandwidth and Phase Margin of the Overall System\relax }}{31}{table.caption.78}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Input Impedance of the Overall System\relax }}{32}{table.caption.80}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Output Impedance of the Overall System\relax }}{33}{table.caption.82}
-\contentsline {table}{\numberline {4.5}{\ignorespaces PSRR of the Overall System\relax }}{34}{table.caption.84}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Transient Parameters of the Overall System\relax }}{35}{table.caption.87}
-\contentsline {table}{\numberline {4.7}{\ignorespaces Transconductance Gain of the Overall System\relax }}{36}{table.caption.89}
-\contentsline {table}{\numberline {4.8}{\ignorespaces Slew Rate of the Overall System\relax }}{37}{table.caption.91}
-\contentsline {table}{\numberline {4.9}{\ignorespaces Input Referred Noise of the Overall System\relax }}{38}{table.caption.93}
-\contentsline {table}{\numberline {4.10}{\ignorespaces AC Parameters of the Overall System for a programmable load - 1\relax }}{39}{table.caption.94}
-\contentsline {table}{\numberline {4.11}{\ignorespaces AC Parameters of the Overall System for a programmable load - 2\relax }}{39}{table.caption.95}
-\contentsline {table}{\numberline {4.12}{\ignorespaces Maximum and Minimum Output Currents for a programmable load\relax }}{40}{table.caption.97}
-\contentsline {table}{\numberline {4.13}{\ignorespaces Transient Parameters of the Overall System for a programmable load\relax }}{40}{table.caption.98}
+\contentsline {table}{\numberline {4.1}{\ignorespaces DC Bias Point at the output of the circuit\relax }}{30}{table.caption.79}
+\contentsline {table}{\numberline {4.2}{\ignorespaces DC Gain, Bandwidth and Phase Margin of the Overall System\relax }}{31}{table.caption.81}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Input Impedance of the Overall System\relax }}{32}{table.caption.83}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Output Impedance of the Overall System\relax }}{33}{table.caption.85}
+\contentsline {table}{\numberline {4.5}{\ignorespaces PSRR of the Overall System\relax }}{34}{table.caption.87}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Transient Parameters of the Overall System\relax }}{35}{table.caption.90}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Transconductance Gain of the Overall System\relax }}{36}{table.caption.92}
+\contentsline {table}{\numberline {4.8}{\ignorespaces Slew Rate of the Overall System\relax }}{37}{table.caption.94}
+\contentsline {table}{\numberline {4.9}{\ignorespaces Input Referred Noise of the Overall System\relax }}{38}{table.caption.96}
+\contentsline {table}{\numberline {4.10}{\ignorespaces AC Parameters of the Overall System for a programmable load - 1\relax }}{39}{table.caption.97}
+\contentsline {table}{\numberline {4.11}{\ignorespaces AC Parameters of the Overall System for a programmable load - 2\relax }}{39}{table.caption.98}
+\contentsline {table}{\numberline {4.12}{\ignorespaces Maximum and Minimum Output Currents for a programmable load\relax }}{40}{table.caption.100}
+\contentsline {table}{\numberline {4.13}{\ignorespaces Transient Parameters of the Overall System for a programmable load\relax }}{40}{table.caption.101}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 
