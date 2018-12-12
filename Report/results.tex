@@ -422,7 +422,44 @@ And finally, we have the plot of transconductance versus the load resistance as 
 \end{figure}
 
 \section{Corner Simulation}
+
+Corner simulations are performed to verify that the circuit works at all possible conditions of process, supply voltage and temperature. Analog circuit designs that perform sufficiently well across these corners are to be considered a robust design.
+
 \subsection{Process Variation}
+
+Process variation is the naturally occurring variation in the attributes of transistors (length, widths, oxide thickness) when ICs are fabricated. In general there are 5 corners - tt, ff, ss, fs, sf. Transistors can be typical, fast or slow. The first letter indicates the PMOS and the second letter indicates the NMOS. However, as part of XT018 technology, the corners are termed as - tm, wp, ws, wo, wz. The meaning and their translation to the general conventions are described in Table.\ref{tab:Process_Corners}. The process corners of Capacitors and Resistors too follow a similar naming convention but with only 3 corners - tm (typical), wp(minimum), ws(maximum).
+
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}ccc@{}}
+\toprule
+Corner	& Expansion						& Translation	\\ \midrule
+tm		& Typical Mean Condition 		& tt			\\
+wp		& Worst Case Power Condition	& ff			\\
+ws		& Worst Case Speed Condition 	& ss			\\
+wo		& Worst Case One Condition 		& fs			\\
+wz		& Worst Case Zero Condition 	& sf			\\
+\bottomrule
+\end{tabular}
+\caption{Different Corners for MOS Transistors in XT018 Technology}
+\label{tab:Process_Corners}
+\end{table}
+
+A total of 45 corners are simulated for 3 different values of $V_{bias}$ - 150mV, 400mV and 700mV. And the results are provided in the subsequent sections.
+
 \subsection{Process and Supply Variation}
+
+In addition to process variation, the system responds to power supply variations too. 3 different corners are obtained by evaluating the power supply with $\pm$10\% from the nominal value. Therefore, we get 3 corners for $V_{DD}$ - 2.5V, 2.25V, 2.75V and 3 corners for $V_{SS}$ - -2.5V, -2.25V, -2.75V. The total number of corners in this case are 405. And the results are discussed in the subsequent sections.
+ 
 \subsection{Process, Voltage and Temperature (PVT) variation}
+
+Another possible variation is seen in the temperature parameter. The PVT corner simulations are performed at the following corners:
+\begin{itemize}
+\item All Process corners mentioned in Section 4.6.1.
+\item $\pm$10\% variations of $V_{DD}$ i.e., 2.5V, 2.25V, 2.75V and $V_{SS}$ i.e., -2.5V, -2.25V, -2.75V.
+\item Three temperature conditions: -25$^0$C, 25$^0$C and 80$^0$C.
+\end{itemize}
+
+Therefore, there are 1215 corners in total. The results are provided in the subsequent sections.
+
 \subsection{Summary of PVT Corner Analysis}
