@@ -133,16 +133,19 @@ Darmstadt, 20\textsuperscript{th} December 2018 : $\underset{\text{\normalsize(S
 
 \input{theory}
 
-\input{design}
+\input{ota}
 
-\input{results}
+\input{opamp}
+
+\input{overall}
+
+\input{corners}
 
 \input{conclusion}
 
 \begin{appendices}
 \include{appendix}
 \end{appendices}
-
 
 
 

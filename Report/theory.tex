@@ -38,19 +38,8 @@ The Conventional OTA considered in the previous section is a Class A type of amp
 \item Cascode Voltage Flipped Follower based OTA
 \end{itemize}
 
-One of the figures of merit to compare these OTAs is the Current Enhancement factor (CE). $CE = I_{out-max}/2I_{bias}$. Class A amplifiers typically have a CE of 1. Class AB OTAs have a high CE value. A family of OTA denoted as $Super Class-AB OTA$ have remarkably large CE values. Typical value of CE ranges from 100 to 500 depending on the implementation of the Class-AB differential pair and the output branches. Cascode Voltage Flipped Follower based OTA is one such example of a Super Class-AB OTA. These OTAs have the largest reported CE in literature.
+One of the figures of merit to compare these OTAs is the Current Enhancement factor (CE). $CE = I_{out-max}/2I_{bias}$. Class A amplifiers typically have a CE of 1. Class AB OTAs have a high CE value. A family of OTA denoted as $Super Class-AB OTA$ have remarkably large CE values. Typical value of CE ranges from 100 to 500 depending on the implementation of the Class-AB differential pair and the output branches. Cascode Voltage Flipped Follower based OTA is one such example of a Super Class-AB OTA. These OTAs have the largest reported CE in literature. Some of the OTA designs considered are explained in the next chapter.
 
-\subsubsection{Super Class AB OTA}
-The schematic of a Super Class AB OTA based on a Cascode Voltage Flipped Follower is as shown in Figure.\ref{fig:OTA_Class_AB}. It uses a Class-AB differential pair to boost the bias current by a factor of $k_1$. Typical values of $k_1$ range from 30 to 60 depending on the implementation of the Class-AB differential pair and supply voltages. An additional current boosting by a factor of $k_2$ is obtained in the output branches. The typical values of $k_2$ range from 3-8. Using cascode transistors maximum output current and subsequently the CE values are reduced. But lack of cascode transistors results in very low open loop gain. Therefore, a simple power efficient technique is used that allows the use of cascode transistors in order to achieve even higher open loop gain and gain bandwidth by maintaining a large CE value. This is done with the help of dynamically biasing the cascode transistors using RC networks (indicated in purple in the figure). The capacitor $C_{bat}$ acts as a floating battery for dynamic operations that transfers variations in the gate voltages of mirror transistors to the gate of the cascode transistors. This increases the $V_{DS}$ of the mirror transistors allowing high output currents. Cascode Voltage Flipped Follower (indicated in red in the figure) is charaterized by high input swing and can operate over a wide range of supply voltages. It uses local shunt feedback to provide nodes A and B with very low impedance.
-
-\begin{figure} [H]
-\centering
-\includegraphics[scale=0.65]{Figures/Misc/OTA_Class_AB.pdf}
-\caption{Super Class-AB OTA with a Cascode Voltage Flipped Follower}
-\label{fig:OTA_Class_AB}
-\end{figure}
-
-Taking into account the complexity, output current requirements and load requirements, this design will not be considered further as part of this research work. The reason being - a high current output of this Class AB OTA would give rise to another output buffer. And the capacitors needed to consume such a high current would be in the order of several pico Farads. Having such a big capacitor inside an IC is not recommended. Also, considering how complex CMOS Current Feedback Amplifiers are, it is wise to stick to a simpler design that does the same work but with some minor trade-offs.
 \vfill
 \clearpage
 
@@ -79,3 +68,101 @@ The biasing to the differential input pair is provided by the current mirror for
 \vfill
 \clearpage
 \section{The Gm/Id Methodology}
+
+Good analog design is an art, not a science. Best work are still done on napkins and not on EDA tools, i.e., using Hand Calculations. However in recent times, in most cases at least, the equations which were once valid have become inadequate. The ability of these equations are limited to only certain cases. The famous equation for $I_{ds}$ is naturally the first thing that comes to mind when someone says Square Law, which is given by 
+$$I_{ds} = \frac{\mu \cdot C_{ox}\cdot W}{2\cdot L}.(V_{gs}-V_{th})^2$$
+
+The square law becomes linear in short-channel limit and thus they are suitable only for long channel MOSFETs. The block diagram in Figure.\ref{fig:Square_Law} indicates the failure in Square law, especially in deep submicron technologies.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1]{Figures/Misc/PDFs/Square_Law.pdf}
+\caption{Square Law Methodology}
+\label{fig:Square_Law}
+\end{figure}
+
+The values obtained from hand calculations for short channel MOSFETs are far away from accuracy according to the requirements and thus there will be a huge gap in the spice simulation results and the specifications. The reason why this methodology has still not been a disaster is that fact that it over-predicts the $V_{dsat}$, but keeps the transistors in saturation. But in strong saturation, the gain from the MOSFET is not very high. So this methodology skips the possibility of fine-tuning the device in the nascent stages of design.
+
+The $G_m$/$I_D$ methodology on the other hand, is fundamentally more practical than theoretical. This methodology uses pre-computed spice data in hand calculation, thereby providing accurate results. The diagram in Figure.\ref{fig:GmID} shows that this methodology uses design tables which are pre-computed and using those tables, the hand calculations are made, which are rather simple and straight forward. 
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1]{Figures/Misc/PDFs/GmID.pdf}
+\caption{Gm/ID Methodology}
+\label{fig:GmID}
+\end{figure}
+
+To obtain the design tables, we need to look at a transistor in terms of width-independent figures of merit that are linked to the design specification. The design trade-offs have to be considered in terms of MOSFET's inversion level by using $G_m$/$I_D$ as a proxy. The circuit in Figure.\ref{fig:GmID_Ckt} is used to simulate the figures of merit parameters that are necessary to make design decisions. The width of the transistor $M_0$ is set to 5$\mu$m and the length is kept as a variable. The value of $V_{ds}$ is set to a value that is half of the value of the power supply. As part of this work, the supply we use is +2.5V and -2.5V. So technically we have a voltage difference of 5V and therefore, the value of $V_{ds}$ is set to 2.5V.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1]{Figures/Misc/PDFs/GmID_NMOS.pdf}
+\caption{Setup for simulating GmID parameters}
+\label{fig:GmID_Ckt}
+\end{figure}
+The ocean script used to simulate this circuit and to obtain the data which is used to generates the graphs below is attached in the Appendix A. The figures of merit considered as part of this work for $G_m$/$I_D$ methodology are $G_m$/$I_D$, $f_T$(transit frequency), $G_m$/$G_{ds}$(intrinsic gain), $I_D$(drain current), $f_TG_m$/$I_D$ (design trade-off).
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1]{Figures/Misc/PDFs/nmos_len_vovgmid.pdf}
+\caption{$G_m$/$I_D$ vs $V_{ov}$}
+\label{fig:vovgmid}
+\end{figure}
+
+The plot of $G_m$/$I_D$ versus the Overdrive voltage is shown in Figure.\ref{fig:vovgmid}. 
+The value of $G_m$/$I_D$ is very high when the overdrive voltage is less than zero, i.e., when the transistor is in weak inversion. The gain starts dropping with increase in overdrive voltage and it becomes close to zero and constant and theat is where the transistor goes into strong inversion. The response to variation in length is minimal for this parameter.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1]{Figures/Misc/PDFs/nmos_len_gmidft.pdf}
+\caption{$f_T$ vs $G_m$/$I_D$}
+\label{fig:gmidft}
+\end{figure}
+
+Transit frequency is defined as the ratio of the transconductance $G_m$ to its gate to source capacitance $C_{gs}$. The plot of transit frequency against $G_m$/$I_D$ is as shown in Figure.\ref{fig:gmidft}. The figure of merit is used to indicate the speed of operation of the MOSFET. And from the plot, it can be seen that the speed is high when the value of $G_m$/$I_D$ is low. So this is quite the opposite to the gain parameter that was discussed with the previous plot. So here we have our first trade-off between high gain and high speed.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1]{Figures/Misc/PDFs/nmos_len_gmidftgmid.pdf}
+\caption{$f_TG_m/I_D$ vs $G_m$/$I_D$}
+\label{fig:gmidftgmid}
+\end{figure}
+
+To evaluate the trade-off mentioned above, the product of the two figures of merit are considered and then plotted against the $G_m$/$I_D$ parameter and is plotted as shown in Figure.\ref{fig:gmidftgmid}. The product is highest in moderate inversion. And this is called as the sweet spot and this provides the best possible trade-off between gain and speed. This is something that cannot be obtained using the square law as moderate inversion range is never utilized in that methodology.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1]{Figures/Misc/PDFs/nmos_len_gmidgmgds.pdf}
+\caption{$G_m/G_{ds}$ vs $G_m$/$I_D$}
+\label{fig:gmidgmgds}
+\end{figure}
+
+The intrinsic gain $G_m/G_{ds}$ is plotted against $G_m$/$I_D$ as shown in Figure.\ref{fig:gmidgmgds}. This along with Figure.\ref{fig:gmidft} form a powerful tool in choosing the value of the channel length that meets the gain requirements. The plot in Figure.\ref{fig:vovgmid} did not show too much of a variation with respect to length. But using this plot it is easy to decide the channel length of the transistor. It is clear that the smallest channel length in moderate inversion provide the highest gain with a decent trade-off with respect to speed, i.e., transist frequency.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1]{Figures/Misc/PDFs/nmos_len_vovid.pdf}
+\caption{$I_D$ vs $V_{ov}$}
+\label{fig:vovid}
+\end{figure}
+
+The final plot we have here is to choose the drain current for the overdrive voltage needed. It is as shown in Figure.\ref{fig:vovid}. Ultimately, it is the overdrive voltage that determines the region of operation of the transistor. So with the overdrive voltage known and the length of the transistor decided, the drain current can be easily chosen.
+
+An important thing not to forget is that the figures of merit simulated and plotted are independent of variation in the width of the transistor. So once, the other parameters are decided, the value of W can be chose using the Id/W plot. The steps involved in the general design flow of this methodology is summarized below.
+\begin{itemize}
+\item Determine $G_m$ from (design objectives)
+\item Pick the channel length L
+	\begin{itemize}
+	\item Short channel $\rightarrow$ high $f_T$ (high speed)
+	\item Long channel $\rightarrow$ high intrinsic gain
+	\end{itemize}
+\item Pick $G_m$/$I_D$ (or $f_T$)
+	\begin{itemize}
+	\item Large $G_m$/$I_D$ $\rightarrow$ low power, large signal swing
+	\item Small $G_m$/$I_D$ $\rightarrow$ high $f_T$ (high speed)
+	\end{itemize}
+\item Determine $I_D$ (from $G_m$ and $G_m$/$I_D$)
+\item Determine W (from $I_D$/W)
+\end{itemize}
+
+There are many other possibilities to design using this methodology and this depends the specifications, constraints and objectives. However, as part of this thesis the steps mentioned above are followed and the plots discussed above are used to design the differential pair of transistors for all the stages of the system. And the other transistors' dimensions were finalized using simulation and output results.

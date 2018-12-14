@@ -5,7 +5,7 @@
 \contentsline {chapter}{Zusammenfassung}{iii}{section*.6}
 \contentsline {chapter}{Acknowledgments}{v}{section*.9}
 \contentsline {chapter}{List of Figures}{xi}{section*.18}
-\contentsline {chapter}{List of Tables}{xiii}{section*.21}
+\contentsline {chapter}{List of Tables}{xvii}{section*.21}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Novel DC Current Transformer}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Specification}{3}{section.1.2}
@@ -14,43 +14,65 @@
 \contentsline {section}{\numberline {2.1}The Operational Transconductance Amplifier}{5}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Conventional Current Mirror OTA}{5}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Other Topologies}{7}{subsection.2.1.2}
-\contentsline {subsubsection}{Super Class AB OTA}{7}{subsubsection*.27}
-\contentsline {section}{\numberline {2.2}The Opeartional Amplifier}{9}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Miller Compensation OP AMP}{9}{subsection.2.2.1}
-\contentsline {section}{\numberline {2.3}The Gm/Id Methodology}{11}{section.2.3}
-\contentsline {chapter}{\numberline {3}Design and Implementation}{13}{chapter.3}
-\contentsline {section}{\numberline {3.1}OTA Design}{13}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Schematic}{13}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Test Setup}{15}{subsection.3.1.2}
-\contentsline {subsubsection}{DC Analysis}{15}{subsubsection*.33}
-\contentsline {subsubsection}{AC Analysis}{15}{subsubsection*.36}
-\contentsline {subsubsection}{Noise Analysis}{17}{subsubsection*.41}
-\contentsline {subsubsection}{Transient Analysis - Sine Input}{18}{subsubsection*.43}
-\contentsline {subsubsection}{Transient Analysis - Square Input}{19}{subsubsection*.47}
-\contentsline {subsubsection}{AC Analysis - PSRR}{20}{subsubsection*.50}
-\contentsline {subsubsection}{AC Analysis - Input Impedance}{21}{subsubsection*.53}
-\contentsline {subsubsection}{AC Analysis - Output Impedance}{22}{subsubsection*.56}
-\contentsline {section}{\numberline {3.2}OP AMP Design}{23}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Schematic}{23}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Test Setup}{24}{subsection.3.2.2}
-\contentsline {subsubsection}{DC Analysis}{25}{subsubsection*.61}
-\contentsline {subsubsection}{AC Analysis}{27}{subsubsection*.65}
-\contentsline {subsubsection}{Transient Analysis}{30}{subsubsection*.71}
-\contentsline {section}{\numberline {3.3}The Complete Design}{32}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Schematic}{33}{subsection.3.3.1}
-\contentsline {chapter}{\numberline {4}Simulation Results}{35}{chapter.4}
-\contentsline {section}{\numberline {4.1}DC Analysis}{35}{section.4.1}
-\contentsline {section}{\numberline {4.2}AC Analysis}{36}{section.4.2}
-\contentsline {section}{\numberline {4.3}Transient Analysis}{40}{section.4.3}
-\contentsline {section}{\numberline {4.4}Noise Analysis}{43}{section.4.4}
-\contentsline {section}{\numberline {4.5}Programmable Load}{45}{section.4.5}
-\contentsline {section}{\numberline {4.6}Corner Simulation}{47}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Process Variation}{47}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Process and Supply Variation}{48}{subsection.4.6.2}
-\contentsline {subsection}{\numberline {4.6.3}Process, Voltage and Temperature (PVT) variation}{48}{subsection.4.6.3}
-\contentsline {subsection}{\numberline {4.6.4}Summary of PVT Corner Analysis}{48}{subsection.4.6.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{49}{chapter.5}
-\contentsline {section}{\numberline {5.1}Summary of Results}{49}{section.5.1}
-\contentsline {section}{\numberline {5.2}Outlook}{49}{section.5.2}
-\contentsline {chapter}{\numberline {A}Appendix}{51}{Appendix.1.A}
+\contentsline {section}{\numberline {2.2}The Opeartional Amplifier}{8}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Miller Compensation OP AMP}{8}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}The Gm/Id Methodology}{10}{section.2.3}
+\contentsline {chapter}{\numberline {3}Operational Transconductance Amplifier}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Design and Implementaion}{17}{section.3.1}
+\contentsline {subsubsection}{Commercial OTA}{17}{subsubsection*.37}
+\contentsline {subsubsection}{Self-Cascode OTA}{18}{subsubsection*.39}
+\contentsline {subsubsection}{2-stage Feed Forward Miller Compensation OTA}{19}{subsubsection*.41}
+\contentsline {subsubsection}{A robust Feed Forward scheme without Miller capacitance}{20}{subsubsection*.43}
+\contentsline {subsubsection}{Super Class AB OTA}{21}{subsubsection*.45}
+\contentsline {subsubsection}{Conventional OTA}{22}{subsubsection*.47}
+\contentsline {subsection}{\numberline {3.1.1}Schematic}{23}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.2}Test Setup}{25}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}DC Analysis}{27}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}AC Analysis}{27}{subsection.3.2.2}
+\contentsline {subsubsection}{Gain, Bandwidth and Phase Margin}{27}{subsubsection*.52}
+\contentsline {subsubsection}{PSRR}{29}{subsubsection*.57}
+\contentsline {subsubsection}{Input Impedance}{30}{subsubsection*.59}
+\contentsline {subsubsection}{Output Impedance}{30}{subsubsection*.61}
+\contentsline {subsection}{\numberline {3.2.3}Noise Analysis}{30}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Transient Analysis}{31}{subsection.3.2.4}
+\contentsline {subsubsection}{Sine Input}{31}{subsubsection*.64}
+\contentsline {subsubsection}{Square Input}{32}{subsubsection*.67}
+\contentsline {section}{\numberline {3.3}Summary}{33}{section.3.3}
+\contentsline {chapter}{\numberline {4}Operational Amplifier}{35}{chapter.4}
+\contentsline {section}{\numberline {4.1}Design and Implementation}{35}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Schematic}{35}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Test Setup}{37}{section.4.2}
+\contentsline {subsubsection}{DC Analysis}{38}{subsubsection*.72}
+\contentsline {subsubsection}{AC Analysis}{38}{subsubsection*.73}
+\contentsline {subsubsection}{Transient Analysis}{39}{subsubsection*.75}
+\contentsline {section}{\numberline {4.3}Summary}{41}{section.4.3}
+\contentsline {chapter}{\numberline {5}Overall System}{43}{chapter.5}
+\contentsline {section}{\numberline {5.1}Schematic}{44}{section.5.1}
+\contentsline {section}{\numberline {5.2}Test Setup}{46}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}DC Analysis}{47}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}AC Analysis}{47}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Transient Analysis}{50}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Noise Analysis}{53}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Programmable Load}{54}{section.5.3}
+\contentsline {section}{\numberline {5.4}Summary of Results}{57}{section.5.4}
+\contentsline {chapter}{\numberline {6}Corner Simulation}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Process Variation}{59}{section.6.1}
+\contentsline {subsubsection}{Lowest $V_{bias}$}{60}{subsubsection*.103}
+\contentsline {subsubsection}{Middle $V_{bias}$}{66}{subsubsection*.116}
+\contentsline {subsubsection}{Highest $V_{bias}$}{72}{subsubsection*.129}
+\contentsline {section}{\numberline {6.2}Process and Supply Variation}{77}{section.6.2}
+\contentsline {subsubsection}{Lowest $V_{bias}$}{78}{subsubsection*.142}
+\contentsline {subsubsection}{Middle $V_{bias}$}{84}{subsubsection*.155}
+\contentsline {subsubsection}{Highest $V_{bias}$}{90}{subsubsection*.168}
+\contentsline {section}{\numberline {6.3}Process, Voltage and Temperature (PVT) variation}{95}{section.6.3}
+\contentsline {subsubsection}{Lowest $V_{bias}$}{96}{subsubsection*.181}
+\contentsline {subsubsection}{Middle $V_{bias}$}{102}{subsubsection*.194}
+\contentsline {subsubsection}{Highest $V_{bias}$}{108}{subsubsection*.207}
+\contentsline {section}{\numberline {6.4}Summary of PVT Corner Analysis}{114}{section.6.4}
+\contentsline {chapter}{\numberline {7}Conclusion}{115}{chapter.7}
+\contentsline {section}{\numberline {7.1}Summary of Results}{115}{section.7.1}
+\contentsline {section}{\numberline {7.2}Outlook}{115}{section.7.2}
+\contentsline {chapter}{\numberline {A}Appendix}{117}{Appendix.1.A}
+\contentsline {section}{\numberline {A.1}OPAMP}{117}{section.1.A.1}
+\contentsline {section}{\numberline {A.2}Corner Simulation}{118}{section.1.A.2}
 \contentsfinish 
