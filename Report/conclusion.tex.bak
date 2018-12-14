@@ -1,3 +1,40 @@
 \chapter{Conclusion}
+A high output current transconductance amplifier was designed and implemented using the XT018 SOI technology from XFAB. The amplifier consists of two stages - 
+\begin{enumerate}
+\item A programmable operational transconductance amplifier that is based on conventional current mirror technique. The output voltage is controlled by an external voltage that indrectly controls the bias current.
+\item An operational amplifier based on the two-stage Miller compensation technique is used as a voltage buffer. This stage produces high currents due the bulky dimensions of the common source amplifier.
+\end{enumerate}
+The range of currents produced by this system is from $\pm$15mA to $\pm$30mA. The programmable parameter - the external bias voltage is swept from 150mV to 700mV and the output is measured across a 50$\Omega$ load resistor. For this setup though, the DC bias voltage at the output of the amplifier is not a constant as the variable parameter is the bias current. However, the design is tweaked in such a way that the variation is minimal. Another set of result is provided with a fixed external voltage, a fixed bias current but a variable load resistor. In this case, the same range of output current is obtained for an external bias voltage of 450mV and the load varying from 35$\Omega$ to 70$\Omega$. The advantage of this setup in comparison to the previous setup is the fact that the DC Bias voltage at the output does not vary with variation in the programmable parameter. The operating bandwidth for both sets of results is around 14MHz and the 2nd and 3rd harmonic distortion are less than -30dB with respect to the carrier frequency.
+
 \section{Summary of Results}
+
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}cccc@{}}
+\toprule
+Parameter						& Value/Specification			& Programmable Voltage			& Programmable Resistor	\\ \midrule
+Circuit Design					& Programmability				& External Votlage $V_{bias}$	& Load Resistor $R_L$	\\
+Transconductance Gain(Gm)		& 75 .. 140 mA/V				& 158.8 .. 298.5 mA/V			& 170 .. 338.9 mA/V		\\
+Linear Input Voltage Range		& $\pm$200 mV					& $\pm$100 mV					& $\pm$100 mV			\\
+Output Current Range			& $\pm$15 mA 					& +18 mA .. -13 mA				& +15 mA .. -18 mA		\\
+Bandwidth						& 10 MHz						& 13.8 MHz						& 13.13 MHz				\\
+Slew Rate						& $\pm$900 V/$\mu$s				& $\pm$10.82 V/$\mu$s			& $\pm$10.28 V/$\mu$s	\\
+Rise/Fall time					& 4.4 ns						& 22.7 ns						& 23.5 ns				\\
+Input Referred Noise			& 3 nV/$\sqrt{Hz}$ @few KHz		& 46.64 nV/$\sqrt{Hz}$ @1MHz	& 36.79 nV/$\sqrt{Hz}$ @1MHz\\
+Input Impedance					& 0.5 M$\Omega$					& 3.394 M$\Omega$				& 3.436 M$\Omega$		\\
+Output Impedance				& 55 K$\Omega$					& 0.9415 $\Omega$				& 0.953 $\Omega$		\\
+HD2								& Less than -75 dBc				& -34.72 dBc					& -34.6 dBc				\\
+HD3								& Less than -80 dBc				& -33.61 dBc					& -39.4 dBc				\\
+Open Loop Voltage Gain			& Not less than+5 V/V			& 8.41 V/V						& 12.9 V/V				\\
+PSRR							& $\pm$20 $\mu$A/V				& 97.76 $\mu$A/V				& 67.32 $\mu$A/V		\\
+\bottomrule
+\end{tabular}
+\caption{Summary of Results}
+\label{tab:Results}
+\end{table}
+
+Table.\ref{tab:Results} summarizes the results of the overall system and compares it with the actual specificaitons. First remark here is about linear input voltage range. Due to varying bias currents of the OTA, the gain keeps varying too. And to avoid saturation, the gain must be low. But OTAs in general have very high gain than a conventional OP AMP. So for this reason, to avoid saturation at the output, the input voltage range is reduced to 100mV instead of 200mV. And consequently, the transconductance parameter is double of what it should have been. The other parameters are picked from the commercial OTA OPA860 (citation) hence it is bit tricky to reach all of those specifications considering that the topology, technology and the power supply requirements are completely different. The key thing here is to note the output impedance requirements. Ideally current sources have infinite output impedance. But practially speaking, for a high current amplifier, with an output buffer, a high impedance at the output node is impractical to achieve.
+
 \section{Outlook}
+
+The amplifier designed has been simulated at all corners. The OTA can be used to test the Closed loop NDCCT. There is no second thought that there is room for improvement and further optimization of the amplifier to better meet the specifications. But this needs more research, and implementation of blocks like slew rate enhancer, current feedback amplifier, and possibly an emitter follower to amplify the current further if necessary.

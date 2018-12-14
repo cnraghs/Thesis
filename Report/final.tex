@@ -113,13 +113,22 @@ Darmstadt, 20\textsuperscript{th} December 2018 : $\underset{\text{\normalsize(S
 \addcontentsline{toc}{chapter}{Abstract}
 \chapter*{Abstract}
 %\let\cleardoublepage\clearpage
+This thesis details the design and implementation of a radiation hardened high output current transconductance amplifier which can provide rail-to-rail currents between 15mA to 30mA across a 50$\Omega$ load resistor for an input rail-to-rail voltage of 100mV. The bias voltage being the programmable parameter ranges from 150mV to 700mV. The design and impelementation was carried in Cadence Virtuoso Design Environment using XT018 SOI technology from XFAB, to make the design radiation hard. The system consists of two stages - the conventional current mirror based Operational Transconductance Amplifier, which is used as a programmable stage followed by a two-stage Miller compensated Operational Amplifier, which is used as a voltage buffer that generates high currents. Two different sets of results are provided. The first of which is - with the bias current of the first stage being the programmable parameter. The bias current in controlled by a PMOS transistor whose gate voltage is an input of the system. Another set of result is provided with the load being a programmable parameter. For this case, the bias voltage is kept at a constant value of 450mV and the load is varied from 35$\Omega$ to 70$\Omega$. The system provides a bandwidth of 10MHz because it is targetted for low frequency applications. The whole system is intended to be used as part of a Closed-loop Novel DC Current Transformer circuit by providing a feedback current that cancels the change in magnetic field of the ion-beam. The system is simulated at all control settings and across PVT corners to verify its robustness. All simulation results are based on Schmetic level design.
 
 \addcontentsline{toc}{chapter}{Zusammenfassung}
 \chapter*{Zusammenfassung}
 
-\addcontentsline{toc}{chapter}{Acknowledgments}
-\chapter*{Acknowledgments}
+In dieser Arbeit wird der Entwurf und die Implementierung eines strahlungsgeh\"arteten Transkonduktanzverst\"arkers mit hohem Ausgangsstrom beschrieben, der Schiene-zu-Schiene-Str\"ome zwischen 15 mA und 30 mA \"uber einen 50$\Omega$ Lastwiderstand f\"ur eine Eingangs-Schiene-zu-Schiene-Spannung von 100 mV liefern kann. Die Vorspannung, die der programmierbare Parameter ist, reicht von 150 mV bis 700 mV. Das Design und die Impelementation wurden in Cadence Virtuoso Design Environment unter Verwendung der XT018 SOI-Technologie von XFAB durchgef\"uhrt, um die Designstrahlung zu erschweren. Das System besteht aus zwei Stufen - dem konventionellen, auf einem Stromspiegel basierenden, betrieblichen Transkonduktanzverst\"arker, der als programmierbare Stufe verwendet wird, gefolgt von einem zweistufigen Miller-kompensierten Operationsverstärker, der als Spannungspuffer verwendet wird, der hohe Str\"ome erzeugt. Es werden zwei verschiedene S\"atze von Ergebnissen bereitgestellt. Die erste davon ist - wobei der Vorspannungsstrom der ersten Stufe der programmierbare Parameter ist. Der Vorspannungsstrom wird von einem PMOS-Transistor gesteuert, dessen Gatespannung ein Eingang des Systems ist. Ein weiterer Ergebnissatz wird bereitgestellt, wobei die Last ein programmierbarer Parameter ist. In diesem Fall wird die Vorspannung auf einem konstanten Wert von 450 mV gehalten und die Last variiert von 35 $\Omega$ bis 70$\Omega$. Das System bietet eine Bandbreite von 10 MHz, da es f\"ur Niederfrequenzanwendungen vorgesehen ist. Das gesamte System ist als Teil eines geschlossenen DC-Stromwandlerkreises mit geschlossenem Regelkreis vorgesehen, indem ein R\"uckkopplungsstrom bereitgestellt wird, der die \"Anderung des Magnetfelds des Ionenstrahls aufhebt. Das System wird bei allen Steuereinstellungen und an allen PVT-Ecken simuliert, um seine Robustheit zu \"uberpr\"ufen. Alle Simulationsergebnisse basieren auf dem Design der Schmetikebene.
 
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\chapter*{Acknowledgements}
+I would like to express my profound gratitude to Prof. Dr.-Ing. Klaus Hofmann for giving me the opportunity to write my Master Thesis at Integrated Electronic Systems institute, Technical University of Darmstadt.
+ 
+To my thesis supervisor M.Sc. Sreekesh Lakshminarayanan, for his constant advice and invaluable feedback that were an integral part of my research. His work ethic and attention to detail is a source of inspiration to say the least. 
+
+To my friends and fellow labmates, for the times we worked together and for all the fun we have had in the last six months. A special mention to Khaleelulla Khan Nazeer who shared his abundant knowledge during the crucial phases of my master thesis. 
+
+To my family, for their everlasting unconditional support and moral fibre.
 \tableofcontents
 \listoffigures
 \listoftables
