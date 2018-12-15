@@ -118,8 +118,6 @@ MnB2				& 20u				& 500n				& 8			\\
 \caption{Dimensions of the Transistors of the designed OTA}
 \label{tab:OTA_dimensions}
 \end{table}
-
-
 From the Table.\ref{tab:OTA_dimensions}, it can be seen that the current mirror gain for the current mirrors formed by $M_{3}$, $M_{5}$ and $M_{4}$, $M_{6}$ is 3. It can also be noted that the transistors $M_{5}$ and $M_{8}$ are not symmetric with respect to their counterparts. This is designed so to make sure the DC bias point at the output of the OTA is close to 0V, which is the mid point of $V_{DD}$ and $V_{SS}$. Changing the bias current of an amplifier, will automatically change the DC bias point at its output. Since we are using the OTA as a programmable block, it is important to have an output which is symmetric over 0. Even though it is not entirely possible, making these two transistors a little assymetric or uneven would close the gap between the bias points for highest and lowest bias currents.
 
 \section{Test Setup}
@@ -129,7 +127,7 @@ In the following subsections, let us look at how this $V_{bias}$ affects various
 \centering
 \includegraphics[scale=0.8]{Figures/Test_Benches/OTA_TB.pdf}
 \caption{Test bench setup for OTA}
-\label{fig:OTA_TB_ACDC}
+\label{fig:OTA_TB}
 \end{figure}
 
 \subsection{DC Analysis}

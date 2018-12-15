@@ -1,7 +1,40 @@
 \chapter{Operational Amplifier}
 
 \section{Design and Implementation}
-The second stage of the design is the Operational Amplifier. This stage too, like the first stage uses a bipolar power supply of 2.5V and -2.5V. A two-stage Miller compensated op amp is designed and it is used as a Voltage Buffer for the OTA.
+With the gain of the first stage suffieciently high enough, the second stage is used just as a buffer. The high impedance output of the operational transconductance amplifier has to be converted to a low impedance output in order to drive a resistive load instead of a pure capacitive load. The first thing to ponder upon is the specifications to design the op amp. And then from the specifications, we can decide on a possible topology for the op amp. So how to arrive at the specifications is the question. We have the results from the first stage OTA and since the output of the OTA is directly provided to the input of the op amp, we can use the OTA to generate the specifications of the op amp. Some of the trivial things like the input common mode range and the output voltage swing can be directly obtained by looking at the output of the OTA. But some of the key parameters like the open loop gain, gain bandwidth prodcut, slew rate, etc., need simulations to reach our requirement. The output impedance, the output current range specifications can be directly taken from the system specifications tabulated in Chapter 1.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1]{Figures/System_Level/ahdl_OPAMP.pdf}
+\caption{Behavior Modelling of Ideal OP AMP}
+\label{fig:ahdlopamp}
+\end{figure}
+
+Cadence Virtuoso offers a few basic libraries and ahdllib (analog hdl library) is one of them. The ahdllib offers an ideal op amp which can used for behavior modelling to sweep gain, unity bandwidth, input impedance, and slew rate. The test setup for this modelling is as shown in Figure.\ref{fig:ahdlopamp}. The $V_{REF}$ reference voltage is typically used to set the DC level of the OP AMP. Generally, the middle voltage between $V_{DD}$ and $V_{SS}$ is the value set for $V_{REF}$. And in this case, as we have a dual bipolar supply, the $V_{REF}$ is grounded. The other behavioral inputs to these are the open loop gain, unity gain bandwidth, input impedance, output impedance, bias current, slew rate, maximum output current. The open loop gain, unity gain bandwidth, slew rate are swept over a wide range of values with input impedance a value much higher than the output impedance of the OTA. The bias current is set to zero and the maximum output current is left unset. The OTA designed is cascaded with the ideal OP AMP by connecting the output pin of the OTA to the non-inverting terminal of the ideal OP AMP. The unity gain bandwidth of the OP AMP that provides the overall system bandwidth that matches the specification is is the unity bandwidth with which the OP AMP has to be designed. And likewise, the value of gain that stabilizes the overall system is the open loop gain of the op amp to be designed. Following the steps above, the specifications of the OP AMP to be designed are tabulated  below.
+
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}cc@{}}
+\toprule
+Parameter					& Value				\\ \midrule
+Open Loop Gain				& 30 dB				\\
+Gain Bandwidth Product		& 6 MHz				\\
+ICMR (min)					& -1.85 V			\\
+ICMR (max)					& 1.2 V				\\
+Output Voltage Swing		& -2 .. 2 			\\
+Slew Rate					& 900 V/us			\\
+Input Impedance				& 10 M$\Omega$		\\
+Output Impedance			& 55 K$\Omega$		\\
+\bottomrule
+\end{tabular}
+\caption{Specifications of the OPAMP to be designed}
+\label{tab:OPAMP_Specs}
+\end{table}
+
+The two-stage circuit architecture has historically been the most popular approach to op amp design. The main reason for that being it can provides a very high gain and a high output swing. The two stages refer to the number of gain stages in the op amp. An optional output buffer to the op amp can be used as a third stage. 
+
+Optimal compensation of op amps are arguably one of the most difficult parts of a design. Two most popular approaches are dominant pole compensation and lead compensation. Compensation capacitor between the output of the gain stages causes pole-splitting and achieves dominant pole compensation. This capacitor is known as Miller capacitor and the op amp is called as a two stage Miller compensation op amp. With the use of this compensation capacitor, the location of the poles can be chosen and thereby the bandwidth of the op amp can be set according to our requirements. This is important because the we need a 6MHz unity gain bandwidth from the OP AMP to meet our requirements and to get a stable enough system.
+
 \subsection{Schematic}
 The schematic of the Miller compensation op amp is as shown in the Figure.\ref{fig:OPAMP_Schematic}. The bias current to the differential pair is provided through the current mirror pair of $M_5$ and $M_8$. The bias current is controlled through the transistor $M_9$ whose gate voltage is provided by the voltage divider formed by the resistors $R_{b1}$ and $R_{b2}$. $C_C$ is the compensation capacitance between the two stages of the amplifier.
 \begin{figure} [H]
