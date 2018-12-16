@@ -29,7 +29,7 @@ Open Loop Voltage Gain			& Not less than+5 V/V			& 8.41 V/V						& 12.9 V/V				\
 PSRR							& $\pm$20 $\mu$A/V				& 97.76 $\mu$A/V				& 67.32 $\mu$A/V		\\
 \bottomrule
 \end{tabular}
-\caption{Summary of Results}
+\caption{Specification vs Results}
 \label{tab:Results}
 \end{table}
 

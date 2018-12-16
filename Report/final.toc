@@ -26,53 +26,66 @@
 \contentsline {subsubsection}{Super Class AB OTA}{21}{subsubsection*.45}
 \contentsline {subsubsection}{Conventional OTA}{22}{subsubsection*.47}
 \contentsline {subsection}{\numberline {3.1.1}Schematic}{23}{subsection.3.1.1}
-\contentsline {section}{\numberline {3.2}Test Setup}{25}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}DC Analysis}{27}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}AC Analysis}{27}{subsection.3.2.2}
-\contentsline {subsubsection}{Gain, Bandwidth and Phase Margin}{27}{subsubsection*.52}
-\contentsline {subsubsection}{PSRR}{29}{subsubsection*.57}
-\contentsline {subsubsection}{Input Impedance}{30}{subsubsection*.59}
-\contentsline {subsubsection}{Output Impedance}{30}{subsubsection*.61}
-\contentsline {subsection}{\numberline {3.2.3}Noise Analysis}{30}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Transient Analysis}{31}{subsection.3.2.4}
-\contentsline {subsubsection}{Sine Input}{31}{subsubsection*.64}
-\contentsline {subsubsection}{Square Input}{32}{subsubsection*.67}
-\contentsline {section}{\numberline {3.3}Summary}{33}{section.3.3}
-\contentsline {chapter}{\numberline {4}Operational Amplifier}{35}{chapter.4}
-\contentsline {section}{\numberline {4.1}Design and Implementation}{35}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Schematic}{36}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Test Setup}{38}{section.4.2}
-\contentsline {subsubsection}{DC Analysis}{39}{subsubsection*.74}
-\contentsline {subsubsection}{AC Analysis}{39}{subsubsection*.75}
-\contentsline {subsubsection}{Transient Analysis}{40}{subsubsection*.77}
-\contentsline {section}{\numberline {4.3}Summary}{42}{section.4.3}
-\contentsline {chapter}{\numberline {5}Overall System}{43}{chapter.5}
-\contentsline {section}{\numberline {5.1}Schematic}{44}{section.5.1}
-\contentsline {section}{\numberline {5.2}Test Setup}{46}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}DC Analysis}{47}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}AC Analysis}{47}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Transient Analysis}{50}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Noise Analysis}{53}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Programmable Load}{54}{section.5.3}
-\contentsline {section}{\numberline {5.4}Summary of Results}{57}{section.5.4}
-\contentsline {chapter}{\numberline {6}Corner Simulation}{59}{chapter.6}
-\contentsline {section}{\numberline {6.1}Process Variation}{59}{section.6.1}
-\contentsline {subsubsection}{Lowest $V_{bias}$}{60}{subsubsection*.105}
-\contentsline {subsubsection}{Middle $V_{bias}$}{66}{subsubsection*.118}
-\contentsline {subsubsection}{Highest $V_{bias}$}{72}{subsubsection*.131}
-\contentsline {section}{\numberline {6.2}Process and Supply Variation}{77}{section.6.2}
-\contentsline {subsubsection}{Lowest $V_{bias}$}{78}{subsubsection*.144}
-\contentsline {subsubsection}{Middle $V_{bias}$}{84}{subsubsection*.157}
-\contentsline {subsubsection}{Highest $V_{bias}$}{90}{subsubsection*.170}
-\contentsline {section}{\numberline {6.3}Process, Voltage and Temperature (PVT) variation}{95}{section.6.3}
-\contentsline {subsubsection}{Lowest $V_{bias}$}{96}{subsubsection*.183}
-\contentsline {subsubsection}{Middle $V_{bias}$}{102}{subsubsection*.196}
-\contentsline {subsubsection}{Highest $V_{bias}$}{108}{subsubsection*.209}
-\contentsline {section}{\numberline {6.4}Summary of PVT Corner Analysis}{114}{section.6.4}
-\contentsline {chapter}{\numberline {7}Conclusion}{115}{chapter.7}
-\contentsline {section}{\numberline {7.1}Summary of Results}{115}{section.7.1}
-\contentsline {section}{\numberline {7.2}Outlook}{116}{section.7.2}
-\contentsline {chapter}{\numberline {A}Appendix}{117}{Appendix.1.A}
-\contentsline {section}{\numberline {A.1}OPAMP}{117}{section.1.A.1}
-\contentsline {section}{\numberline {A.2}Corner Simulation}{118}{section.1.A.2}
+\contentsline {section}{\numberline {3.2}Test Setup}{24}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}DC Analysis}{24}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}AC Analysis}{24}{subsection.3.2.2}
+\contentsline {subsubsection}{Gain, Bandwidth and Phase Margin}{26}{subsubsection*.52}
+\contentsline {subsubsection}{PSRR}{27}{subsubsection*.57}
+\contentsline {subsubsection}{Input Impedance}{28}{subsubsection*.59}
+\contentsline {subsubsection}{Output Impedance}{28}{subsubsection*.61}
+\contentsline {subsection}{\numberline {3.2.3}Noise Analysis}{28}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Transient Analysis}{29}{subsection.3.2.4}
+\contentsline {subsubsection}{Sine Input}{29}{subsubsection*.64}
+\contentsline {subsubsection}{Square Input}{30}{subsubsection*.67}
+\contentsline {section}{\numberline {3.3}Summary}{30}{section.3.3}
+\contentsline {chapter}{\numberline {4}Operational Amplifier}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Design and Implementation}{31}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Schematic}{32}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Test Setup}{34}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}DC Analysis}{35}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}AC Analysis}{35}{subsection.4.2.2}
+\contentsline {subsubsection}{Gain and Unity Bandwidth}{35}{subsubsection*.75}
+\contentsline {subsubsection}{PSRR}{36}{subsubsection*.78}
+\contentsline {subsubsection}{Input and Output Impedance}{37}{subsubsection*.80}
+\contentsline {subsection}{\numberline {4.2.3}Transient Analysis}{37}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Summary}{38}{section.4.3}
+\contentsline {chapter}{\numberline {5}Overall System}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Schematic}{40}{section.5.1}
+\contentsline {section}{\numberline {5.2}Test Setup}{41}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}DC Analysis}{42}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}AC Analysis}{42}{subsection.5.2.2}
+\contentsline {subsubsection}{Gain and Bandwidth}{42}{subsubsection*.88}
+\contentsline {subsubsection}{Input Impedance}{43}{subsubsection*.91}
+\contentsline {subsubsection}{Output Impedance}{44}{subsubsection*.93}
+\contentsline {subsubsection}{PSRR}{45}{subsubsection*.95}
+\contentsline {subsection}{\numberline {5.2.3}Transient Analysis}{45}{subsection.5.2.3}
+\contentsline {subsubsection}{Sine Wave}{45}{subsubsection*.97}
+\contentsline {subsubsection}{Square Wave}{47}{subsubsection*.102}
+\contentsline {subsection}{\numberline {5.2.4}Noise Analysis}{48}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Programmable Load}{49}{section.5.3}
+\contentsline {section}{\numberline {5.4}Summary of Results}{52}{section.5.4}
+\contentsline {chapter}{\numberline {6}Corner Simulation}{53}{chapter.6}
+\contentsline {section}{\numberline {6.1}Process Variation}{53}{section.6.1}
+\contentsline {subsubsection}{Lowest $V_{bias}$}{54}{subsubsection*.114}
+\contentsline {subsubsection}{Highest $V_{bias}$}{56}{subsubsection*.120}
+\contentsline {section}{\numberline {6.2}Process and Supply Variation}{58}{section.6.2}
+\contentsline {subsubsection}{Lowest $V_{bias}$}{59}{subsubsection*.126}
+\contentsline {subsubsection}{Highest $V_{bias}$}{61}{subsubsection*.132}
+\contentsline {section}{\numberline {6.3}Process, Voltage and Temperature (PVT) variation}{64}{section.6.3}
+\contentsline {subsubsection}{Lowest $V_{bias}$}{65}{subsubsection*.139}
+\contentsline {subsubsection}{Highest $V_{bias}$}{71}{subsubsection*.152}
+\contentsline {section}{\numberline {6.4}Summary of PVT Corner Analysis}{76}{section.6.4}
+\contentsline {chapter}{\numberline {7}Conclusion}{77}{chapter.7}
+\contentsline {section}{\numberline {7.1}Summary of Results}{77}{section.7.1}
+\contentsline {section}{\numberline {7.2}Outlook}{78}{section.7.2}
+\contentsline {chapter}{\numberline {A}Appendix}{79}{Appendix.1.A}
+\contentsline {section}{\numberline {A.1}OPAMP}{79}{section.1.A.1}
+\contentsline {section}{\numberline {A.2}Corner Simulation}{80}{section.1.A.2}
+\contentsline {subsubsection}{Process Variation - Overall System: Lowest $V_{bias}$}{80}{subsubsection*.168}
+\contentsline {subsubsection}{Process Variation - Overall System: Middle $V_{bias}$}{84}{subsubsection*.176}
+\contentsline {subsubsection}{Process Variation - Overall System: Highest $V_{bias}$}{90}{subsubsection*.189}
+\contentsline {subsubsection}{Process and Supply Variation - Overeall System: Lowest $V_{bias}$}{93}{subsubsection*.197}
+\contentsline {subsubsection}{Process and Supply Variation - Overeall System: Middle $V_{bias}$}{97}{subsubsection*.205}
+\contentsline {subsubsection}{Process and Supply Variation - Overeall System: Highest $V_{bias}$}{103}{subsubsection*.218}
+\contentsline {subsubsection}{PVT: Overall - Middle $V_{bias}$}{106}{subsubsection*.225}
 \contentsfinish 

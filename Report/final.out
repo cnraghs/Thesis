@@ -28,24 +28,27 @@
 \BOOKMARK [1][-]{section.4.1}{Design and Implementation}{chapter.4}% 28
 \BOOKMARK [2][-]{subsection.4.1.1}{Schematic}{section.4.1}% 29
 \BOOKMARK [1][-]{section.4.2}{Test Setup}{chapter.4}% 30
-\BOOKMARK [1][-]{section.4.3}{Summary}{chapter.4}% 31
-\BOOKMARK [0][-]{chapter.5}{Overall System}{}% 32
-\BOOKMARK [1][-]{section.5.1}{Schematic}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.2}{Test Setup}{chapter.5}% 34
-\BOOKMARK [2][-]{subsection.5.2.1}{DC Analysis}{section.5.2}% 35
-\BOOKMARK [2][-]{subsection.5.2.2}{AC Analysis}{section.5.2}% 36
-\BOOKMARK [2][-]{subsection.5.2.3}{Transient Analysis}{section.5.2}% 37
-\BOOKMARK [2][-]{subsection.5.2.4}{Noise Analysis}{section.5.2}% 38
-\BOOKMARK [1][-]{section.5.3}{Programmable Load}{chapter.5}% 39
-\BOOKMARK [1][-]{section.5.4}{Summary of Results}{chapter.5}% 40
-\BOOKMARK [0][-]{chapter.6}{Corner Simulation}{}% 41
-\BOOKMARK [1][-]{section.6.1}{Process Variation}{chapter.6}% 42
-\BOOKMARK [1][-]{section.6.2}{Process and Supply Variation}{chapter.6}% 43
-\BOOKMARK [1][-]{section.6.3}{Process, Voltage and Temperature \(PVT\) variation}{chapter.6}% 44
-\BOOKMARK [1][-]{section.6.4}{Summary of PVT Corner Analysis}{chapter.6}% 45
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 46
-\BOOKMARK [1][-]{section.7.1}{Summary of Results}{chapter.7}% 47
-\BOOKMARK [1][-]{section.7.2}{Outlook}{chapter.7}% 48
-\BOOKMARK [0][-]{Appendix.1.A}{Appendix}{}% 49
-\BOOKMARK [1][-]{section.1.A.1}{OPAMP}{Appendix.1.A}% 50
-\BOOKMARK [1][-]{section.1.A.2}{Corner Simulation}{Appendix.1.A}% 51
+\BOOKMARK [2][-]{subsection.4.2.1}{DC Analysis}{section.4.2}% 31
+\BOOKMARK [2][-]{subsection.4.2.2}{AC Analysis}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.3}{Transient Analysis}{section.4.2}% 33
+\BOOKMARK [1][-]{section.4.3}{Summary}{chapter.4}% 34
+\BOOKMARK [0][-]{chapter.5}{Overall System}{}% 35
+\BOOKMARK [1][-]{section.5.1}{Schematic}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.2}{Test Setup}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.2.1}{DC Analysis}{section.5.2}% 38
+\BOOKMARK [2][-]{subsection.5.2.2}{AC Analysis}{section.5.2}% 39
+\BOOKMARK [2][-]{subsection.5.2.3}{Transient Analysis}{section.5.2}% 40
+\BOOKMARK [2][-]{subsection.5.2.4}{Noise Analysis}{section.5.2}% 41
+\BOOKMARK [1][-]{section.5.3}{Programmable Load}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.4}{Summary of Results}{chapter.5}% 43
+\BOOKMARK [0][-]{chapter.6}{Corner Simulation}{}% 44
+\BOOKMARK [1][-]{section.6.1}{Process Variation}{chapter.6}% 45
+\BOOKMARK [1][-]{section.6.2}{Process and Supply Variation}{chapter.6}% 46
+\BOOKMARK [1][-]{section.6.3}{Process, Voltage and Temperature \(PVT\) variation}{chapter.6}% 47
+\BOOKMARK [1][-]{section.6.4}{Summary of PVT Corner Analysis}{chapter.6}% 48
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 49
+\BOOKMARK [1][-]{section.7.1}{Summary of Results}{chapter.7}% 50
+\BOOKMARK [1][-]{section.7.2}{Outlook}{chapter.7}% 51
+\BOOKMARK [0][-]{Appendix.1.A}{Appendix}{}% 52
+\BOOKMARK [1][-]{section.1.A.1}{OPAMP}{Appendix.1.A}% 53
+\BOOKMARK [1][-]{section.1.A.2}{Corner Simulation}{Appendix.1.A}% 54

@@ -19,17 +19,15 @@ The schematic symbol for the overall system is as indicated in Figure.\ref{fig:S
 \end{figure}
 
 \section{Schematic}
-The transistor level schematic of the overall system is as shown in the Figure.\ref{fig:System_Schematic}. The upper portion of the schematic is the OTA and the bottom portion is the OP AMP. Note the feedback connection of the OP AMP and the connection between the OTA and the OP AMP. To summarize the physical aspects of the system, there are 3 input terminals, 2 power supply levels and 1 ouput pin.
- 
+The transistor level schematic of the overall system is as shown in the Figure.\ref{fig:System_Schematic}. The upper portion of the schematic is the OTA and the bottom portion is the OP AMP. Note the feedback connection of the OP AMP and the connection between the OTA and the OP AMP.
 \begin{figure} [H]
 \centering
-\includegraphics[scale=1]{Figures/Schematics/OTA_OPAMP_Schematic_RL.pdf}
+\includegraphics[scale=0.95]{Figures/Schematics/OTA_OPAMP_Schematic_RL.pdf}
 \caption{Schematic Diagram for the Overall System}
 \label{fig:System_Schematic}
 \end{figure}
 
 \section{Test Setup}
-
 \begin{figure} [H]
 \centering
 \includegraphics[scale=0.9]{Figures/Test_Benches/Overall_TB.pdf}
@@ -38,7 +36,7 @@ The transistor level schematic of the overall system is as shown in the Figure.\
 \end{figure}
 
 \subsection{DC Analysis}
-The test bench to perform the DC analysis is as shown in the Figure.(a). 
+The test bench to perform the DC analysis is as shown in the Figure.\ref{fig:TB}(a). 
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV;  $V_{ac}$ = 1V; $R_{L}$ = 50$\Omega$.
 
@@ -67,11 +65,10 @@ Vbias (mV)			& Output DC Bias (mV)	\\ \midrule
 \end{table}
 
 \subsection{AC Analysis}
-
-The test bench in Figure.(a) is used for the AC analysis too. The magnitude of the AC source is set to 1V and as mentioned in the previous chapter, the voltage at the output will be the gain of the overall system.
+\subsubsection{Gain and Bandwidth}
+The test bench in Figure.\ref{fig:TB}(a) is used to measure the gain and operating bandwidth of the system. The magnitude of the AC source is set to 1V and as mentioned in the previous chapter, the voltage at the output will be the gain of the overall system.
 
 The plot of gain for different values of $V_{bias}$ is as shown in the Figure.\ref{fig:Gain}. The value of the open loop gain is between 18dB and 25dB.
-
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Plots/Ov_Gain.pdf}
@@ -101,14 +98,12 @@ Vbias (mV)			& DC Gain (dB) 	& Bandwidth (MHz) 	& Phase Margin \\ \midrule
 \caption{DC Gain, Bandwidth and Phase Margin of the Overall System}
 \label{tab:GAIN_GBW_PM}
 \end{table}
-
-The test bench in Figure.(e) is used to measure the input impedance of the system. The concept for measurement is same as in the case of the OTA. The voltage at the non-inverting terminal will be the magnitude of the input impedance of the overall system because the magnitude of the current from the AC source is 1A.
+\subsubsection{Input Impedance}
+The test bench in Figure.\ref{fig:TB}(e) is used to measure the input impedance of the system. The concept for measurement is same as in the case of the OTA. The voltage at the non-inverting terminal will be the magnitude of the input impedance of the overall system because the magnitude of the current from the AC source is 1A.
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{bias}$ = 150mV to 700mV;  $I_{sin} magnitude$ = 1A; $R_{L}$ = 50$\Omega$.
 
-
 The value of input impedance with respect to Vbias is tabulated in Table.\ref{tab:ZIN}. It is clear that the input impedance of the overall system is same as the input impedance of the OTA in the first stage.
-
 \begin{table} [H]
 \centering
 \begin{tabular}{@{}cc@{}}
@@ -132,7 +127,8 @@ Vbias (mV)			& Input Impedance (M$\Omega$)	\\ \midrule
 \label{tab:ZIN}
 \end{table}
 
-On the same lines, the test bench for measuring the output impedance is as shown in the Figure.(f). The resistive load is replaced by a current source which tries to pull out 1A of current from the circuit and thereby the voltage at the output turning out to be the magnitude of the output impedance of the system.
+\subsubsection{Output Impedance}
+On the same lines, the test bench for measuring the output impedance is as shown in the Figure.\ref{fig:TB}(f). The resistive load is replaced by a current source which tries to pull out 1A of current from the circuit and thereby the voltage at the output turning out to be the magnitude of the output impedance of the system.
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV;  $I_{sin} magnitude$ = 1A.
 
@@ -159,13 +155,12 @@ Vbias (mV)			& Output Impedance ($\Omega$)	\\ \midrule
 \caption{Output Impedance of the Overall System}
 \label{tab:ZOUT}
 \end{table}
-
-The next important parameter is the PSRR or the Power Supply Rejection Ratio. It was seen in the previous chapter that the PSRR of the second stage is much more significant than the first stage. Figure.(c) shows the test bench used to measure the PSRR of the whole system. The schematic on the left is used to measure PSRR for $V_{DD}$ and likewise on the right side for $V_{SS}$.
+\subsubsection{PSRR}
+The next important parameter is the Power Supply Rejection Ratio. It was seen in the previous chapter that the PSRR of the second stage is much more significant than the first stage. Figure.\ref{fig:TB}(c) and (d) shows the test bench used to measure the PSRR for $V_{DD}$ and $V_{SS}$ respectively.
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV;  $V_{ac} magnitude$ = 1V; $R_{L}$ = 50$\Omega$.
 
 The variation of PSRR against $V_{bias}$ is tabulated below in Table.\ref{tab:PSRR}. PSRR is high for high bias currents or low values of $V_{bias}$ and it decreases with increase in $V_{bias}$. PSRR is generally expressed in terms of dB. But from the specifications, it is seen that the parameter has to be expressed in uA/V as part of this work.
-
 \begin{table} [H]
 \centering
 \begin{tabular}{@{}ccc@{}}
@@ -190,7 +185,9 @@ Vbias (mV)			& PSRR (VDD)(uA/V)			& PSRR (VSS)(uA/V)	 \\ \midrule
 \end{table}
 
 \subsection{Transient Analysis}
-The transient analysis is divided in to two parts. The first part involves simulation with a sine wave input and the second part involves simulation with a square wave input. The test bench for transient analysis with a sine wave input for the system is as shown in Figure.(b).
+The transient analysis is divided in to two parts. The first part involves simulation with a sine wave input and the second part involves simulation with a square wave input. 
+\subsubsection{Sine Wave}
+The test bench for transient analysis with a sine wave input for the system is as shown in Figure.\ref{fig:TB}(b).
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV;  $V_{sin} amplitude$ = 100mV; $R_{L}$ = 50$\Omega$.
 
@@ -262,6 +259,7 @@ Vbias (mV)			& Transconductance (mA/V)	\\ \midrule
 \label{tab:GM}
 \end{table}
 
+\subsubsection{Square Wave}
 Now, the second part of the transient analysis is performed with a square wave input. 
 The slew rate for the rising edge and the falling edge is tabulated in the Table.\ref{tab:SLEW}. The slew rate is at a low value due to the fact that the OP AMP designed exhibits a very low slew rate.
  
@@ -289,7 +287,7 @@ Vbias (mV)			& Slew Rate (Rising Edge)(V/us)			& Slew Rate (Falling Edge)(V/us)	
 \end{table}
 
 \subsection{Noise Analysis}
-The test bench to perform the noise analysis is same as the test bench used for AC analysis in Figure.(a). The input referred noise of the first stage is far more significant for the overall system than the second stage.
+The test bench to perform the noise analysis is same as the test bench used for AC analysis in Figure..\ref{fig:TB}(a). The input referred noise of the first stage is far more significant for the overall system than the second stage.
 
 The Bode plot of the input referred noise for different values of $V_{bias}$ is shown in the Figure.\ref{fig:NOISE}. It is clear that the type of noise is 1/f noise or the Flicker noise. The magnitude of the input referred noise is very high for low frequencies and it reduces significantly in moderate and high frequencies when White noise starts to dominate.
 
@@ -324,7 +322,6 @@ Vbias (mV)			& Input Referred Noise (nV/sqrt(Hz))	\\ \midrule
 \caption{Input Referred Noise of the Overall System}
 \label{tab:NOISE}
 \end{table}
-
 
 \section{Programmable Load}
 Another way to make the overall system programmable is to have a programmable load. Having a Resistive load that varies would imply that the current flowing through the load is controlled. So, for the following analyses, the $V_{bias}$ is made constant and set a value of 425mV.
@@ -419,4 +416,26 @@ And finally, we have the plot of transconductance versus the load resistance as 
 \end{figure}
 
 \section{Summary of Results}
-
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}ccc@{}}
+\toprule
+Parameter						& Programmable Voltage			& Programmable Resistor	\\ \midrule
+Transconductance Gain(Gm)		& 158.8 .. 298.5 mA/V			& 170 .. 338.9 mA/V		\\
+Linear Input Voltage Range		& $\pm$100 mV					& $\pm$100 mV			\\
+Output Current Range			& +18 mA .. -13 mA				& +15 mA .. -18 mA		\\
+Bandwidth						& 13.8 MHz						& 13.13 MHz				\\
+Slew Rate						& $\pm$10.82 V/$\mu$s			& $\pm$10.28 V/$\mu$s	\\
+Rise/Fall time					& 22.7 ns						& 23.5 ns				\\
+Input Referred Noise			& 46.64 nV/$\sqrt{Hz}$ @1MHz	& 36.79 nV/$\sqrt{Hz}$ @1MHz\\
+Input Impedance					& 3.394 M$\Omega$				& 3.436 M$\Omega$		\\
+Output Impedance				& 0.9415 $\Omega$				& 0.953 $\Omega$		\\
+HD2								& -34.72 dBc					& -34.6 dBc				\\
+HD3								& -33.61 dBc					& -39.4 dBc				\\
+Open Loop Voltage Gain			& 8.41 V/V						& 12.9 V/V				\\
+PSRR							& 97.76 $\mu$A/V				& 67.32 $\mu$A/V		\\
+\bottomrule
+\end{tabular}
+\caption{Summary of Results}
+\label{tab:Results}
+\end{table}

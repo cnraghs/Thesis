@@ -36,7 +36,8 @@ The two-stage circuit architecture has historically been the most popular approa
 Optimal compensation of op amps are arguably one of the most difficult parts of a design. Two most popular approaches are dominant pole compensation and lead compensation. Compensation capacitor between the output of the gain stages causes pole-splitting and achieves dominant pole compensation. This capacitor is known as Miller capacitor and the op amp is called as a two stage Miller compensation op amp. With the use of this compensation capacitor, the location of the poles can be chosen and thereby the bandwidth of the op amp can be set according to our requirements. This is important because the we need a 6MHz unity gain bandwidth from the OP AMP to meet our requirements and to get a stable enough system.
 
 \subsection{Schematic}
-The schematic of the Miller compensation op amp is as shown in the Figure.\ref{fig:OPAMP_Schematic}. The bias current to the differential pair is provided through the current mirror pair of $M_5$ and $M_8$. The bias current is controlled through the transistor $M_9$ whose gate voltage is provided by the voltage divider formed by the resistors $R_{b1}$ and $R_{b2}$. $C_C$ is the compensation capacitance between the two stages of the amplifier.
+The schematic of the Miller compensation op amp is as shown in the Figure.\ref{fig:OPAMP_Schematic}. The bias current to the differential pair is provided through the current mirror pair of $M_5$ and $M_8$. The bias current is controlled through the transistor $M_9$ whose gate voltage is provided by the voltage divider formed by the resistors $R_{b1}$ and $R_{b2}$. The adaptive load for the differential stage is formed by the current mirror pair $M_3$ and $M_4$. The second stage is the common source amplifier formed by the transistors $M_6$ and $M_7$. $C_C$ is the compensation capacitor connected between the output of the two stages of the amplifier. The phase margin can be set by adjusting the value of this capacitor.  Smaller the capacitor, higher the phase margin of the op amp. The dimensions of the differential pair are chosen with the help of the graphs generated using the $G_m/I_D$ methodology to obtain the a moderate gain and required unity gain bandwidth. The adaptive load sets the maximum input common mode voltage and $M_5$ sets the minimum input common mode voltage. The output voltage range is set by the common source amplifier and therefore the open loop gain. $M_6$ is tweaked to alter the gain of the op amp. Alternatively the gain is also increased by decreasing the bias current. And then in order to maintain the voltage swing, the W/L ratios of some transistors need tuning as well.
+
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Schematics/OPAMP_Vbias.pdf}
@@ -44,22 +45,22 @@ The schematic of the Miller compensation op amp is as shown in the Figure.\ref{f
 \label{fig:OPAMP_Schematic}
 \end{figure}
 
-The dimensions of the transistors are tabulated in Table.\ref{tab:OPAMP_dimensions}. One can easily recognize that the transistors at the output are large. This is designed so to make sure the op amp provides a very high current and thereby avoiding a common collector amplifier at the output of the op amp to amplify the output current. The compensation capacitance value is 50fF.
+The dimensions of the transistors are tabulated in Table.\ref{tab:OPAMP_dimensions}. One can easily recognize that the transistors at the output are significantly large. This is designed so to make sure the op amp provides a very high current and thereby avoiding a common collector amplifier at the output of the op amp to amplify the output current. The compensation capacitance value is 50fF.
 
 \begin{table} [H]
 \centering
 \begin{tabular}{@{}cccc@{}}
 \toprule
-Transistor			& Width				& Length			& Multiplier \\ \midrule
-M1					& 5u				& 500n				& 2			\\
-M2					& 5u				& 500n				& 2			\\ 
-M3					& 30u				& 500n				& 1			\\
-M4					& 30u				& 500n				& 1			\\ 
-M5					& 2u				& 500n				& 1			\\
-M6					& 85u				& 500n				& 55		\\ 
-M7					& 50u				& 500n				& 48		\\
-M8					& 2u				& 500n				& 1			\\ 
-M9					& 700n				& 500n				& 1			\\
+Transistor			& Width($\mu$m)		& Length(nm)		& Multiplier \\ \midrule
+M1					& 5					& 500				& 2			\\
+M2					& 5					& 500				& 2			\\ 
+M3					& 30 				& 500				& 1			\\
+M4					& 30 				& 500				& 1			\\ 
+M5					& 2 				& 500				& 1			\\
+M6					& 85 				& 500				& 55		\\ 
+M7					& 50 				& 500				& 48		\\
+M8					& 2 				& 500				& 1			\\ 
+M9					& 0.7				& 500				& 1			\\
 \bottomrule
 \end{tabular}
 \caption{Dimensions of the Transistors of the designed OPAMP}
@@ -67,7 +68,6 @@ M9					& 700n				& 500n				& 1			\\
 \end{table}
 
 \section{Test Setup}
-
 \begin{figure} [H]
 \centering
 \includegraphics[scale=0.8]{Figures/Test_Benches/OPAMP_TB.pdf}
@@ -75,18 +75,33 @@ M9					& 700n				& 500n				& 1			\\
 \label{fig:OPAMP_TB}
 \end{figure}
 
-\subsubsection{DC Analysis}
+The test bench setup for the operation transconductance amplifier is as shown in Figure.\ref{fig:OPAMP_TB}. All the analyses are carried out under a standard temperature of $27_0C$, typical mean conditions for the NMOS transistors, PMOS transistors, capacitors and resistors unless explicitly mentioned otherwise. The $ocean$ script containing all the expressions to measure the various parameters of the OP AMP are attached in the Appendix. In the following subsections, the results of these parameters are discussed using DC Analysis, AC Analysis, Transient Analysis and Noise Analysis separately.
 
+\subsection{DC Analysis}
+The OP AMP is not separately biased. The DC level at the output of the OTA cannot be filtered out using a coupling capacitor as the OTA is already driving a capacitive load. Therefore the common mode voltage of the OP AMP will be the DC output bias of the OTA. Considering that the OP AMP is connected in a buffer configuration, the output of the OP AMP will have the same DC level as the output of the OTA. As part of the DC analysis, the input common mode range and the output voltage swing is calculated. In the test circuit in Figure.\ref{fig:OPAMP_TB}(b), the input DC voltage is varied from $V_{SS}$ to $V_{DD}$ and the voltage range in the linear range varies from -2.19V to 2.089V. Similarly the output voltage swing is calculated without the negative feedback and is found to be -2.19V and 2.323V.
 
-\subsubsection{AC Analysis}
-The open loop gain and the gain bandwidth product are inarguably the most important parameters of an operational amplifier. Before the op amp was actually designed, these parameters were simulated with the help of an ideal op amp from the ahdlLib in Cadence. In order to have a stable system, i.e., an OTA with an OP AMP buffer in a cascade configuration, it is necessary to have the dominant poles far from each other. So that is the reason for the OTA to have a high bandwidth and correspondingly the OP AMP bandwidth can be adjusted so as to reach the specification and also to have a stable system.
+$V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{DC}$ = -2.5V to 2.5V; $R_L$ = 50$\Omega$.
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}cc@{}}
+\toprule
+Parameter					& Value				\\ \midrule
+ICMR (min)					& -2.19 V			\\
+ICMR (max)					& 2.089 V			\\
+Output Voltage Swing		& -2.19 .. 2.323V	\\
+\bottomrule
+\end{tabular}
+\caption{DC Analysis}
+\label{tab:OPAMP_DC}
+\end{table}
 
-The test bench used to measure these parameters is as shown in Figure.(a). The op amp is configured in an open loop. The DC biasing to the differential transistor pair is provided by the output of the OTA, which is centred around 0V. 
-
-$V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{ac} magnitude $ = 1 V; $R_L$ = 50$\Omega$.
+\subsection{AC Analysis}
+\subsubsection{Gain and Unity Bandwidth}
+The open loop gain and the gain bandwidth product are inarguably the most important parameters of an operational amplifier. The test bench used to measure these parameters is as shown in Figure.\ref{fig:OPAMP_TB}(a). The op amp is configured in an open loop. The DC biasing to the differential transistor pair is provided by the output of the OTA, which is centred around 0V. 
 
 The plot of the open loop gain and the phase of the op amp is as shown in the Figure.\ref{fig:OPAMP_gain_pm_gbw}. The open loop gain of the op amp is 30.8dB. The gain bandwidth product is 6.2MHz and correspondingly the phase margin is $76.79^0$.
 
+$V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{ac} magnitude $ = 1 V; $R_L$ = 50$\Omega$.
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Plots/OPAMP_Gain_PM.pdf}
@@ -94,33 +109,51 @@ The plot of the open loop gain and the phase of the op amp is as shown in the Fi
 \label{fig:OPAMP_gain_pm_gbw}
 \end{figure}
 
-The PSRR of the OTA in the first stage was in the range of $nA/V$ and hence neglibigle. However, the op amp designed exhibits a relatively high value of PSRR. This is due to the bulky transistors at the output stage. The test bench to measure the PSRR of the op amp is as shown in the Figure.(c). The one on the left is used to measure PSRR for a change in $V_{DD}$. And similarly, the one on the right side is used to measure PSRR for a change in $V_{SS}$.
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}cc@{}}
+\toprule
+Parameter					& Value				\\ \midrule
+Open Loop Gain				& 30.8 dB			\\
+Phase Margin				& 76.79 degrees		\\
+Unity Gain Bandwidth		& 6.2 MHz			\\
+\bottomrule
+\end{tabular}
+\caption{Gain and Unity Bandwidth of the OP AMP}
+\label{tab:OPAMP_Gain_UBW}
+\end{table}
+
+\subsubsection{PSRR}
+The PSRR of the OTA in the first stage was in the range of $nA/V$ and hence neglibigle. However, the op amp designed exhibits a relatively high value of PSRR. This is due to the bulky transistors at the output stage. The test bench to measure the PSRR of the op amp is as shown in the Figure.\ref{fig:OPAMP_TB}(c) and (d); (c) is used to measure PSRR for a change in $V_{DD}$ and similarly, (d) is used to measure PSRR for a change in $V_{SS}$.
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{ac} magnitude $ = 1 V; $R_L$ = 50$\Omega$.
 
-The PSRR ($V_{DD}$) of the op amp is 30.96 uA/V, and PSRR ($V_{SS}$) is 130.96 uA/V. In the next chapter, it is seen that the assymetry in the two PSRR values doesn't affect the PSRR of the whole system.
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}cc@{}}
+\toprule
+Parameter					& Value				\\ \midrule
+PSRR($V_{DD}$)				& 30.96 $\mu$A/V		\\
+PSRR($V_{SS}$)				& 138.8 $\mu$A/V		\\
+\bottomrule
+\end{tabular}
+\caption{PSRR of the OP AMP}
+\label{tab:OPAMP_PSRR}
+\end{table}
 
+\subsubsection{Input and Output Impedance}
 The test bench to calculate the input impedance follows a similar concept to that of the OTA. i.e., a unity current source is connected to the non-inverting terminal of the op amp and the voltage at that terminal is measured which in turn is the magnitude of the input impedance of the op amp.
 
-To have a stable system, it is important that input impedance of the second stage is higher than the output impedance of the first stage. Given that the output impedance of the OTA is generally high, the input impedance of the op amp becomes a very important parameter. And th input impedance is found to be 9.04M$\Omega$.
+To have a stable system, it is important that input impedance of the second stage is higher than the output impedance of the first stage. Given that the output impedance of the OTA is generally high, the input impedance of the op amp becomes a very important parameter. And the input impedance is found to be 9.04M$\Omega$.
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $I_{sin} magnitude $ = 1A.
 
-Op amps are known to have zero or very low output impedance. Along with this theoretical fact, the op amp in this work is designed to retrieve very high currents, so it is expected to have a very low output impedance. The value of the output impedance is observed to be 4.167$\Omega$.
+Op amps are known to have zero or very low output impedance. Along with this theoretical fact, the op amp in this work is designed to have very high output currents, so it is expected to have a very low output impedance. The value of the output impedance is observed to be 4.167$\Omega$.
 
-\subsubsection{Transient Analysis}
-The test bench to perform the transient analysis is as shown in the Figure.(e). The op amp is connected in a negative feedback configuration so as to analyse its behavior as a voltage buffer.
+\subsection{Transient Analysis}
+The test bench to perform the transient analysis is as shown in the Figure.\ref{fig:OPAMP_TB}(e). The op amp is connected in a negative feedback configuration so as to analyse its behavior as a voltage buffer.
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{sin} amplitude $ = 1.5V; $frequency$ = 1MHz; $R_L$ = 50$\Omega$.
-
-The of input voltage and output voltage with respect to time is as shown in the Figure.\ref{fig:OPAMP_Vout}. The output follows the input only with a very small delay.
-
-\begin{figure} [H]
-\centering
-\includegraphics[scale=1]{Figures/Plots/OPAMP_Buffer.pdf}
-\caption{OPAMP Plot of Output Voltage vs time}
-\label{fig:OPAMP_Vout}
-\end{figure}
 
 The output current of the op amp is effectively the current flowing through the load resistor $R_L$. The plot of current versus time is as shown in the Figure.\ref{fig:OPAMP_Iout}. The current is $180^0$ out of phase with the voltage and it ranges from -30mA to 30mA for a 50$\Omega$ load and 3V peak to peak input voltage. 
 

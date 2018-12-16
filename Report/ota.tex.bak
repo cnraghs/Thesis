@@ -66,14 +66,14 @@ This scheme results in an amplifier with high gain and fast respsone. Bandwidth 
 This topology offers several advantages over the other topologies reviewed during the design phase. Some aspects to be careful about are - the feed-forward stage has to be optimized to make sure the pole-zero cancellation occurs at high frequency otherwise there is a possibility of having an unstable system. Another drawback as in the previous case is the complexity of the circuit given that this scheme was initially intended to work for a single input design. Having two different pairs to transistors that need biasing at its gate terminals along with the complexity of the design, makes the programmability of the circuit a mystery. And since that is an integral part of our specification, this scheme might not be entirely suitable for our design despite offering more advantages than disadvantages.
 
 \subsubsection{Super Class AB OTA}
-The schematic of a Super Class AB OTA based on a Cascode Voltage Flipped Follower is as shown in Figure.\ref{fig:OTA_Class_AB}. It uses a Class-AB differential pair to boost the bias current by a factor of $k_1$. Typical values of $k_1$ range from 30 to 60 depending on the implementation of the Class-AB differential pair and supply voltages. An additional current boosting by a factor of $k_2$ is obtained in the output branches. The typical values of $k_2$ range from 3-8. Using cascode transistors maximum output current and subsequently the CE values are reduced. But lack of cascode transistors results in very low open loop gain. Therefore, a simple power efficient technique is used that allows the use of cascode transistors in order to achieve even higher open loop gain and gain bandwidth by maintaining a large CE value. This is done with the help of dynamically biasing the cascode transistors using RC networks (indicated in purple in the figure). The capacitor $C_{bat}$ acts as a floating battery for dynamic operations that transfers variations in the gate voltages of mirror transistors to the gate of the cascode transistors. This increases the $V_{DS}$ of the mirror transistors allowing high output currents. Cascode Voltage Flipped Follower (indicated in red in the figure) is charaterized by high input swing and can operate over a wide range of supply voltages. It uses local shunt feedback to provide nodes A and B with very low impedance.
-
 \begin{figure} [H]
 \centering
 \includegraphics[scale=0.65]{Figures/Schematics/OTA_Class_AB.pdf}
 \caption{Super Class-AB OTA with a Cascode Voltage Flipped Follower}
 \label{fig:OTA_Class_AB}
 \end{figure}
+
+The schematic of a Super Class AB OTA based on a Cascode Voltage Flipped Follower is as shown in Figure.\ref{fig:OTA_Class_AB}. It uses a Class-AB differential pair to boost the bias current by a factor of $k_1$. Typical values of $k_1$ range from 30 to 60 depending on the implementation of the Class-AB differential pair and supply voltages. An additional current boosting by a factor of $k_2$ is obtained in the output branches. The typical values of $k_2$ range from 3-8. Using cascode transistors maximum output current and subsequently the CE values are reduced. But lack of cascode transistors results in very low open loop gain. Therefore, a simple power efficient technique is used that allows the use of cascode transistors in order to achieve even higher open loop gain and gain bandwidth by maintaining a large CE value. This is done with the help of dynamically biasing the cascode transistors using RC networks (indicated in purple in the figure). The capacitor $C_{bat}$ acts as a floating battery for dynamic operations that transfers variations in the gate voltages of mirror transistors to the gate of the cascode transistors. This increases the $V_{DS}$ of the mirror transistors allowing high output currents. Cascode Voltage Flipped Follower (indicated in red in the figure) is charaterized by high input swing and can operate over a wide range of supply voltages. It uses local shunt feedback to provide nodes A and B with very low impedance.
 
 Taking into account the complexity, output current requirements and load requirements, this design will not be considered further as part of this research work. The reason being - a high current output of this Class AB OTA would give rise to another output buffer. And the capacitors needed to consume such a high current would be in the order of several pico Farads. Having such a big capacitor inside an IC is not recommended. Also, considering how complex CMOS Current Feedback Amplifiers are, it is wise to stick to a simpler design that does the same work but with some minor trade-offs.
 
@@ -85,10 +85,9 @@ Generally, amplifiers with PMOS transistors used as differential input offer hig
 Having stated all these facts, NMOS input transistors would be better in terms of transconductance gain, and hence thermal noise and the bandwidth of the amplifier. An important fact considered in the selection of the type of differential pair is that the OTA in this system is being used in an open loop. This means that the gain of the OTA has to be limited in order to avoid saturation at the crests and troughs at the output of the OTA.
 
 PMOS transistors exhibit their low noise behaviour due to the fact that PMOS transistors are usually bigger (higher W/L ratio) than an NMOS pair. Since we need a small open loop gain, we cannot afford to have big transistors at the input that cause the output to saturate. Along with this, it was also seen that, the range of bias currents needed to obtain a similar range of voltage swing was much wider in case of PMOS than NMOS. Since this indirectly results in a high power dissipation in the 1st stage itself, it was concluded to use the NMOS based design as part of this Thesis work.
-
+\vfill
+\clearpage
 \subsection{Schematic}
-
-Figure.\ref{fig:OTA_Schematic} shows the schematic of the OTA used as part of this Thesis. As mentioned above, the differential amplifier is formed by the NMOS pair. The bias current $I_{bias}$ to the differential pair is provided by the current mirror formed by $M_{nB1}$ and $M_{nB2}$ which is in turn controlled by the PMOS transistor $M_9$ whose gate voltage $V_{bias}$ is the programmable variable of the OTA and the entire system. This bias voltage is inversely proportional to the bias current flowing through each branch of the OTA.
 
 \begin{figure} [H]
 \centering
@@ -97,22 +96,24 @@ Figure.\ref{fig:OTA_Schematic} shows the schematic of the OTA used as part of th
 \label{fig:OTA_Schematic}
 \end{figure}
 
+Figure.\ref{fig:OTA_Schematic} shows the schematic of the OTA used as part of this Thesis. As mentioned above, the differential amplifier is formed by the NMOS pair. The bias current $I_{bias}$ to the differential pair is provided by the current mirror formed by $M_{nB1}$ and $M_{nB2}$ which is in turn controlled by the PMOS transistor $M_9$ whose gate voltage $V_{bias}$ is the programmable variable of the OTA and the entire system. This bias voltage is inversely proportional to the bias current flowing through each branch of the OTA.
+
 \begin{table} [H]
 \centering
 \begin{tabular}{@{}cccc@{}}
 \toprule
-Transistor			& Width				& Length			& Multiplier \\ \midrule
-M1					& 8u				& 500n				& 5			\\
-M2					& 8u				& 500n				& 5			\\
-M3					& 35u				& 500n				& 1			\\
-M4					& 35u				& 500n				& 1			\\
-M5					& 28u				& 500n				& 3			\\
-M6					& 35u				& 500n				& 3			\\
-M7					& 35u				& 500n				& 18		\\
-M8					& 33u				& 500n				& 18		\\
-M9					& 10u				& 500n				& 4			\\
-MnB1				& 20u				& 500n				& 8			\\
-MnB2				& 20u				& 500n				& 8			\\
+Transistor			& Width($\mu$m)		& Length(nm)		& Multiplier \\ \midrule
+M1					& 8					& 500n				& 5			\\
+M2					& 8					& 500n				& 5			\\
+M3					& 35				& 500n				& 1			\\
+M4					& 35				& 500n				& 1			\\
+M5					& 28				& 500n				& 3			\\
+M6					& 35				& 500n				& 3			\\
+M7					& 35				& 500n				& 18		\\
+M8					& 33				& 500n				& 18		\\
+M9					& 10				& 500n				& 4			\\
+MnB1				& 20				& 500n				& 8			\\
+MnB2				& 20				& 500n				& 8			\\
 \bottomrule
 \end{tabular}
 \caption{Dimensions of the Transistors of the designed OTA}
@@ -121,19 +122,12 @@ MnB2				& 20u				& 500n				& 8			\\
 From the Table.\ref{tab:OTA_dimensions}, it can be seen that the current mirror gain for the current mirrors formed by $M_{3}$, $M_{5}$ and $M_{4}$, $M_{6}$ is 3. It can also be noted that the transistors $M_{5}$ and $M_{8}$ are not symmetric with respect to their counterparts. This is designed so to make sure the DC bias point at the output of the OTA is close to 0V, which is the mid point of $V_{DD}$ and $V_{SS}$. Changing the bias current of an amplifier, will automatically change the DC bias point at its output. Since we are using the OTA as a programmable block, it is important to have an output which is symmetric over 0. Even though it is not entirely possible, making these two transistors a little assymetric or uneven would close the gap between the bias points for highest and lowest bias currents.
 
 \section{Test Setup}
-In the following subsections, let us look at how this $V_{bias}$ affects various paramters of the OTA by performing DC, AC, Transient and Noise Analyses.
-
-\begin{figure} [H]
-\centering
-\includegraphics[scale=0.8]{Figures/Test_Benches/OTA_TB.pdf}
-\caption{Test bench setup for OTA}
-\label{fig:OTA_TB}
-\end{figure}
+The test bench setup for the operation transconductance amplifier is as shown in Figure.\ref{fig:OTA_TB}. All the analyses are carried out under a standard temperature of $27_0C$, typical mean conditions for the NMOS transistors, PMOS transistors, capacitors and resistors unless explicitly mentioned otherwise. The $ocean$ script containing all the expressions to measure the various parameters of the OTA are attached in the Appendix. In the following subsections, the results of these parameters are discussed using DC Analysis, AC Analysis, Transient Analysis and Noise Analysis separately.
 
 \subsection{DC Analysis}
-
+The first thing a designer checks in the bias conditions and this is done with the help of a large signal model using DC analysis. The test bench in Figure.\ref{fig:OTA_TB}(a) and (b) are used to perform the DC analysis. The test bench in (a) is used to meausre the DC bias point at the output of the OTA. Since the programmable input indirectly controls the bias current, the DC bias at the output consequentially changes too.
+ 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV;  $V_{ac}$ = 1V; $C_{L}$ = 50fF.
-
 
 \begin{table} [H]
 \centering
@@ -147,17 +141,23 @@ Output DC Bias (mV)			& 13.68		& -16.43		& -78.96		& -144.6		& -213.3		& -285.2	
 \label{tab:OTA_DC_Bias}
 \end{table}
 
-The output DC bias points for various values of $V_{bias}$ is tabulated in Table\ref{tab:OTA_DC_Bias}. The DC voltage at the output decreases with the increase in bias voltage or decrease in bias current.
+The output DC bias points for various values of $V_{bias}$ is tabulated in Table\ref{tab:OTA_DC_Bias}. The DC voltage at the output decreases with the increase in bias voltage or decrease in bias current. The test bench in (b) is used to check the offset voltage of the OTA. With a varying DC bias, there will be different offset voltage for each $V_{bias}$ which does not make sense since the offset voltage is usually a single value.
 
 \subsection{AC Analysis}
+The AC analysis is a small signal analysis in the frequency domain. The AC analysis allows the designer to figure out what happens to the circuit when a well-behaving AC signal is applied to its input.  The test bench in Figure.\ref{fig:OTA_TB}(a),(c),(d),(g) and (h) is used to analyse the small signal parameters of the OTA.
+
+\begin{figure} [H]
+\centering
+\includegraphics[scale=0.8]{Figures/Test_Benches/OTA_TB.pdf}
+\caption{Test bench setup for OTA}
+\label{fig:OTA_TB}
+\end{figure}
+
 \subsubsection{Gain, Bandwidth and Phase Margin}
+Consider the Figure.\ref{fig:OTA_TB}(a) with the circuit condtions:
+
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV;  $V_{ac}$ = 1V; $C_{L}$ = 50fF.
-
-The same parameters hold good for AC analysis as well. Here, the value of $V_{ac}$ becomes significant. The value of the open loop gain is given by the ratio of output voltage to input voltage.
-
-Gain = $\frac{V_{out}}{V_{in}}$\\
-Gain in dB = $20 log_{10}\frac{V_{out}}{V_{in}}$
-
+$$Gain in dB = 20 log_{10}\frac{V_{out}}{V_{in}}$$
 Figure\ref{fig:OTA_Gain} shows the semilog plot of Gain for maximum and minimum $V_{bias}$. The plots for the other values of $V_{bias}$ are not shown here as that would make the plot less legible for understanding and more so because those plots would be in between the plots already shown.
 
 \begin{figure} [H]
@@ -205,14 +205,9 @@ DC Gain (V/V)			& 8.548		& 9.4		& 11.1		& 12.67		& 14.06		& 15.31		& 16.49 \\
 \end{table}
 
 \subsubsection{PSRR}
+Figure.\ref{fig:OTA_TB}(c) is the test setup to measure PSRR for a change in $V_{DD}$ and similarly the one in Figure.\ref{fig:OTA_TB}(d) is used to measure PSRR for a change in $V_{SS}$. The circuit conditions are:
 
-$ PSRR = \frac{\Delta I_{out}}{\Delta V_{DD}}$
-
-$V_{DD}$ = 2.5V; $AC Magnitude of V_{DD}$ = 1V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV; $C_{L}$ = 50fF.
-
-$V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $AC Magnitude of V_{SS}$ = 1V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV; $C_{L}$ = 50fF.
-
-The test bench to measure the PSRR of the OTA is as shown in the Figure.(c). The one on the left is used to measure PSRR for a change in $V_{DD}$. And similarly, the one on the right side is used to measure PSRR for a change in $V_{SS}$.
+$V_{DD}$ = 2.5V; $AC Magnitude$ = 1V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV; $C_{L}$ = 50fF.
 
 The variation of PSRR with respect to $V_{bias}$ is tabulated in Table.\ref{tab:OTA_PSRR}. The PSRR is fairly low in the range of nA/V and increases only slightly with increase in $V_{bias}$.
 
@@ -230,7 +225,7 @@ PSRR (VSS Supply) (nA/V)			& 254.5		& 256.5		& 260.4		& 264.2		& 267.9		& 271.5	
 \end{table}
 
 \subsubsection{Input Impedance}
-OTAs generally exhibit a very high input impedance. And to measure this parameter, an AC current source with a magnitude of 1A is connected to the non-inverting terminal of the OTA. And the input impedance is given by the ratio of the AC voltage to the AC current at the input of the OTA. Since the current at the input is 1A, the magnitude of the input voltage will be the value of the input impedance in Ohms at that particular frequency. Since the OTA operation is carried out at 1MHz, the voltage at 1MHz is considered to obtain the value of Input Impedance. Figure.(g) shows the test bench to measure the input impedance.
+OTAs generally exhibit a very high input impedance. And to measure this parameter, an AC current source with a magnitude of 1A is connected to the non-inverting terminal of the OTA. And the input impedance is given by the ratio of the AC voltage to the AC current at the input of the OTA. Since the current at the input is 1A, the magnitude of the input voltage will be the value of the input impedance in Ohms at that particular frequency. Since the OTA operation is carried out at 1MHz, the voltage at 1MHz is considered to obtain the value of Input Impedance. Figure.\ref{fig:OTA_TB}(g) shows the test bench to measure the input impedance, with the circuit conditions:
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{bias}$ = 150mV to 700mV; $C_{L}$ = 50fF; $I_{sin} magnitude$ = 1A. 
 
@@ -249,8 +244,7 @@ Input Impedance (M$\Omega$)			& 3.38		& 3.388		& 3.403		& 3.419		& 3.434		& 3.45
 \end{table}
 
 \subsubsection{Output Impedance}
-
-In a concept similar to measuring the input impedance, the output impedance too, is measured with a help of a current source with unity magnitude at the output instead of a Capacitive load. The differential inputs are connected in a common mode configutation. The test bench to measure the output impedance of the OTA is as shown in Figure(h).
+In a concept similar to measuring the input impedance, the output impedance too, is measured with a help of a current source with unity magnitude at the output instead of a Capacitive load. The differential inputs are connected in a common mode configutation. The test bench to measure the output impedance of the OTA is as shown in Figure.\ref{fig:OTA_TB}(h).
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V $V_{bias}$ = 150mV to 700mV; $I_{sin} magnitude$ = 1A. 
  
@@ -269,7 +263,7 @@ Output Impedance (k$\Omega$)			& 1.262		& 1.3		& 1.382		& 1.473		& 1.577		& 1.69
 
 \subsection{Noise Analysis}
 
-Once again, we use the same test bench as shown in Figure.(a). As mentioned in the previous section, the NMOS differential pair exhibits high flicker noise, also known as 1/f noise. This noise is significant at low frequencies. At moderate and high frequencies, the effect of thermal or white noise is much more dominant and hence flicker noise becomes less significant at those frequencies.
+Once again, we use the same test bench as shown in Figure.\ref{fig:OTA_TB}(a) to perform the noise analysis. As mentioned in the previous sections of this chapter, the NMOS differential pair exhibits high flicker noise, also known as 1/f noise. This noise is significant at low frequencies. At moderate and high frequencies, the effect of thermal or white noise is much more dominant and hence flicker noise becomes less significant at those frequencies.
 
 The variation of the input referred noise with respect to $V_{bias}$ is tabulated in Table.\ref{tab:OTA_Noise}. With increase in $V_{bias}$, the input referred noise decreases. This is because the gain increases with increase in $V_{bias}$ and consequently input referred noise decreases. This also converges to the fact that the input referred noise decreases with bigger dimensions of the differential pair, and thereby contributing to a higher gain.
 
@@ -286,9 +280,10 @@ Input Referred Noise (nV/$\sqrt{Hz}$)			& 46.36		& 43.73		& 39.83		& 37.29		& 35
 \end{table}
 
 \subsection{Transient Analysis}
-\subsubsection{Sine Input}
+Transient analysis will determine how the circuit behaves under non-well-behaved signals in time domain. For the OTA designed, the transient analysis is performed for sine wave input and square wave input. The test bench in Figure.\ref{fig:OTA_TB}(e) and (f) is used to perform the transient analysis of the designed OTA.
 
-The test bench in Figure.(e) is used to measure the transient parameters for a sine wave input. An ideal balun is used at the input to provide a differential voltage to the terminals. The voltages are 180$^0$ out of phase with each other. 
+\subsubsection{Sine Input}
+The test bench in Figure.\ref{fig:OTA_TB}(e) is used to measure the transient parameters for a sine wave input with the circuit conditions as shown below. An ideal balun is used at the input to provide a differential voltage to the terminals. The voltages are 180$^0$ out of phase with each other. 
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV;  $V_{sin} amplitude$ = 100mV; $frequency = 1MHz$ $C_{L}$ = 50fF.
 
@@ -324,7 +319,7 @@ The test bench in Figure.(f) is used to measure the transient parameters for a s
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV;  $V_{pulse} V_1$ = 100mV; $V_2$ = -100mV; $Pulse Width$ = 49.7ns; $Period$ = 100ns; $Rise Time$ = 300ps; $Fall time$ = 300ps; $C_{L}$ = 50fF.
 
-The slew rate, both for the rising edge and the falling edge is tabulated in the Table.\ref{tab:OTA_Slew}.
+The slew rate, both for the rising edge and the falling edge is tabulated in the Table.\ref{tab:OTA_Slew}. The OTA is reasonably fast enough high $V_{bias}$ voltages.
 
 \begin{table} [H]
 \centering
