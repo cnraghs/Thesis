@@ -118,7 +118,7 @@ This thesis details the design and implementation of a radiation hardened high o
 \addcontentsline{toc}{chapter}{Zusammenfassung}
 \chapter*{Zusammenfassung}
 
-In dieser Arbeit wird der Entwurf und die Implementierung eines strahlungsgeh\"arteten Transkonduktanzverst\"arkers mit hohem Ausgangsstrom beschrieben, der Schiene-zu-Schiene-Str\"ome zwischen 15 mA und 30 mA \"uber einen 50$\Omega$ Lastwiderstand f\"ur eine Eingangs-Schiene-zu-Schiene-Spannung von 100 mV liefern kann. Die Vorspannung, die der programmierbare Parameter ist, reicht von 150 mV bis 700 mV. Das Design und die Impelementation wurden in Cadence Virtuoso Design Environment unter Verwendung der XT018 SOI-Technologie von XFAB durchgef\"uhrt, um die Designstrahlung zu erschweren. Das System besteht aus zwei Stufen - dem konventionellen, auf einem Stromspiegel basierenden, betrieblichen Transkonduktanzverst\"arker, der als programmierbare Stufe verwendet wird, gefolgt von einem zweistufigen Miller-kompensierten Operationsverstärker, der als Spannungspuffer verwendet wird, der hohe Str\"ome erzeugt. Es werden zwei verschiedene S\"atze von Ergebnissen bereitgestellt. Die erste davon ist - wobei der Vorspannungsstrom der ersten Stufe der programmierbare Parameter ist. Der Vorspannungsstrom wird von einem PMOS-Transistor gesteuert, dessen Gatespannung ein Eingang des Systems ist. Ein weiterer Ergebnissatz wird bereitgestellt, wobei die Last ein programmierbarer Parameter ist. In diesem Fall wird die Vorspannung auf einem konstanten Wert von 450 mV gehalten und die Last variiert von 35 $\Omega$ bis 70$\Omega$. Das System bietet eine Bandbreite von 10 MHz, da es f\"ur Niederfrequenzanwendungen vorgesehen ist. Das gesamte System ist als Teil eines geschlossenen DC-Stromwandlerkreises mit geschlossenem Regelkreis vorgesehen, indem ein R\"uckkopplungsstrom bereitgestellt wird, der die \"Anderung des Magnetfelds des Ionenstrahls aufhebt. Das System wird bei allen Steuereinstellungen und an allen PVT-Ecken simuliert, um seine Robustheit zu \"uberpr\"ufen. Alle Simulationsergebnisse basieren auf dem Design der Schmetikebene.
+In dieser Arbeit wird der Entwurf und die Implementierung eines strahlungsgeh\"arteten Transkonduktanzverst\"arkers mit hohem Ausgangsstrom beschrieben, der Schiene-zu-Schiene-Str\"ome zwischen 15 mA und 30 mA \"uber einen 50$\Omega$ Lastwiderstand f\"ur eine Eingangs-Schiene-zu-Schiene-Spannung von 100 mV liefern kann. Die Vorspannung, die der programmierbare Parameter ist, reicht von 150 mV bis 700 mV. Das Design und die Impelementation wurden in Cadence Virtuoso Design Environment unter Verwendung der XT018 SOI-Technologie von XFAB durchgef\"uhrt, um die Designstrahlung zu erschweren. Das System besteht aus zwei Stufen - dem konventionellen, auf einem Stromspiegel basierenden, betrieblichen Transkonduktanzverst\"arker, der als programmierbare Stufe verwendet wird, gefolgt von einem zweistufigen Miller-kompensierten Operationsverst\"arker, der als Spannungspuffer verwendet wird, der hohe Str\"ome erzeugt. Es werden zwei verschiedene S\"atze von Ergebnissen bereitgestellt. Die erste davon ist - wobei der Vorspannungsstrom der ersten Stufe der programmierbare Parameter ist. Der Vorspannungsstrom wird von einem PMOS-Transistor gesteuert, dessen Gatespannung ein Eingang des Systems ist. Ein weiterer Ergebnissatz wird bereitgestellt, wobei die Last ein programmierbarer Parameter ist. In diesem Fall wird die Vorspannung auf einem konstanten Wert von 450 mV gehalten und die Last variiert von 35 $\Omega$ bis 70$\Omega$. Das System bietet eine Bandbreite von 10 MHz, da es f\"ur Niederfrequenzanwendungen vorgesehen ist. Das gesamte System ist als Teil eines geschlossenen DC-Stromwandlerkreises mit geschlossenem Regelkreis vorgesehen, indem ein R\"uckkopplungsstrom bereitgestellt wird, der die \"Anderung des Magnetfelds des Ionenstrahls aufhebt. Das System wird bei allen Steuereinstellungen und an allen PVT-Ecken simuliert, um seine Robustheit zu \"uberpr\"ufen. Alle Simulationsergebnisse basieren auf dem Design der Schmetikebene.
 
 \addcontentsline{toc}{chapter}{Acknowledgments}
 \chapter*{Acknowledgements}
@@ -156,11 +156,9 @@ To my family, for their everlasting unconditional support and moral fibre.
 \include{appendix}
 \end{appendices}
 
-
-
 \printglossary[type=acronym, title=Acronyms, toctitle=Acronyms]
-%
-%\bibliography{OTA}
-%\bibliographystyle{ieeetr}
+
+\bibliography{ota}
+\bibliographystyle{ieeetr}
 
 \end{document}

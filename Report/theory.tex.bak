@@ -1,6 +1,6 @@
 \chapter{Theory}
 \section{The Operational Transconductance Amplifier}
-The operational transconductance amplifier (OTA) is basically an op-amp without an output buffer. An OTA can be defined as an amplifier where all the nodes are low impedance except the input and output nodes. A schematic symbol of an OTA is shown in Figure.\ref{fig:OTA_symbol}. OTAs are generally programmable usually through the bias current that is provided to a differential amplifier. In the symbol, a bias voltage is being used as a programmable input. This bias voltage in turn controls the bias current of the amplifier. More on this later.
+The operational transconductance amplifier (OTA) is basically an op-amp without an output buffer \cite{baker_book}. An OTA can be defined as an amplifier where all the nodes are low impedance except the input and output nodes. A schematic symbol of an OTA is shown in Figure.\ref{fig:OTA_symbol}. OTAs are generally programmable usually through the bias current that is provided to a differential amplifier. In the symbol, a bias voltage is being used as a programmable input. This bias voltage in turn controls the bias current of the amplifier. More on this later.
 
 \begin{figure} [H]
 \centering
@@ -38,7 +38,7 @@ The Conventional OTA considered in the previous section is a Class A type of amp
 \item Cascode Voltage Flipped Follower based OTA
 \end{itemize}
 
-One of the figures of merit to compare these OTAs is the Current Enhancement factor (CE). $CE = I_{out-max}/2I_{bias}$. Class A amplifiers typically have a CE of 1. Class AB OTAs have a high CE value. A family of OTA denoted as $Super Class-AB OTA$ have remarkably large CE values. Typical value of CE ranges from 100 to 500 depending on the implementation of the Class-AB differential pair and the output branches. Cascode Voltage Flipped Follower based OTA is one such example of a Super Class-AB OTA. These OTAs have the largest reported CE in literature. Some of the OTA designs considered are explained in the next chapter.
+One of the figures of merit to compare these OTAs is the Current Enhancement factor (CE). $CE = I_{out-max}/2I_{bias}$. Class A amplifiers typically have a CE of 1. Class AB OTAs have a high CE value \cite{pourashraf2017high}. A family of OTA denoted as $Super Class-AB OTA$ have remarkably large CE values. Typical value of CE ranges from 100 to 500 depending on the implementation of the Class-AB differential pair and the output branches. Cascode Voltage Flipped Follower based OTA is one such example of a Super Class-AB OTA. These OTAs have the largest reported CE in literature. Some of the OTA designs considered are explained in the next chapter.
 
 \vfill
 \clearpage
@@ -53,8 +53,7 @@ The operational amplifier (OP AMP) is a fundamental building block in analog int
 \label{fig:OPAMP_symbol}
 \end{figure}
 
-OP AMPs are voltage controlled voltage sources, much to the contrary of OTAs, which are voltage controlled current sources. Design of an OP AMP consists of determining the specifications, selecting the device sizes and biasing conditions, compensating the op-amp for stability, simulating and characterizing the open loop gain, the input common mode range, common mode rejection ratio, power supply rejection ration, output votlage range, current sourcing/sinking capability and power dissipation.
-OP AMPs are used as a voltage buffer whenever there is a need to drive resistive loads or a combination of capacitive load and a resistive load.
+OP AMPs are voltage controlled voltage sources, much to the contrary of OTAs, which are voltage controlled current sources. Design of an OP AMP consists of determining the specifications, selecting the device sizes and biasing conditions, compensating the op-amp for stability, simulating and characterizing the open loop gain, the input common mode range, common mode rejection ratio, power supply rejection ratio, output votlage range, current sourcing/sinking capability and power dissipation \cite{razavi_book}.OP AMPs are used as a voltage buffer whenever there is a need to drive resistive loads or a combination of capacitive load and a resistive load.
 
 \subsection{Miller Compensation OP AMP}
 The schematic of the a two-stage Miller Compensation OP AMP is as shown in Figure.\ref{fig:OPAMP_Schematic_Ibias}. First stage of the OP AMP is the differential amplfier formed by the transistors $M_1-M_5$ and $M_8$. The second stage of the OP AMP is the Common Source amplifier formed by the transistors $M_6$ and $M_7$. Compensation Capacitor or Miller Capacitor denoted by $C_C$ is used for the splitting of the poles of the two stages thereby providing stability and also controlling the bandwidth and the slew rate. 
@@ -69,10 +68,10 @@ The biasing to the differential input pair is provided by the current mirror for
 \clearpage
 \section{The Gm/Id Methodology}
 
-Good analog design is an art, not a science. Best work are still done on napkins and not on EDA tools, i.e., using Hand Calculations. However in recent times, in most cases at least, the equations which were once valid have become inadequate. The ability of these equations are limited to only certain cases. The famous equation for $I_{ds}$ is naturally the first thing that comes to mind when someone says Square Law, which is given by 
+Good analog design is an art, not a science. Best work are still done on napkins and not on EDA tools, i.e., using Hand Calculations. However in recent times, in most cases at least, the equations which were once valid have become inadequate. The ability of these equations are limited to only certain cases \cite{gmid_vs_sqlaw}. The famous equation for $I_{ds}$ is naturally the first thing that comes to mind when someone says Square Law, which is given by 
 $$I_{ds} = \frac{\mu \cdot C_{ox}\cdot W}{2\cdot L}.(V_{gs}-V_{th})^2$$
 
-The square law becomes linear in short-channel limit and thus they are suitable only for long channel MOSFETs. The block diagram in Figure.\ref{fig:Square_Law} indicates the failure in Square law, especially in deep submicron technologies.
+The square law becomes linear in short-channel limit \cite{silveira1996g} and thus they are suitable only for long channel MOSFETs. The block diagram in Figure.\ref{fig:Square_Law} \cite{boris2017systematic} indicates the failure in Square law, especially in deep submicron technologies.
 
 \begin{figure} [H]
 \centering
@@ -81,7 +80,7 @@ The square law becomes linear in short-channel limit and thus they are suitable 
 \label{fig:Square_Law}
 \end{figure}
 
-The values obtained from hand calculations for short channel MOSFETs are far away from accuracy according to the requirements and thus there will be a huge gap in the spice simulation results and the specifications. The reason why this methodology has still not been a disaster is that fact that it over-predicts the $V_{dsat}$, but keeps the transistors in saturation. But in strong saturation, the gain from the MOSFET is not very high. So this methodology skips the possibility of fine-tuning the device in the nascent stages of design.
+The values obtained from hand calculations for short channel MOSFETs are far away from accuracy according to the requirements and thus there will be a huge gap in the spice simulation results and the specifications. The reason why this methodology has still not been a disaster is that fact that it over-predicts the $V_{dsat}$, but keeps the transistors in saturation. But in strong saturation, the gain of the MOSFET is not very high. So this methodology skips the possibility of fine-tuning the device in the nascent stages of design.
 
 The $G_m$/$I_D$ methodology on the other hand, is fundamentally more practical than theoretical. This methodology uses pre-computed spice data in hand calculation, thereby providing accurate results. The diagram in Figure.\ref{fig:GmID} shows that this methodology uses design tables which are pre-computed and using those tables, the hand calculations are made, which are rather simple and straight forward. 
 
@@ -92,7 +91,7 @@ The $G_m$/$I_D$ methodology on the other hand, is fundamentally more practical t
 \label{fig:GmID}
 \end{figure}
 
-To obtain the design tables, we need to look at a transistor in terms of width-independent figures of merit that are linked to the design specification. The design trade-offs have to be considered in terms of MOSFET's inversion level by using $G_m$/$I_D$ as a proxy. The circuit in Figure.\ref{fig:GmID_Ckt} is used to simulate the figures of merit parameters that are necessary to make design decisions. The width of the transistor $M_0$ is set to 5$\mu$m and the length is kept as a variable. The value of $V_{ds}$ is set to a value that is half of the value of the power supply. As part of this work, the supply we use is +2.5V and -2.5V. So technically we have a voltage difference of 5V and therefore, the value of $V_{ds}$ is set to 2.5V.
+To obtain the design tables, we need to look at a transistor in terms of width-independent figures of merit that are linked to the design specification. The design trade-offs have to be considered in terms of MOSFET's inversion level by using $G_m$/$I_D$ as a proxy \cite{gmid_basic}. The circuit in Figure.\ref{fig:GmID_Ckt} is used to simulate the figures of merit parameters that are necessary to make design decisions. The width of the transistor $M_0$ is set to 5$\mu$m and the length is kept as a variable. The value of $V_{ds}$ is set to a value that is half of the value of the power supply. As part of this work, the supply we use is +2.5V and -2.5V. So technically we have a voltage difference of 5V and therefore, the value of $V_{ds}$ is set to 2.5V.
 
 \begin{figure} [H]
 \centering
@@ -152,5 +151,17 @@ An important thing not to forget is that the figures of merit simulated and plot
 \begin{itemize}
 \item Determine $G_m$ from (design objectives)
 \item Pick the channel length L
-be
+	\begin{itemize}
+	\item Short channel $\rightarrow$ high $f_T$ (high speed)
+	\item Long channel $\rightarrow$ high intrinsic gain
+	\end{itemize}
+\item Pick $G_m$/$I_D$ (or $f_T$)
+	\begin{itemize}
+	\item Large $G_m$/$I_D$ $\rightarrow$ low power, large signal swing
+	\item Small $G_m$/$I_D$ $\rightarrow$ high $f_T$ (high speed)
+	\end{itemize}
+\item Determine $I_D$ (from $G_m$ and $G_m$/$I_D$)
+\item Determine W (from $I_D$/W)
 \end{itemize}
+
+There are many other possibilities to design using this methodology and this depends the specifications, constraints and objectives. However, as part of this thesis the steps mentioned above are followed and the plots discussed above are used to design the differential pair of transistors for all the stages of the system. And the other transistors' dimensions were finalized using simulation and output results.

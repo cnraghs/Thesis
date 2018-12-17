@@ -5,7 +5,7 @@
 The first stage of the design is the Operational Transconductance Amplifier. This stage uses bipolar power supply of 2.5V and -2.5V. 
 
 \subsubsection{Commercial OTA}
-OPA860 by Texas Instruments is one of the most popular commercial OTA in the market. The design document(citation) of OPA860 compares OTA to a 3 terminal transistor - a high impedance input(base), low impedance inout(emitter) and a current output(collector). OTA is therefore bipolar and self-biased. Being self-biased simplifies the design process and reduces component count. The overview of the OTA is as shown in Figure.\ref{fig:OPA}. The transconductance of the OTA can be adjusted using an external resistor, allowing bandwidth, quiscent current and gain trade-offs to be optimized. Reducing or increasing the size of the OTA controls the bandwidth, AC behavior and transconductance. With a fixed external resistor, the quiscent current increases with increase in temperature. The variation of the current with temperature holds the transconductance of the OTA relatively constant with temperature.
+OPA860 by Texas Instruments is one of the most popular commercial OTA in the market. The design document \cite{opa860} of OPA860 compares OTA to a 3 terminal transistor - a high impedance input(base), low impedance inout(emitter) and a current output(collector). OTA is therefore bipolar and self-biased. Being self-biased simplifies the design process and reduces component count. The overview of the OTA is as shown in Figure.\ref{fig:OPA}. The transconductance of the OTA can be adjusted using an external resistor, allowing bandwidth, quiscent current and gain trade-offs to be optimized. Reducing or increasing the size of the OTA controls the bandwidth, AC behavior and transconductance. With a fixed external resistor, the quiscent current increases with increase in temperature. The variation of the current with temperature holds the transconductance of the OTA relatively constant with temperature.
 
 \begin{figure} [H]
 \centering
@@ -16,10 +16,10 @@ OPA860 by Texas Instruments is one of the most popular commercial OTA in the mar
 
 The commercial OTA in review, can operate in 2 modes - Voltage mode and Current mode. In voltage mode, it can operate in 3 states - common emitter, common base and common collector. In current mode, it is useful for analog communication such as current amplifier, current differentiator, current integrator and current summer. The output offset voltage is usually very close to zero for an OTA.
 
-Having stated all these facts, this commercial OTA is an amplifier based on BJTs. Considering the high power dissipation and high input current noise of a BJT based amplifier, it is not suitable for our system. However, the concept of having an OTA and an output buffer is something that can be pondered upon.
+Having stated all these facts, this commercial OTA is an amplifier based on BJTs. Considering the high power dissipation and high input current noise of a BJT based amplifier, it is not suitable for our system. However, the concept of having an OTA and an output buffer \cite{lt1228} is something that can be pondered upon.
 
 \subsubsection{Self-Cascode OTA}
-An intruiging concept of Self-Cascode can be used to achieve very high gain for a low supply voltage. A high gain 2-stage self cascode OTA for a 1V supply was researched as part of (citation). A self-cascode MOSFET (SCMOS) has a similar geometrical structure to a regular MOSFET. But still, the transconductance, and the output resistance of an SCMOS are much better than its conventional counterpart. A regular channel requires a long channel for high gain and a short channel for high speed. With the same channel length of a regular MOS, an SCMOS will provide a much higher gain without compromising the speed. 
+An intruiging concept of Self-Cascode can be used to achieve very high gain for a low supply voltage. A high gain 2-stage self cascode OTA for a 1V supply was researched as part of \cite{scmos_ota}. A self-cascode MOSFET (SCMOS) has a similar geometrical structure to a regular MOSFET. But still, the transconductance, and the output resistance of an SCMOS are much better than its conventional counterpart. A regular channel requires a long channel for high gain and a short channel for high speed. With the same channel length of a regular MOS, an SCMOS will provide a much higher gain without compromising the speed. 
 An SCMOS is formed where a regular MOSFET will be replaced by two transistors whose gates are tied together, as shown in Figure.\ref{fig:SCMOS}. The two transistors have same widths. The operating regions of $M_1$ and $M_2$ depend upon the common gate voltage of the SCMOS. If $V_g$ is greater than $V_{th}$ of both the MOSFETs, then $M_1$ and $M_2$ operate in linear and saturation region respectively. With a bulk bias, the threshold voltage of the drain transistor ($M_2$) decreases. This increases the $V_{ds}$ of $M_1$, resulting in moving of its operating point from linear to edge of saturation, i.e., moderate inversion. And this is where the gain is high. Suppose both transistors are operating in saturation, the maximum output resistance can be achived but the voltage swing is considerably reduced.
 
 \begin{figure} [H]
@@ -35,7 +35,7 @@ A self-cascode OTA is very hekpful in achieving a high gain for low power suppli
 
 \subsubsection{2-stage Feed Forward Miller Compensation OTA}
 
-The system level diagram of a feed-forward Miller compensated OTA is shown in Figure.\ref{fig:FFMCO}. The $g_{m1}$ and $g_{m2}$ are input and output stage of the OTA and $g_{mf}$ is the feed-forward path from input to output node. The implementation is based on feed-forward technique proposed in (citation). There is no concept of pole spiltting. The location of poles is mainly dependent on the internal node impedance and parasitic capacitance. It is difficult to estimate the parasitic capacitances and it makes the design complex. Therefore the dominant and non-dominant pole locations will change when the OTA is configured in a closed loop. But using Miller compensation, the poles can be placed at desired locations.
+The system level diagram of a feed-forward Miller compensated OTA is shown in Figure.\ref{fig:FFMCO}. The $g_{m1}$ and $g_{m2}$ are input and output stage of the OTA and $g_{mf}$ is the feed-forward path from input to output node. The implementation is based on feed-forward technique proposed in \cite{feed_fwd_miller}. There is no concept of pole spiltting. The location of poles is mainly dependent on the internal node impedance and parasitic capacitance. It is difficult to estimate the parasitic capacitances and it makes the design complex. Therefore the dominant and non-dominant pole locations will change when the OTA is configured in a closed loop. But using Miller compensation, the poles can be placed at desired locations.
 
 \begin{figure} [H]
 \centering
@@ -50,7 +50,7 @@ The results of this topology were interesting and encouraging. But that fact tha
 
 \subsubsection{A robust Feed Forward scheme without Miller capacitance}
 
-This scheme uses a positive phase shift of left hand plane (LHP) zeros caused by the feedforward path to cancel the negative phase shift of poles to attain good phase margin. The two-stage path increases the low frequency gain further  while the feed forward single stage amplifier makes the circuit faster. The amplifier bandwidth is not compromised by the absence of the traditional pole-splitting effect of Miller compensation capacitor, resulting in a high gain wide-band amplifier.
+This scheme uses a positive phase shift of left hand plane (LHP) zeros caused by the feedforward path to cancel the negative phase shift of poles to attain good phase margin. The two-stage path increases the low frequency gain further  while the feed forward single stage amplifier makes the circuit faster. The amplifier bandwidth is not compromised by the absence of the traditional pole-splitting effect of Miller compensation capacitor, resulting in a high gain wide-band amplifier \cite{robust_feed_fwd}.
 
 \begin{figure} [H]
 \centering
@@ -73,14 +73,14 @@ This topology offers several advantages over the other topologies reviewed durin
 \label{fig:OTA_Class_AB}
 \end{figure}
 
-The schematic of a Super Class AB OTA based on a Cascode Voltage Flipped Follower is as shown in Figure.\ref{fig:OTA_Class_AB}. It uses a Class-AB differential pair to boost the bias current by a factor of $k_1$. Typical values of $k_1$ range from 30 to 60 depending on the implementation of the Class-AB differential pair and supply voltages. An additional current boosting by a factor of $k_2$ is obtained in the output branches. The typical values of $k_2$ range from 3-8. Using cascode transistors maximum output current and subsequently the CE values are reduced. But lack of cascode transistors results in very low open loop gain. Therefore, a simple power efficient technique is used that allows the use of cascode transistors in order to achieve even higher open loop gain and gain bandwidth by maintaining a large CE value. This is done with the help of dynamically biasing the cascode transistors using RC networks (indicated in purple in the figure). The capacitor $C_{bat}$ acts as a floating battery for dynamic operations that transfers variations in the gate voltages of mirror transistors to the gate of the cascode transistors. This increases the $V_{DS}$ of the mirror transistors allowing high output currents. Cascode Voltage Flipped Follower (indicated in red in the figure) is charaterized by high input swing and can operate over a wide range of supply voltages. It uses local shunt feedback to provide nodes A and B with very low impedance.
+The schematic of a Super Class AB OTA based on a Cascode Voltage Flipped Follower is as shown in Figure.\ref{fig:OTA_Class_AB}. It uses a Class-AB differential pair to boost the bias current by a factor of $k_1$. Typical values of $k_1$ range from 30 to 60 depending on the implementation of the Class-AB differential pair and supply voltages. An additional current boosting by a factor of $k_2$ is obtained in the output branches. The typical values of $k_2$ range from 3-8. Using cascode transistors maximum output current and subsequently the CE values are reduced. But lack of cascode transistors results in very low open loop gain. Therefore, a simple power efficient technique is used that allows the use of cascode transistors in order to achieve even higher open loop gain and gain bandwidth by maintaining a large CE value. This is done with the help of dynamically biasing the cascode transistors using RC networks (indicated in purple in the figure) \cite{super_class_ab}. The capacitor $C_{bat}$ acts as a floating battery for dynamic operations that transfers variations in the gate voltages of mirror transistors to the gate of the cascode transistors. This increases the $V_{DS}$ of the mirror transistors allowing high output currents. Cascode Voltage Flipped Follower (indicated in red in the figure) is charaterized by high input swing and can operate over a wide range of supply voltages. It uses local shunt feedback to provide nodes A and B with very low impedance.
 
 Taking into account the complexity, output current requirements and load requirements, this design will not be considered further as part of this research work. The reason being - a high current output of this Class AB OTA would give rise to another output buffer. And the capacitors needed to consume such a high current would be in the order of several pico Farads. Having such a big capacitor inside an IC is not recommended. Also, considering how complex CMOS Current Feedback Amplifiers are, it is wise to stick to a simpler design that does the same work but with some minor trade-offs.
 
 \subsubsection{Conventional OTA}
 Two separate designs - OTA with PMOS Differential pair and OTA with NMOS Differential pair were deisgned and simulated in Cadence to get a good understanding of the circuit parameters and how the differential pair impact them. 
 
-Generally, amplifiers with PMOS transistors used as differential input offer high linearity, low flicker (1/f) noise. A possible reason to choose PMOS transistors as a differential pair comes from the necessity to reduce the influence of the substrate noise. The two transistors are in an N-well and the well is connected to the supply voltage that any substrate interference coupled via the parasitic capacitance to substrate is decoupled to the VDD line. P-channels typically have less flicker noise (1/f noise) caused by the carriers randomly enterring and leaving traps introduced by defects near the semiconductor surface. Since the majority charge carriers are holes in PMOS, there are less potential to be trapped in surface states.
+Generally, amplifiers with PMOS transistors used as differential input offer high linearity, low flicker (1/f) noise. A possible reason to choose PMOS transistors as a differential pair comes from the necessity to reduce the influence of the substrate noise. The two transistors are in an N-well and the well is connected to the supply voltage that any substrate interference coupled via the parasitic capacitance to substrate is decoupled to the VDD line \cite{ota_hf}. P-channels typically have less flicker noise (1/f noise) caused by the carriers randomly enterring and leaving traps introduced by defects near the semiconductor surface. Since the majority charge carriers are holes in PMOS, there are less potential to be trapped in surface states.
 
 Having stated all these facts, NMOS input transistors would be better in terms of transconductance gain, and hence thermal noise and the bandwidth of the amplifier. An important fact considered in the selection of the type of differential pair is that the OTA in this system is being used in an open loop. This means that the gain of the OTA has to be limited in order to avoid saturation at the crests and troughs at the output of the OTA.
 
@@ -96,7 +96,7 @@ PMOS transistors exhibit their low noise behaviour due to the fact that PMOS tra
 \label{fig:OTA_Schematic}
 \end{figure}
 
-Figure.\ref{fig:OTA_Schematic} shows the schematic of the OTA used as part of this Thesis. As mentioned above, the differential amplifier is formed by the NMOS pair. The bias current $I_{bias}$ to the differential pair is provided by the current mirror formed by $M_{nB1}$ and $M_{nB2}$ which is in turn controlled by the PMOS transistor $M_9$ whose gate voltage $V_{bias}$ is the programmable variable of the OTA and the entire system. This bias voltage is inversely proportional to the bias current flowing through each branch of the OTA.
+Figure.\ref{fig:OTA_Schematic} \cite{lcmfb_ota} shows the schematic of the OTA used as part of this Thesis. As mentioned above, the differential amplifier is formed by the NMOS pair $M_{1}$ and $M_{2}$. The bias current $I_{bias}$ to the differential pair is provided by the current mirror formed by $M_{nB1}$ and $M_{nB2}$ which is in turn controlled by the PMOS transistor $M_9$ whose gate voltage $V_{bias}$ is the programmable variable of the OTA and the entire system. This bias voltage is inversely proportional to the bias current flowing through each branch of the OTA.
 
 \begin{table} [H]
 \centering
@@ -122,7 +122,7 @@ MnB2				& 20				& 500n				& 8			\\
 From the Table.\ref{tab:OTA_dimensions}, it can be seen that the current mirror gain for the current mirrors formed by $M_{3}$, $M_{5}$ and $M_{4}$, $M_{6}$ is 3. It can also be noted that the transistors $M_{5}$ and $M_{8}$ are not symmetric with respect to their counterparts. This is designed so to make sure the DC bias point at the output of the OTA is close to 0V, which is the mid point of $V_{DD}$ and $V_{SS}$. Changing the bias current of an amplifier, will automatically change the DC bias point at its output. Since we are using the OTA as a programmable block, it is important to have an output which is symmetric over 0. Even though it is not entirely possible, making these two transistors a little assymetric or uneven would close the gap between the bias points for highest and lowest bias currents.
 
 \section{Test Setup}
-The test bench setup for the operation transconductance amplifier is as shown in Figure.\ref{fig:OTA_TB}. All the analyses are carried out under a standard temperature of $27_0C$, typical mean conditions for the NMOS transistors, PMOS transistors, capacitors and resistors unless explicitly mentioned otherwise. The $ocean$ script containing all the expressions to measure the various parameters of the OTA are attached in the Appendix. In the following subsections, the results of these parameters are discussed using DC Analysis, AC Analysis, Transient Analysis and Noise Analysis separately.
+The test bench setup for the operation transconductance amplifier is as shown in Figure.\ref{fig:OTA_TB}. All the analyses are carried out under a standard temperature of $27^0C$, typical mean conditions for the NMOS transistors, PMOS transistors, capacitors and resistors unless explicitly mentioned otherwise. The $ocean$ script containing all the expressions to measure the various parameters of the OTA are attached in the Appendix. In the following subsections, the results of these parameters are discussed using DC Analysis, AC Analysis, Transient Analysis and Noise Analysis separately.
 
 \subsection{DC Analysis}
 The first thing a designer checks in the bias conditions and this is done with the help of a large signal model using DC analysis. The test bench in Figure.\ref{fig:OTA_TB}(a) and (b) are used to perform the DC analysis. The test bench in (a) is used to meausre the DC bias point at the output of the OTA. Since the programmable input indirectly controls the bias current, the DC bias at the output consequentially changes too.
@@ -335,3 +335,24 @@ Slew Rate Falling Edge (V/us)			& -389		& -413.8		& -469.4		& -523.5		& -570.5		
 \end{table}
 
 \section{Summary}
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}ccc@{}}
+\toprule
+Parameter						& Programmable Voltage	\\ \midrule
+Linear Input Voltage Range		& $\pm$100 mV			\\
+Bandwidth						& 89.19 .. 135 MHz				\\
+Slew Rate						& $\pm$386.6 .. 609.3 V/$\mu$s	\\
+Input Referred Noise			& 33.28 .. 46.64 nV/$\sqrt{Hz}$ @1MHz \\
+Input Impedance					& 3.38 .. 3.467 M$\Omega$		\\
+Output Impedance				& 1.262 .. 1.837 K$\Omega$		\\
+Output Voltage Swing			& 1.6389 .. 3.014 V				\\
+HD2								& -43.86 .. -60.86 dBc			\\
+HD3								& -39.32 .. -52.15 dBc			\\
+Open Loop Voltage Gain			& 8.548 .. 16.49 V/V			\\
+PSRR							& 234.6 .. 274.9 nA/V			\\
+\bottomrule
+\end{tabular}
+\caption{Simulation Results of the OTA}
+\label{tab:Results}
+\end{table}

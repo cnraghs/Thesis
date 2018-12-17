@@ -1,0 +1,204 @@
+@comment{x-kbibtex-personnameformatting=<%l><, %f>}
+
+@unpublished{hrdcct,
+	author = "Eman Ahmed Hamdy Azab and Klaus Hofmann",
+	title = "{R\&D Accelerators: Novel-DC Beam Current Transformer}",
+	year = "2015",
+}
+
+@techreport{xt018,
+	booktitle = "{XT018: 0.18 Micron HV SOI CMOS Technology}",
+	institution = "XFAB",
+	title = "{XT018 SOI Technology Specification}",
+	url = "https://www.xfab.com/fileadmin/X-FAB/Download_Center/Technology/Datasheet/XT018_Datasheet.pdf",
+	year = "2017"
+}
+
+@article{radhard_ota,
+	author={A. Vandooren and J. P. Colinge and D. Flandre},
+	journal={IEEE Transactions on Nuclear Science},
+	title={Gate-all-around OTA's for rad-hard and high-temperature analog applications},
+	year={1999},
+	volume={46},
+	number={4},
+	pages={1242-1249},
+	abstract={Performance of operational transconductance amplifiers (OTA's) fabricated in the gate-all-around SOI technology is described at elevated temperature and after total dose irradiation. Design guidelines using two analog parameters (early voltage and transconductance to drain current ratio) are proposed for correct operation in these two different harsh environments. The design methodology using the two analog parameters of interest is proposed and applied to the specific case of the GAA technology. The temperature and dose dependence of the two above design parameters are then presented. Two different OTA architectures are considered: a single-stage amplifier and a folded cascode amplifier. Experimental results obtained separately for each environment are discussed. High-temperature measurements were performed up to 300/spl deg/C, while total dose measurements were obtained for doses up to 15 Mrad(Si) total dose of gamma rays from a /sup 60/Co source.},
+	keywords={operational amplifiers;high-temperature electronics;radiation hardening (electronics);gamma-ray effects;silicon-on-insulator;GAA OTA;radiation hardness;high temperature operation;gate-all-around operational transconductance amplifier;SOI technology;total dose;single-stage amplifier;folded cascode amplifier;gamma ray irradiation;design;analog circuit;transconductance;early voltage;300 C;15 Mrad;Radiation hardening;Transconductance;Temperature;Design methodology;Operational amplifiers;Silicon on insulator technology;Voltage;Analog circuits;Equations;Guidelines},
+	doi={10.1109/23.785739},
+	ISSN={0018-9499},
+	month={Aug},}
+
+@article{radhard,
+	author = {Messenger, George C.},
+	title = "{Radiation Hardening}",
+	url = "https://www.accessscience.com:443/content/radiation-hardening/566850",
+	journal={Journal of Applied Physics},
+	publisher = {McGraw-Hill Education},
+	year = {2014}
+}
+
+@article{soi_tech,
+  title={Frontiers of silicon-on-insulator},
+  author={Celler, GK and Cristoloveanu, Sorin},
+  journal={Journal of Applied Physics},
+  volume={93},
+  number={9},
+  pages={4955},
+  year={2003},
+  publisher={American Institute of Physics}
+}
+
+@techreport{ndcct_gsi,
+	author = {E. Soliman and H. Reeg and M. Schwickert and K. Hofmann},
+	booktitle = {N-DCCT using MR for FAIR},
+	institution = "IES Institute, TU Darmstadt",
+	title = {A novel DC Current Transformer Using Magneto-Resistance Sensors for FAIR},
+	url = "https://repository.gsi.de/record/184191/files/FG-SIS100-11.pdf",
+	year = "2014"
+}
+
+@book{baker_book,
+  title={CMOS: circuit design, layout, and simulation},
+  author={Baker, R Jacob},
+  volume={1},
+  year={2008},
+  publisher={John Wiley \& Sons}
+}
+
+@book{razavi_book,
+  title={Design of analog CMOS integrated circuits},
+  author={Razavi, Behzad},
+  year={2005},
+  publisher={McGraw Hill International}
+}
+
+@article{pourashraf2017high,
+  title={High current efficiency class-AB OTA with high open loop gain and enhanced bandwidth},
+  author={Pourashraf, Shirin and Ramirez-Angulo, Jaime and Roman-Loera, Alejandro and Lopez-Martin, Antonio J and Diaz-Sanchez, Alejandro and Carvajal, Ramon G},
+  journal={IEICE Electronics Express},
+  volume={14},
+  number={17},
+  pages={20170719--20170719},
+  year={2017},
+  publisher={The Institute of Electronics, Information and Communication Engineers}
+}
+
+@article{silveira1996g,
+  title={A g/sub m//I/sub D/based methodology for the design of CMOS analog circuits and its application to the synthesis of a silicon-on-insulator micropower OTA},
+  author={Silveira, Flandre and Flandre, Denis and Jespers, PGA},
+  journal={IEEE Journal of Solid-State Circuits},
+  volume={31},
+  number={9},
+  pages={1314--1319},
+  year={1996},
+  publisher={IEEE}
+}
+
+@book{boris2017systematic,
+  title={Systematic Design of Analog Cmos Circuits-Using Pre-computed Lookup Table},
+  author={Murmann, Boris},
+  year={2017},
+  publisher={Cambridge University Press}
+}
+
+@techreport{gmid_basic,
+	booktitle = {Basic Introduction to Gm ID Methodology},
+	title = "{A Basic Introduction to the Gm ID-Based Design}",
+	url = "https://www.scribd.com/document/214431452/A-Basic-Introduction-to-the-gm-ID-Based-Design-pdf",
+	institution = {Scribd}
+}
+
+@article{gmid_vs_sqlaw,
+	author={ Daniel Foty and David Binkley and Matthias Bucher},
+	title = "{Gm/Id-based MOSFET Modeling and Modern Analog Design}",
+	journal={MIXDES, Wroclaw, Poland},
+	year = {2002}
+}
+
+@misc{opa860,
+  title={Operational Transconductance Amplifier (OTA) and Buffer. Texas Instruments, SBOS331C-June 2005-Revised August 2008},
+  author={Amplifier, OPA860-Wide Bandwidth Operational Transconductance}
+}
+
+@misc{lt1228,
+  title={100MHz Current Feedback Amplifier with DC Gain Control. Linear Technology Corporation, 2012},
+  author={Datasheets, LT1228}
+}
+
+@manual{aicd_opamp_design,
+	title		= "Miller Compensation Op Amp Design",
+	organization= "IES Institute, TU Darmstadt",
+	year		= "2017",
+}
+
+@inproceedings{scmos_ota, 
+author={H. Veldandi and R. A. Shaik}, 
+booktitle={2017 Innovations in Power and Advanced Computing Technologies (i-PACT)}, 
+title={A 1-V high-gain two-stage self-cascode operational transconductance amplifier}, 
+year={2017}, 
+volume={}, 
+number={}, 
+pages={1-4}, 
+keywords={CMOS integrated circuits;integrated circuit design;MOSFET;operational amplifiers;input stage load transistors;unity gain frequency;CMOS process;self-cascode MOSFET;high-gain two-stage self-cascode operational transconductance amplifier;positive feedback;cross coupling;bulk terminals;self-cascode OTA;process voltage temperature variations;PVT variations;frequency 191.0 MHz;size 65.0 nm;voltage 1.0 V;gain 78.0 dB;Gain;MOSFET;Transconductance;CMOS technology;Resistance;Technological innovation;Self-casocde MOSFET;Operational;transconductance amplifier;Pseudo compensation;DC gain;Unity gain frequency;Slew-rate}, 
+doi={10.1109/IPACT.2017.8245037}, 
+ISSN={}, 
+month={April}
+}
+
+@inproceedings{feed_fwd_miller,
+  title={Design of low-voltage CMOS two-stage operational transconductance amplifier},
+  author={Singh, Sardar Inderjeet},
+  booktitle={Electrical, Electronics, Communication, Computer, and Optimization Techniques (ICEECCOT), 2017 International Conference on},
+  pages={248--252},
+  year={2017},
+  organization={IEEE}
+}
+
+@article{robust_feed_fwd,
+  title={A robust feedforward compensation scheme for multistage operational transconductance amplifiers with no Miller capacitors},
+  author={Thandri, Bharath Kumar and Silva-Mart{\'\i}nez, Jos{\'e}},
+  journal={IEEE Journal of Solid-State Circuits},
+  volume={38},
+  number={2},
+  pages={237--243},
+  year={2003},
+  publisher={IEEE}
+}
+
+@inproceedings{super_class_ab, 
+author={S. Pourashraf and J. Ramírez-Angulo and A. J. Lopez-Martin and R. González-Carvajal}, 
+booktitle={2017 IEEE 60th International Midwest Symposium on Circuits and Systems (MWSCAS)}, 
+title={A super class-AB OTA with high output current and no open loop gain degradation}, 
+year={2017}, 
+volume={}, 
+number={}, 
+pages={815-818}, 
+keywords={CMOS analogue integrated circuits;low-power electronics;operational amplifiers;high output current enhancement factors;current enhancement factor;CMOS technology;dynamically biased cascode transistors;super class-AB op-amps;high slew rate improvement;super class-AB OTA;size 180.0 nm;gain 67.0 dB;Transistors;Gain;Logic gates;Degradation;Mirrors;Manganese;CMOS technology;Class-AB;OTA;Dynamic biasing;Low power;Analog amplifiers}, 
+doi={10.1109/MWSCAS.2017.8053048}, 
+ISSN={1558-3899}, 
+month={August}
+}
+
+@mastersthesis{lcmfb_ota,
+	author = "Holmes, Michael Leigh",
+	school = "New Mexico State University",
+	title = "{Application of local common mode feedback techniques to enhance slew rate and gain-bandwidth of CMOS Operational Amplifiers}",
+	url = "http://cc.ee.nchu.edu.tw/~aiclab/public_htm/Analog/Theses/2002Holmes.pdf",
+	year = {2002}
+}
+
+@article{ota_hf,
+  title={A novel design technique of one stage CMOS OTA for high frequency applications},
+  author={Motlak, Hassan Jassim and Ahmad, S Nasaem},
+  journal={Frequenz},
+  volume={61},
+  number={7-8},
+  pages={182--188},
+  year={2007},
+  publisher={De Gruyter}
+}
+
+@misc{opamp_basic,
+    title     = "Basic OpAmp Design and Compensation",
+ 	author = "University of Minnesota Twin Cities"
+}

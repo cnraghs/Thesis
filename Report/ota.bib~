@@ -1,0 +1,17 @@
+@comment{x-kbibtex-personnameformatting=<%l><, %f>}
+
+@unpublished{hrdcct,
+	author = "Eman Ahmed Hamdy Azab and Klaus Hoffman",
+	title = "{R&D Accelerators: Novel-DC Beam Current Transformer}",
+	year = "2015",
+	note = ""
+}
+
+@techreport{xt018,
+	booktitle = "{XT018: 0.18 Micron HV SOI CMOS Technology}",
+	institution = "XFAB",
+	title = "{XT018 SOI Technology Specification}",
+	url = "https://www.xfab.com/fileadmin/X-FAB/Download_Center/Technology/Datasheet/XT018_Datasheet.pdf",
+	year = "2017"
+}
+

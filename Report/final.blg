@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: final.aux
+A level-1 auxiliary file: appendix.aux
+The style file: ieeetr.bst
+Database file #1: ota.bib
+Warning--empty note in hrdcct
+Warning--empty author in xt018
+Warning--empty author in gmid_basic
+Warning--empty year in gmid_basic
+You've used 22 entries,
+            1876 wiz_defined-function locations,
+            591 strings with 6952 characters,
+and the built_in function-call counts, 4614 in all, are:
+= -- 455
+> -- 149
+< -- 0
++ -- 61
+- -- 39
+* -- 290
+:= -- 645
+add.period$ -- 22
+call.type$ -- 22
+change.case$ -- 21
+chr.to.int$ -- 0
+cite$ -- 26
+duplicate$ -- 246
+empty$ -- 482
+format.name$ -- 39
+if$ -- 1135
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 16
+newline$ -- 72
+num.names$ -- 19
+pop$ -- 81
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 168
+stack$ -- 0
+substring$ -- 256
+swap$ -- 86
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 4
+while$ -- 39
+width$ -- 24
+write$ -- 194
+(There were 4 warnings)
