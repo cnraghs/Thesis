@@ -74,6 +74,8 @@ At the highest $V_{bias}$, the mean values of the parameters meet the requiremen
 \includegraphics[scale=1]{Figures/Corners/Overall/Proc_Max/PDFs/Proc_Max_imin.pdf}
 \caption{Histogram of Minimum Output Current due to Process Variation at $V_{bias}$=700mV}
 \end{figure}
+\vfill
+\clearpage
 
 \section{Process and Supply Variation}
 
@@ -311,4 +313,51 @@ For the highest $V_{bias}$, the mean gain is around 24dB with a standard deviati
 \caption{Histogram of PSRR($V_{SS}$) due to PVT Variation at $V_{bias}$=700mV}
 \end{figure}
 
+\vfill
+\clearpage
 \section{Summary of PVT Corner Analysis}
+The summary of all PVT corners of the lowest and highest $V_{bias}$ is presented in this section. As seen in the previous sections, the current is worst at lowest $V_{bias}$, with a value of -1.62mA.
+The worst case open loop gain of the OTA is 12dB for the lowest $V_{bias}$. The mean values of all the parameters are very close to the typical or nominal case.
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}cccc@{}}
+\toprule
+Parameter					& Min			& Max 				& Mean			\\ \midrule
+Transconductance Gain(Gm)	& 81 mA/V		& 241 mA/V 			& 158.2 mA/V	\\
+Output Current(+)			& -1.626 mA		& 28.01 mA			& 14.79 mA		\\
+Output Current(-)			& -28.41 mA		& -7.123 mA			& -16.84 mA		\\
+Bandwidth					& 8.858 MHz		& 28.46 MHz			& 16.7 MHz		\\
+Input Referred Noise		& 36.62 nV/$\sqrt{Hz}$	& 75.85 nV/$\sqrt{Hz}$	& 48.96 nV/$\sqrt{Hz}$\\
+Input Impedance				& 3.241 M$\Omega$	& 3.352 M$\Omega$ & 3.388 M$\Omega$	\\
+Output Impedance			& 0.418$\Omega$		& 2.207$\Omega$	& 0.968$\Omega$	\\
+HD2							& -63.12 dBc		& -31.12 dBc	& -41.2 dBc		\\
+HD3							& -78.03 dBc		& -39.28 dBc	& -51.6 dBc		\\
+Open Loop Voltage Gain		& 12.3 dB			& 22.51 dB		& 18.3 dB		\\
+PSRR						& 61.04 $\mu$A/V	& 205.1 $\mu$A/V & 96.14 $\mu$A/V \\
+\bottomrule
+\end{tabular}
+\caption{PVT Corners for $V_{bias}$ = 150mV}
+\label{tab:PVT_150}
+\end{table}
+
+\begin{table} [H]
+\centering
+\begin{tabular}{@{}cccc@{}}
+\toprule
+Parameter					& Min				& Max 			& Mean			\\ \midrule
+Transconductance Gain(Gm)	& 241.7 mA/V		& 319.3 mA/V 	& 290.49 mA/V	\\
+Output Current(+)			& 13.6 mA			& 29.99 mA		& 22.96 mA		\\
+Output Current(-)			& -44.21 mA			& -23.01 mA		& -35.13 mA		\\
+Bandwidth					& 8.235 MHz			& 27.15 MHz		& 15.8 MHz		\\
+Input Referred Noise		& 27.62 nV/$\sqrt{Hz}$	& 38.52 nV/$\sqrt{Hz}$	& 32.985 nV/$\sqrt{Hz}$\\
+Input Impedance				& 3.327 M$\Omega$	& 3.675 M$\Omega$ & 3.49 M$\Omega$ \\
+Output Impedance			& 0.427$\Omega$		& 2.287$\Omega$	& 0.996$\Omega$	\\
+HD2							& -48.93 dBc		& -18.36 dBc	& -31.72 dBc	\\
+HD3							& -39.28 dBc		& -22.5 dBc		& -30.94 dBc	\\
+Open Loop Voltage Gain		& 22.5 dB			& 26.14 dB		& 24.52 dB		\\
+PSRR						& 40.76 $\mu$A/V	& 64.63 $\mu$A/V & 51.3 $\mu$A/V \\
+\bottomrule
+\end{tabular}
+\caption{PVT Corners for $V_{bias}$ = 700mV}
+\label{tab:PVT_700}
+\end{table}

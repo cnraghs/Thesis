@@ -76,7 +76,7 @@ The schematic of a Super Class AB OTA based on a Cascode Voltage Flipped Followe
 
 Taking into account the complexity, output current requirements and load requirements, this design will not be considered further as part of this research work. The reason being - a high current output of this Class AB OTA would give rise to another output buffer. And the capacitors needed to consume such a high current would be in the order of several pico Farads. Having such a big capacitor inside an IC is not recommended. Also, considering how complex CMOS Current Feedback Amplifiers are, it is wise to stick to a simpler design that does the same work but with some minor trade-offs.
 
-\subsubsection{Conventional OTA}
+\subsubsection{Conventional Current Mirror OTA}
 Two separate designs - OTA with PMOS Differential pair and OTA with NMOS Differential pair were deisgned and simulated in Cadence to get a good understanding of the circuit parameters and how the differential pair impact them. 
 
 Generally, amplifiers with PMOS transistors used as differential input offer high linearity, low flicker (1/f) noise. A possible reason to choose PMOS transistors as a differential pair comes from the necessity to reduce the influence of the substrate noise. The two transistors are in an N-well and the well is connected to the supply voltage that any substrate interference coupled via the parasitic capacitance to substrate is decoupled to the VDD line \cite{ota_hf}. P-channels typically have less flicker noise (1/f noise) caused by the carriers randomly enterring and leaving traps introduced by defects near the semiconductor surface. Since the majority charge carriers are holes in PMOS, there are less potential to be trapped in surface states.
@@ -86,8 +86,28 @@ Having stated all these facts, NMOS input transistors would be better in terms o
 PMOS transistors exhibit their low noise behaviour due to the fact that PMOS transistors are usually bigger (higher W/L ratio) than an NMOS pair. Since we need a small open loop gain, we cannot afford to have big transistors at the input that cause the output to saturate. Along with this, it was also seen that, the range of bias currents needed to obtain a similar range of voltage swing was much wider in case of PMOS than NMOS. Since this indirectly results in a high power dissipation in the 1st stage itself, it was concluded to use the NMOS based design as part of this Thesis work.
 \vfill
 \clearpage
+
+\subsubsection{Comparison of Topologies}
+\begin{table} [H]
+\centering
+\begin{tabular}{|m{5cm}|m{5cm}|m{5cm}|}
+\toprule
+Topology				& Advantages				& Disadvantages			\\ \midrule
+\hline
+Commercial OTA OPA860	& Simple design, wide bandwidth, high gain	& BJT based design; high power consumption, high input current noise \\ \hline
+Self Cascode OTA	& High gain for low supplies; good tradeoff between high gain and high speed	& low output current, Low slew rate; High gain in an open loop will cause saturation \\ \hline
+Feed forward compensation with Miller Capacitance	& Wide bandwidth; less power dissipation 	& Unstable when cascaded. Need for compensation circuitry \\ \hline
+Robust feed forward compensation without Miller Capacitance & Area and power reduction; enhanced bandwidth	& Need to optimize feed forward stage for pole-zero cancellation at high frequencies; Complex circuit \\ \hline
+Super Class AB OTA & High current in a single stage; No open loop degradation & 3 RC circuits mean                                                                                                   increased area and power consumption; Complex input stage; High output capacitance \\ \hline
+Conventional Current Mirror OTA & Simple Design; Easy to achieve programmability & Multiple branches lead to higher power dissipation; Output current and Slew Rate are limited \\ \hline
+\bottomrule
+\end{tabular}
+\caption{Comparison of OTA Topologies}
+\label{tab:OTA_topologies}
+\end{table}
 \subsection{Schematic}
 
+Figure.\ref{fig:OTA_Schematic} \cite{lcmfb_ota} shows the schematic of the OTA used as part of this Thesis. As mentioned above, the differential amplifier is formed by the NMOS pair $M_{1}$ and $M_{2}$ and dimensions of the differential pair was fixed using the figures of merit of the ${G_m/I_D}$ methodology. The bias current $I_{bias}$ to the differential pair is provided by the current mirror formed by $M_{nB1}$ and $M_{nB2}$ which is in turn controlled by the PMOS transistor $M_9$ whose gate voltage $V_{bias}$ is the programmable variable of the OTA and the entire system. This bias voltage is inversely proportional to the bias current flowing through each branch of the OTA.
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Schematics/OTA_NMOS_Vbias.pdf}
@@ -95,7 +115,6 @@ PMOS transistors exhibit their low noise behaviour due to the fact that PMOS tra
 \label{fig:OTA_Schematic}
 \end{figure}
 
-Figure.\ref{fig:OTA_Schematic} \cite{lcmfb_ota} shows the schematic of the OTA used as part of this Thesis. As mentioned above, the differential amplifier is formed by the NMOS pair $M_{1}$ and $M_{2}$ and dimensions of the differential pair was fixed using the figures of merit of the ${G_m/I_D}$ methodology. The bias current $I_{bias}$ to the differential pair is provided by the current mirror formed by $M_{nB1}$ and $M_{nB2}$ which is in turn controlled by the PMOS transistor $M_9$ whose gate voltage $V_{bias}$ is the programmable variable of the OTA and the entire system. This bias voltage is inversely proportional to the bias current flowing through each branch of the OTA.
 
 \begin{table} [H]
 \centering

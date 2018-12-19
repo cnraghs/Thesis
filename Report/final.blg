@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: final.aux
 A level-1 auxiliary file: appendix.aux
@@ -8,45 +8,45 @@ Warning--empty note in hrdcct
 Warning--empty author in xt018
 Warning--empty author in gmid_basic
 Warning--empty year in gmid_basic
-You've used 29 entries,
+You've used 30 entries,
             1876 wiz_defined-function locations,
-            628 strings with 8065 characters,
-and the built_in function-call counts, 6288 in all, are:
-= -- 608
-> -- 228
+            632 strings with 8129 characters,
+and the built_in function-call counts, 6419 in all, are:
+= -- 619
+> -- 232
 < -- 0
-+ -- 90
-- -- 61
-* -- 407
-:= -- 892
-add.period$ -- 30
-call.type$ -- 29
-change.case$ -- 28
++ -- 92
+- -- 62
+* -- 414
+:= -- 914
+add.period$ -- 31
+call.type$ -- 30
+change.case$ -- 29
 chr.to.int$ -- 0
-cite$ -- 33
-duplicate$ -- 333
-empty$ -- 644
-format.name$ -- 61
-if$ -- 1542
+cite$ -- 34
+duplicate$ -- 342
+empty$ -- 661
+format.name$ -- 62
+if$ -- 1573
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 22
-newline$ -- 94
-num.names$ -- 26
-pop$ -- 109
+int.to.str$ -- 30
+missing$ -- 23
+newline$ -- 97
+num.names$ -- 27
+pop$ -- 113
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 221
+skip$ -- 222
 stack$ -- 0
 substring$ -- 340
-swap$ -- 115
+swap$ -- 116
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 52
-width$ -- 31
-write$ -- 258
+while$ -- 53
+width$ -- 32
+write$ -- 266
 (There were 4 warnings)

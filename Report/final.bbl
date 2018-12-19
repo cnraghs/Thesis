@@ -4,6 +4,10 @@
 E.~A.~H. Azab and K.~Hofmann, ``{R\&D Accelerators: Novel-DC Beam Current
   Transformer}.'' 2015.
 
+\bibitem{baker_book}
+R.~J. Baker, {\em CMOS: circuit design, layout, and simulation}, vol.~1.
+\newblock John Wiley \& Sons, 2008.
+
 \bibitem{intro}
 A.~J. Poitzsch, ``{A High Voltage, High Current, Low Error Operational
   Amplifier with Novel Features},'' Master's thesis, Massachusetts Institute of
@@ -24,6 +28,10 @@ E.~Soliman, H.~Reeg, M.~Schwickert, and K.~Hofmann, ``A novel dc current
   transformer using magneto-resistance sensors for fair,'' tech. rep., IES
   Institute, TU Darmstadt, 2014.
 
+\bibitem{opa861}
+T.~Instruments, ``Wide bandwidth operational transconductance amplifier opa861
+  [z],'' {\em Texas Instruments}, 2004.
+
 \bibitem{xt018}
 ``{XT018 SOI Technology Specification},'' tech. rep., XFAB, 2017.
 
@@ -43,10 +51,6 @@ G.~C. Messenger, ``{Radiation Hardening},'' {\em Journal of Applied Physics},
 J.~R. Schwank, V.~Ferlet-Cavrois, M.~R. Shaneyfelt, P.~Paillet, and P.~E. Dodd,
   ``Radiation effects in soi technologies,'' {\em IEEE Transactions on Nuclear
   Science}, vol.~50, pp.~522--538, June 2003.
-
-\bibitem{baker_book}
-R.~J. Baker, {\em CMOS: circuit design, layout, and simulation}, vol.~1.
-\newblock John Wiley \& Sons, 2008.
 
 \bibitem{folded_cascode}
 M.~J. Cabebe, C.~D. Gallego, J.~R. Hizon, and L.~Alarcon, ``Design tradeoffs in
@@ -99,12 +103,12 @@ B.~Murmann, {\em Systematic Design of Analog Cmos Circuits-Using Pre-computed
 ``{A Basic Introduction to the Gm ID-Based Design},'' tech. rep., Scribd.
 
 \bibitem{opa860}
-O.-W. B. O.~T. Amplifier, ``Operational transconductance amplifier (ota) and
-  buffer. texas instruments, sbos331c-june 2005-revised august 2008.''
+T.~Instruments, ``Operational transconductance amplifier (ota) and buffer.
+  texas instruments, sbos331c-june 2005-revised august 2008.''
 
 \bibitem{lt1228}
-L.~Datasheets, ``100mhz current feedback amplifier with dc gain control. linear
-  technology corporation, 2012.''
+L.~T.~. Datasheets, ``100mhz current feedback amplifier with dc gain control.
+  linear technology corporation, 2012.''
 
 \bibitem{scmos_ota}
 H.~Veldandi and R.~A. Shaik, ``A 1-v high-gain two-stage self-cascode

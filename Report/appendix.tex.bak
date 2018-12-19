@@ -1,19 +1,4 @@
 \chapter{Appendix}
-\section{OPAMP}
-\begin{figure} [H]
-\centering
-\includegraphics[scale=1]{Figures/Plots/OPAMP_ICMR.pdf}
-\caption{OPAMP Plot of ICMR vs Vin}
-\label{fig:OPAMP_ICMR}
-\end{figure}
-
-
-\begin{figure} [H]
-\centering
-\includegraphics[scale=1]{Figures/Plots/OPAMP_OutSwing.pdf}
-\caption{OPAMP Plot of Output Voltage Swing vs Vin}
-\label{fig:OPAMP_Swing}
-\end{figure}
 
 \section{Corner Simulation}
 
@@ -404,4 +389,18 @@
 \centering
 \includegraphics[scale=1]{Figures/Corners/Overall/PVT_Mid/PDFs/PVT_Mid_psrrn.pdf}
 \caption{Histogram of PSRR($V_{SS}$) due to PVT Variation at $V_{bias}$=400mV}
+\end{figure}
+
+\section{Conventional OTA with PMOS Input}
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1]{Figures/Schematics/OTA_PMOS.pdf}
+\caption{Conventional Current Mirror OTA with PMOS Input}
+\end{figure}
+
+\section{3-stage Topology}
+\begin{figure} [H]
+\centering
+\includegraphics[scale=1]{Figures/System_Level/System_Overview_EF.pdf}
+\caption{3 stage design with an Emitter Follower}
 \end{figure}

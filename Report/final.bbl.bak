@@ -1,0 +1,137 @@
+\begin{thebibliography}{10}
+
+\bibitem{hrdcct}
+E.~A.~H. Azab and K.~Hofmann, ``{R\&D Accelerators: Novel-DC Beam Current
+  Transformer}.'' 2015.
+
+\bibitem{intro}
+A.~J. Poitzsch, ``{A High Voltage, High Current, Low Error Operational
+  Amplifier with Novel Features},'' Master's thesis, Massachusetts Institute of
+  Technology, 2014.
+
+\bibitem{colinge}
+J.-P. Colinge {\em et~al.}, {\em FinFETs and other multi-gate transistors},
+  vol.~73.
+\newblock Springer, 2008.
+
+\bibitem{sensor_ndcct_gsi}
+E.~Soliman, K.~Hofmann, H.~Reeg, and M.~Schwickert, ``Sensor studies for dc
+  current transformer application,'' tech. rep., GSI Helmholtz Centre for Heavy
+  Ion Research, 2014.
+
+\bibitem{ndcct_gsi}
+E.~Soliman, H.~Reeg, M.~Schwickert, and K.~Hofmann, ``A novel dc current
+  transformer using magneto-resistance sensors for fair,'' tech. rep., IES
+  Institute, TU Darmstadt, 2014.
+
+\bibitem{xt018}
+``{XT018 SOI Technology Specification},'' tech. rep., XFAB, 2017.
+
+\bibitem{soi_tech}
+G.~Celler and S.~Cristoloveanu, ``Frontiers of silicon-on-insulator,'' {\em
+  Journal of Applied Physics}, vol.~93, no.~9, p.~4955, 2003.
+
+\bibitem{soi_ease}
+T.~Romanko and B.~Clegg, ``Soi eases radiation-hardened asic designs,'' {\em
+  Military and Aerospace Designline}, 2005.
+
+\bibitem{radhard}
+G.~C. Messenger, ``{Radiation Hardening},'' {\em Journal of Applied Physics},
+  2014.
+
+\bibitem{radhard_effects}
+J.~R. Schwank, V.~Ferlet-Cavrois, M.~R. Shaneyfelt, P.~Paillet, and P.~E. Dodd,
+  ``Radiation effects in soi technologies,'' {\em IEEE Transactions on Nuclear
+  Science}, vol.~50, pp.~522--538, June 2003.
+
+\bibitem{baker_book}
+R.~J. Baker, {\em CMOS: circuit design, layout, and simulation}, vol.~1.
+\newblock John Wiley \& Sons, 2008.
+
+\bibitem{folded_cascode}
+M.~J. Cabebe, C.~D. Gallego, J.~R. Hizon, and L.~Alarcon, ``Design tradeoffs in
+  a 0.5v 65nm cmos folded cascode ota,'' in {\em IEEE 2013 Tencon - Spring},
+  pp.~293--297, April 2013.
+
+\bibitem{telescopic}
+O.~A. Abu-El-ela, A.~A. Aldaly, Y.~Abd-El-azim, and H.~A. Omran, ``Design
+  automation of a fully differential switched capacitor amplifier using a
+  telescopic cascode ota,'' in {\em 2018 35th National Radio Science Conference
+  (NRSC)}, pp.~385--392, March 2018.
+
+\bibitem{lcmfb_ota}
+M.~L. Holmes, ``{Application of local common mode feedback techniques to
+  enhance slew rate and gain-bandwidth of CMOS Operational Amplifiers},''
+  Master's thesis, New Mexico State University, 2002.
+
+\bibitem{super_class_ab}
+S.~Pourashraf, J.~Ramirez-Angulo, A.~J. Lopez-Martin, and R.~Gonzalez-Carvajal,
+  ``A super class-ab ota with high output current and no open loop gain
+  degradation,'' in {\em 2017 IEEE 60th International Midwest Symposium on
+  Circuits and Systems (MWSCAS)}, pp.~815--818, August 2017.
+
+\bibitem{pourashraf2017high}
+S.~Pourashraf, J.~Ramirez-Angulo, A.~Roman-Loera, A.~J. Lopez-Martin,
+  A.~Diaz-Sanchez, and R.~G. Carvajal, ``High current efficiency class-ab ota
+  with high open loop gain and enhanced bandwidth,'' {\em IEICE Electronics
+  Express}, vol.~14, no.~17, pp.~20170719--20170719, 2017.
+
+\bibitem{razavi_book}
+B.~Razavi, {\em Design of analog CMOS integrated circuits}.
+\newblock McGraw Hill International, 2005.
+
+\bibitem{gmid_vs_sqlaw}
+D.~Foty, D.~Binkley, and M.~Bucher, ``{Gm/Id-based MOSFET Modeling and Modern
+  Analog Design},'' {\em MIXDES, Wroclaw, Poland}, 2002.
+
+\bibitem{silveira1996g}
+F.~Silveira, D.~Flandre, and P.~Jespers, ``A g/sub m//i/sub d/based methodology
+  for the design of cmos analog circuits and its application to the synthesis
+  of a silicon-on-insulator micropower ota,'' {\em IEEE Journal of Solid-State
+  Circuits}, vol.~31, no.~9, pp.~1314--1319, 1996.
+
+\bibitem{boris2017systematic}
+B.~Murmann, {\em Systematic Design of Analog Cmos Circuits-Using Pre-computed
+  Lookup Table}.
+\newblock Cambridge University Press, 2017.
+
+\bibitem{gmid_basic}
+``{A Basic Introduction to the Gm ID-Based Design},'' tech. rep., Scribd.
+
+\bibitem{opa860}
+O.-W. B. O.~T. Amplifier, ``Operational transconductance amplifier (ota) and
+  buffer. texas instruments, sbos331c-june 2005-revised august 2008.''
+
+\bibitem{lt1228}
+L.~Datasheets, ``100mhz current feedback amplifier with dc gain control. linear
+  technology corporation, 2012.''
+
+\bibitem{scmos_ota}
+H.~Veldandi and R.~A. Shaik, ``A 1-v high-gain two-stage self-cascode
+  operational transconductance amplifier,'' in {\em 2017 Innovations in Power
+  and Advanced Computing Technologies (i-PACT)}, pp.~1--4, April 2017.
+
+\bibitem{feed_fwd_miller}
+S.~I. Singh, ``Design of low-voltage cmos two-stage operational
+  transconductance amplifier,'' in {\em Electrical, Electronics, Communication,
+  Computer, and Optimization Techniques (ICEECCOT), 2017 International
+  Conference on}, pp.~248--252, IEEE, 2017.
+
+\bibitem{robust_feed_fwd}
+B.~K. Thandri and J.~Silva-Mart{\'\i}nez, ``A robust feedforward compensation
+  scheme for multistage operational transconductance amplifiers with no miller
+  capacitors,'' {\em IEEE Journal of Solid-State Circuits}, vol.~38, no.~2,
+  pp.~237--243, 2003.
+
+\bibitem{ota_hf}
+H.~J. Motlak and S.~N. Ahmad, ``A novel design technique of one stage cmos ota
+  for high frequency applications,'' {\em Frequenz}, vol.~61, no.~7-8,
+  pp.~182--188, 2007.
+
+\bibitem{opamp_basic}
+U.~of~Minnesota Twin~Cities, ``Basic opamp design and compensation.''
+
+\bibitem{aicd_opamp_design}
+IES Institute, TU Darmstadt, {\em Miller Compensation Op Amp Design}, 2017.
+
+\end{thebibliography}
