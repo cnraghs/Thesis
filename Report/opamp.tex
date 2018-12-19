@@ -1,7 +1,8 @@
 \chapter{Operational Amplifier}
-
+This chapter deals with the design and implementation of an operational amplifier as a second stage. OP AMPs are fundamental building blocks in analog IC design. OP AMPs can work in different configurations like - Adder, Integrator, Differentiator, Buffer. And also in inverting and non-inverting configurations. As part of this work, the OP AMP specifications were obtained from simulations and using those specifications, the OP AMP was designed and tested for all parameters.
+ 
 \section{Design and Implementation}
-With the gain of the first stage suffieciently high enough, the second stage is used just as a buffer. The high impedance output of the operational transconductance amplifier has to be converted to a low impedance output in order to drive a resistive load instead of a pure capacitive load. The first thing to ponder upon is the specifications to design the op amp. And then from the specifications, we can decide on a possible topology for the op amp. So how to arrive at the specifications is the question. We have the results from the first stage OTA and since the output of the OTA is directly provided to the input of the op amp, we can use the OTA to generate the specifications of the op amp. Some of the trivial things like the input common mode range and the output voltage swing can be directly obtained by looking at the output of the OTA. But some of the key parameters like the open loop gain, gain bandwidth prodcut, slew rate, etc., need simulations to reach our requirement. The output impedance, the output current range specifications can be directly taken from the system specifications tabulated in Chapter 1.
+With the gain of the first stage suffieciently high enough, the second stage is used just as a buffer. The high impedance output of the operational transconductance amplifier has to be converted to a low impedance output in order to drive a resistive load instead of a pure capacitive load. As a first step, the specifications of the OP AMP have to be decided. We have the results from the first stage OTA and since the output of the OTA is directly provided to the input of the op amp, we can use the OTA to generate the specifications of the op amp. Some of the parameters like the input common mode range and the output voltage swing can be directly obtained by looking at the output of the OTA. But some of the key parameters like the open loop gain, gain bandwidth prodcut, slew rate, etc., need simulations to reach our requirement. The output impedance, the output current range specifications can be directly taken from the system specifications tabulated in Chapter 1.
 
 \begin{figure} [H]
 \centering
@@ -52,14 +53,11 @@ The dimensions of the transistors are tabulated in Table.\ref{tab:OPAMP_dimensio
 \begin{tabular}{@{}cccc@{}}
 \toprule
 Transistor			& Width($\mu$m)		& Length(nm)		& Multiplier \\ \midrule
-M1					& 5					& 500				& 2			\\
-M2					& 5					& 500				& 2			\\ 
-M3					& 30 				& 500				& 1			\\
-M4					& 30 				& 500				& 1			\\ 
-M5					& 2 				& 500				& 1			\\
+M1, M2				& 5					& 500				& 2			\\
+M3, M4				& 30 				& 500				& 1			\\
+M5, M8				& 2 				& 500				& 1			\\
 M6					& 85 				& 500				& 55		\\ 
 M7					& 50 				& 500				& 48		\\
-M8					& 2 				& 500				& 1			\\ 
 M9					& 0.7				& 500				& 1			\\
 \bottomrule
 \end{tabular}
@@ -70,9 +68,10 @@ M9					& 0.7				& 500				& 1			\\
 \section{Test Setup}
 \begin{figure} [H]
 \centering
-\includegraphics[scale=0.8]{Figures/Test_Benches/OPAMP_TB.pdf}
+\includegraphics[scale=0.75]{Figures/Test_Benches/OPAMP_TB.pdf}
 \caption{Test bench setup for OP AMP}
 \label{fig:OPAMP_TB}
+(a)Bias, Gain, Bandiwdth; (b)ICMR; (c)PSRR($V_{DD}$); (d)PSRR($V_{SS}$); (e)Transient - Sine; (f)Transient - Square; (g)Input Impedance; (h)Output Impedance
 \end{figure}
 
 The test bench setup for the operation transconductance amplifier is as shown in Figure.\ref{fig:OPAMP_TB}. All the analyses are carried out under a standard temperature of $27_0C$, typical mean conditions for the NMOS transistors, PMOS transistors, capacitors and resistors unless explicitly mentioned otherwise. The $ocean$ script containing all the expressions to measure the various parameters of the OP AMP are attached in the Appendix. In the following subsections, the results of these parameters are discussed using DC Analysis, AC Analysis, Transient Analysis and Noise Analysis separately.
@@ -96,8 +95,9 @@ Output Voltage Swing		& -2.19 .. 2.323V	\\
 \end{table}
 
 \subsection{AC Analysis}
+The test bench in Figure.\ref{fig:OPAMP_TB}(a),(c),(d),(g) and (h) is used to analyse the small signal parameters of the OP AMP.
 \subsubsection{Gain and Unity Bandwidth}
-The open loop gain and the gain bandwidth product are inarguably the most important parameters of an operational amplifier. The test bench used to measure these parameters is as shown in Figure.\ref{fig:OPAMP_TB}(a). The op amp is configured in an open loop. The DC biasing to the differential transistor pair is provided by the output of the OTA, which is centred around 0V. 
+The test bench used to measure the parameters - gain and unity gain bandwidth is as shown in Figure.\ref{fig:OPAMP_TB}(a). The op amp is configured in an open loop. The DC biasing to the differential transistor pair is provided by the output of the OTA, which is centred around 0V. 
 
 The plot of the open loop gain and the phase of the op amp is as shown in the Figure.\ref{fig:OPAMP_gain_pm_gbw}. The open loop gain of the op amp is 30.8dB. The gain bandwidth product is 6.2MHz and correspondingly the phase margin is $76.79^0$.
 
@@ -142,27 +142,25 @@ PSRR($V_{SS}$)				& 138.8 $\mu$A/V		\\
 \end{table}
 
 \subsubsection{Input and Output Impedance}
-The test bench to calculate the input impedance follows a similar concept to that of the OTA. i.e., a unity current source is connected to the non-inverting terminal of the op amp and the voltage at that terminal is measured which in turn is the magnitude of the input impedance of the op amp.
+The test bench to calculate the input impedance is shown in \ref{fig:OPAMP_TB}(g). A unity current source is connected to the non-inverting terminal of the op amp and the voltage at that terminal is measured which in turn is the magnitude of the input impedance of the op amp.
 
 To have a stable system, it is important that input impedance of the second stage is higher than the output impedance of the first stage. Given that the output impedance of the OTA is generally high, the input impedance of the op amp becomes a very important parameter. And the input impedance is found to be 9.04M$\Omega$.
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $I_{sin} magnitude $ = 1A.
 
-Op amps are known to have zero or very low output impedance. Along with this theoretical fact, the op amp in this work is designed to have very high output currents, so it is expected to have a very low output impedance. The value of the output impedance is observed to be 4.167$\Omega$.
+Op amps are known to have zero or very low output impedance. Along with this theoretical fact, the op amp in this work is designed to have very high output currents, so it is expected to have a very low output impedance. The test bench to calculate the output impedance is shown in \ref{fig:OPAMP_TB}(h). The value of the output impedance is measured to be 4.167$\Omega$.
 
 \subsection{Transient Analysis}
 The test bench to perform the transient analysis is as shown in the Figure.\ref{fig:OPAMP_TB}(e). The op amp is connected in a negative feedback configuration so as to analyse its behavior as a voltage buffer.
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{sin} amplitude $ = 1.5V; $frequency$ = 1MHz; $R_L$ = 50$\Omega$.
-
-The output current of the op amp is effectively the current flowing through the load resistor $R_L$. The plot of current versus time is as shown in the Figure.\ref{fig:OPAMP_Iout}. The current is $180^0$ out of phase with the voltage and it ranges from -30mA to 30mA for a 50$\Omega$ load and 3V peak to peak input voltage. 
-
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Plots/OPAMP_Iout.pdf}
 \caption{OPAMP Plot of Ourput Current vs time}
 \label{fig:OPAMP_Iout}
 \end{figure}
+The output current of the op amp is effectively the current flowing through the load resistor $R_L$. The plot of current versus time is as shown in the Figure.\ref{fig:OPAMP_Iout}. The current is $180^0$ out of phase with the voltage and it ranges from -30mA to 30mA for a 50$\Omega$ load and 3V peak to peak input voltage. 
 
 \section{Summary}
 
@@ -181,8 +179,8 @@ Output Current (max)		& -29.6 mA			\\
 Output Current (min)		& 30.28 mA			\\
 Output Voltage Swing		& -2.19 .. 2.323 	\\
 Slew Rate					& 10 V/us			\\
-PSRR (VDD)					& 30.96 uA/V		\\
-PSRR (VSS)					& 138.8 uA/V		\\
+PSRR ($V_{DD}$)				& 30.96 uA/V		\\
+PSRR ($V_{DD}$)				& 138.8 uA/V		\\
 Input Impedance				& 9.04 MOhms		\\
 Output Impedance			& 4.167 Ohms		\\
 \bottomrule
@@ -190,3 +188,6 @@ Output Impedance			& 4.167 Ohms		\\
 \caption{Simlation Results of the OPAMP}
 \label{tab:OPAMP_Results}
 \end{table}
+
+\subsubsection{Conclusion}
+The obejective of the second stage of the system was to design an operational amplifier. The OP AMP was used in a unity gain configuration. A two stage Miller compensation topology was used to design the OP AMP. The results of the OTA were used to generate the specifications of the OP AMP with the help of the ideal OP AMP from the ahdllib library from Cadence. The OP AMP produces a high current at the output stage because of the bulky dimensions of the transistors in common source amplifier. Having such a wide range of ICMR was challenging. The unity gain bandwidth was adjusted using the compensation capacitance at 6MHz. The value of load resistance was set at 50$\Omega$ so that it can be driven by a high current.

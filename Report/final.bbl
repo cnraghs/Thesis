@@ -1,13 +1,28 @@
 \begin{thebibliography}{10}
 
+\bibitem{hrdcct}
+E.~A.~H. Azab and K.~Hofmann, ``{R\&D Accelerators: Novel-DC Beam Current
+  Transformer}.'' 2015.
+
+\bibitem{intro}
+A.~J. Poitzsch, ``{A High Voltage, High Current, Low Error Operational
+  Amplifier with Novel Features},'' Master's thesis, Massachusetts Institute of
+  Technology, 2014.
+
+\bibitem{colinge}
+J.-P. Colinge {\em et~al.}, {\em FinFETs and other multi-gate transistors},
+  vol.~73.
+\newblock Springer, 2008.
+
+\bibitem{sensor_ndcct_gsi}
+E.~Soliman, K.~Hofmann, H.~Reeg, and M.~Schwickert, ``Sensor studies for dc
+  current transformer application,'' tech. rep., GSI Helmholtz Centre for Heavy
+  Ion Research, 2014.
+
 \bibitem{ndcct_gsi}
 E.~Soliman, H.~Reeg, M.~Schwickert, and K.~Hofmann, ``A novel dc current
   transformer using magneto-resistance sensors for fair,'' tech. rep., IES
   Institute, TU Darmstadt, 2014.
-
-\bibitem{hrdcct}
-E.~A.~H. Azab and K.~Hofmann, ``{R\&D Accelerators: Novel-DC Beam Current
-  Transformer}.'' 2015.
 
 \bibitem{xt018}
 ``{XT018 SOI Technology Specification},'' tech. rep., XFAB, 2017.
@@ -16,13 +31,44 @@ E.~A.~H. Azab and K.~Hofmann, ``{R\&D Accelerators: Novel-DC Beam Current
 G.~Celler and S.~Cristoloveanu, ``Frontiers of silicon-on-insulator,'' {\em
   Journal of Applied Physics}, vol.~93, no.~9, p.~4955, 2003.
 
+\bibitem{soi_ease}
+T.~Romanko and B.~Clegg, ``Soi eases radiation-hardened asic designs,'' {\em
+  Military and Aerospace Designline}, 2005.
+
 \bibitem{radhard}
 G.~C. Messenger, ``{Radiation Hardening},'' {\em Journal of Applied Physics},
   2014.
 
+\bibitem{radhard_effects}
+J.~R. Schwank, V.~Ferlet-Cavrois, M.~R. Shaneyfelt, P.~Paillet, and P.~E. Dodd,
+  ``Radiation effects in soi technologies,'' {\em IEEE Transactions on Nuclear
+  Science}, vol.~50, pp.~522--538, June 2003.
+
 \bibitem{baker_book}
 R.~J. Baker, {\em CMOS: circuit design, layout, and simulation}, vol.~1.
 \newblock John Wiley \& Sons, 2008.
+
+\bibitem{folded_cascode}
+M.~J. Cabebe, C.~D. Gallego, J.~R. Hizon, and L.~Alarcon, ``Design tradeoffs in
+  a 0.5v 65nm cmos folded cascode ota,'' in {\em IEEE 2013 Tencon - Spring},
+  pp.~293--297, April 2013.
+
+\bibitem{telescopic}
+O.~A. Abu-El-ela, A.~A. Aldaly, Y.~Abd-El-azim, and H.~A. Omran, ``Design
+  automation of a fully differential switched capacitor amplifier using a
+  telescopic cascode ota,'' in {\em 2018 35th National Radio Science Conference
+  (NRSC)}, pp.~385--392, March 2018.
+
+\bibitem{lcmfb_ota}
+M.~L. Holmes, ``{Application of local common mode feedback techniques to
+  enhance slew rate and gain-bandwidth of CMOS Operational Amplifiers},''
+  Master's thesis, New Mexico State University, 2002.
+
+\bibitem{super_class_ab}
+S.~Pourashraf, J.~Ramirez-Angulo, A.~J. Lopez-Martin, and R.~Gonzalez-Carvajal,
+  ``A super class-ab ota with high output current and no open loop gain
+  degradation,'' in {\em 2017 IEEE 60th International Midwest Symposium on
+  Circuits and Systems (MWSCAS)}, pp.~815--818, August 2017.
 
 \bibitem{pourashraf2017high}
 S.~Pourashraf, J.~Ramirez-Angulo, A.~Roman-Loera, A.~J. Lopez-Martin,
@@ -77,21 +123,10 @@ B.~K. Thandri and J.~Silva-Mart{\'\i}nez, ``A robust feedforward compensation
   capacitors,'' {\em IEEE Journal of Solid-State Circuits}, vol.~38, no.~2,
   pp.~237--243, 2003.
 
-\bibitem{super_class_ab}
-S.~Pourashraf, J.~Ramírez-Angulo, A.~J. Lopez-Martin, and
-  R.~González-Carvajal, ``A super class-ab ota with high output current and no
-  open loop gain degradation,'' in {\em 2017 IEEE 60th International Midwest
-  Symposium on Circuits and Systems (MWSCAS)}, pp.~815--818, August 2017.
-
 \bibitem{ota_hf}
 H.~J. Motlak and S.~N. Ahmad, ``A novel design technique of one stage cmos ota
   for high frequency applications,'' {\em Frequenz}, vol.~61, no.~7-8,
   pp.~182--188, 2007.
-
-\bibitem{lcmfb_ota}
-M.~L. Holmes, ``{Application of local common mode feedback techniques to
-  enhance slew rate and gain-bandwidth of CMOS Operational Amplifiers},''
-  Master's thesis, New Mexico State University, 2002.
 
 \bibitem{opamp_basic}
 U.~of~Minnesota Twin~Cities, ``Basic opamp design and compensation.''

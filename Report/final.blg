@@ -8,45 +8,45 @@ Warning--empty note in hrdcct
 Warning--empty author in xt018
 Warning--empty author in gmid_basic
 Warning--empty year in gmid_basic
-You've used 22 entries,
+You've used 29 entries,
             1876 wiz_defined-function locations,
-            591 strings with 6952 characters,
-and the built_in function-call counts, 4614 in all, are:
-= -- 455
-> -- 149
+            628 strings with 8065 characters,
+and the built_in function-call counts, 6288 in all, are:
+= -- 608
+> -- 228
 < -- 0
-+ -- 61
-- -- 39
-* -- 290
-:= -- 645
-add.period$ -- 22
-call.type$ -- 22
-change.case$ -- 21
++ -- 90
+- -- 61
+* -- 407
+:= -- 892
+add.period$ -- 30
+call.type$ -- 29
+change.case$ -- 28
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 246
-empty$ -- 482
-format.name$ -- 39
-if$ -- 1135
+cite$ -- 33
+duplicate$ -- 333
+empty$ -- 644
+format.name$ -- 61
+if$ -- 1542
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 16
-newline$ -- 72
-num.names$ -- 19
-pop$ -- 81
+int.to.str$ -- 29
+missing$ -- 22
+newline$ -- 94
+num.names$ -- 26
+pop$ -- 109
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 168
+skip$ -- 221
 stack$ -- 0
-substring$ -- 256
-swap$ -- 86
+substring$ -- 340
+swap$ -- 115
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 39
-width$ -- 24
-write$ -- 194
+while$ -- 52
+width$ -- 31
+write$ -- 258
 (There were 4 warnings)

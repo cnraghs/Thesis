@@ -1,5 +1,5 @@
-\chapter{Corner Simulation}
-Corner simulations are performed to verify that the circuit works at all possible conditions of process, supply voltage and temperature. Analog circuit designs that perform sufficiently well across these corners are to be considered a robust design.
+\chapter{Corner Simulations}
+Corner analysis is performed to simulate the circuit's performance against a set of parameters belonging to extreme manufacturing variations. Corner simulations are performed to verify that the circuit works at all possible conditions of process, supply voltage and temperature. Analog circuit designs that perform sufficiently well across these corners are to be considered a robust design.
 
 \section{Process Variation}
 
@@ -21,10 +21,10 @@ wz		& Worst Case Zero Condition 	& sf			\\
 \label{tab:Process_Corners}
 \end{table}
 
-A total of 45 corners are simulated for 3 different values of $V_{bias}$ - 150mV, 400mV and 700mV. And the results are provided in the subsequent sections.
+A total of 45 corners are simulated for 2 values of $V_{bias}$ - 150mV and 700mV. The results are presented in the subsequent sections.
 
 \subsubsection{Lowest $V_{bias}$}
-
+At the lowest $V_{bias}$, the mean values of all parameters satisfy the requirement. In the worst corner, the positive peak of the current goes below 10mA but the negative peak is still under -15mA. So the current swing is decreased. 
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Corners/Overall/Proc_Min/PDFs/Proc_Min_gain.pdf}
@@ -49,14 +49,8 @@ A total of 45 corners are simulated for 3 different values of $V_{bias}$ - 150mV
 \caption{Histogram of Minimum Output Current due to Process Variation at $V_{bias}$=150mV}
 \end{figure}
 
-\begin{figure} [H]
-\centering
-\includegraphics[scale=1]{Figures/Corners/Overall/Proc_Min/PDFs/Proc_Min_gm.pdf}
-\caption{Histogram of Transconductance due to Process Variation at $V_{bias}$=150mV}
-\end{figure}
-
 \subsubsection{Highest $V_{bias}$}
-
+At the highest $V_{bias}$, the mean values of the parameters meet the requirements. At the worst corner, the positive peak of the output current slips to 20mA but the peak to peak current is still under the requirement. Since the spread is smaller for all parameters, none of them fail to meet the requirements.
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Corners/Overall/Proc_Max/PDFs/Proc_Max_gain.pdf}
@@ -81,17 +75,12 @@ A total of 45 corners are simulated for 3 different values of $V_{bias}$ - 150mV
 \caption{Histogram of Minimum Output Current due to Process Variation at $V_{bias}$=700mV}
 \end{figure}
 
-\begin{figure} [H]
-\centering
-\includegraphics[scale=1]{Figures/Corners/Overall/Proc_Max/PDFs/Proc_Max_gm.pdf}
-\caption{Histogram of Transconductance due to Process Variation at $V_{bias}$=700mV}
-\end{figure}
-
 \section{Process and Supply Variation}
 
 In addition to process variation, the system responds to power supply variations too. 3 different corners are obtained by evaluating the power supply with $\pm$10\% from the nominal value. Therefore, we get 3 corners for $V_{DD}$ - 2.5V, 2.25V, 2.75V and 3 corners for $V_{SS}$ - -2.5V, -2.25V, -2.75V. The total number of corners in this case are 405. And the results are discussed in the subsequent sections.
 
 \subsubsection{Lowest $V_{bias}$}
+Additional variation in power supply increases the spread in the histogram with samples for gain at 12dB and as high as 21dB. The mean values of all parameters are well within their specified range. But the positive peak output current value drops to a negative value for the worst case. The negative output current for the same case is at -10mA which makes the peak to peak current of 9mA, which is little far from what is required.
 
 \begin{figure} [H]
 \centering
@@ -124,7 +113,7 @@ In addition to process variation, the system responds to power supply variations
 \end{figure}
 
 \subsubsection{Highest $V_{bias}$}
-
+The spread is wide for the bandwidth but even in the worst corner, the bandwidth is above 10MHz and the mean value being 15MHz. The spread for the gain is comparatively smaller with the mean value being 24.5dB and the standard deviation of 0.62dB. The slow corners are once again the worst case corners with the positive current peak dropping 16mA from a mean value of 22mA.
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Corners/Overall/PV_Max/PDFs/PV_Max_gain.pdf}
@@ -173,6 +162,7 @@ Another possible variation is seen in the temperature parameter. The PVT corner 
 Therefore, there are 1215 corners in total. The results are provided in the subsequent sections.
 
 \subsubsection{Lowest $V_{bias}$}
+With all the variations included, it is observed that the worst case is caused by the supply variations and the temperature variation has lower effect than the suuply variation. The worst case corners are still affected by the voltage but with normal spread. The mean gain is 18.3dB with a standard deviation of 2.1dB. The bandwidth too has a wide spread like the gain histogram and at the worst case, it falls just a tad below 10MHz with the mean and standard deviation being 16MHz and 4MHz respectively. The HD2 and HD3 values are less than -30dBc even for worst cases. The PSRR however, at worst case, goes to a value beyond 160$\mu$A/V
 
 \begin{figure} [H]
 \centering
@@ -247,6 +237,8 @@ Therefore, there are 1215 corners in total. The results are provided in the subs
 \end{figure}
 
 \subsubsection{Highest $V_{bias}$}
+For the highest $V_{bias}$, the mean gain is around 24dB with a standard deviation of 0.7dB. The spread for the gain histogram is comparatively narrower in comparison to the lowest $V_{bias}$. Once again the bandwidth just falls short of 10MHz for the worst case corner. The mean values of the currents are 23mA and -35mA. But at the worst case corner, the peak-to-peak current is as low as 40mA. The mean values of HD2 and HD3 are below -30dBc but they rise above the -30dBc mark for slow corners. The input referred noise spread is much smaller for highest $V_{bias}$ with a mean value of 32.985nV/$\sqrt{Hz}$.
+
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Corners/Overall/PVT_Max/PDFs/PVT_Max_gain.pdf}
@@ -319,4 +311,6 @@ Therefore, there are 1215 corners in total. The results are provided in the subs
 \caption{Histogram of PSRR($V_{SS}$) due to PVT Variation at $V_{bias}$=700mV}
 \end{figure}
 
+\vfill
+\clearpage
 \section{Summary of PVT Corner Analysis}
