@@ -3,7 +3,7 @@ Over the last ten years, the electronics industry has exploded. The largest port
 
 The necessity for high voltage integrated circuits, capable of driving high currents, remains greater than ever before, with countless applications related to emerging technologies \cite{intro}. There are numerous applications of high current amplifiers which can be used in any signal processing context involving driving loads which require high current. One of the common applications is in the Current Transformer circuit.
 
-Operational Transconductance Amplifier(OTA) is a building block for most of the analog circuits with linear input-output characteristics. Operational Amplifiers (OP AMP) too are used as a basic building block in implementing a variety of analog applications such as amplifiers, summers, differentiators, integrators, etc to a more complicated applications like Oscillators. 
+Operational Transconductance Amplifier(OTA) is the final block in a closed loop DC Current Transformer. OTA is a building block for most of the analog circuits with linear input-output characteristics. Operational Amplifiers (OP AMP) too are used as a basic building block in implementing a variety of analog applications such as amplifiers, summers, differentiators, integrators, etc to a more complicated applications like Oscillators. 
 
 For more than 50 years, silicon-on-insulator (SOI) technologies have been developed for radiation-hardened military and space applications.  The  use  of  SOI  has  been  motivated  by  the  full dielectric  isolation  of  individual  transistors,  which  prevents latchup. Many efforts have been made to reduce the parasitic structures and very high levels of radiation hardness have been achieved \cite{colinge}. In addition, major chip manufacturers are now producing SOI technologies for many nonhardened high performance or low-power applications.
 
@@ -14,25 +14,25 @@ This document describes the design and implementation of such a radiation hard t
 
 \section{Motivation}
 
-DC Current Transformers (DCCTs) are known as  non-intercepting  standard  tools  for online beam current measurement in synchrotrons and storage rings \cite{sensor_ndcct_gsi}. In general, the measurement principle of commonly used DCCTs is to introduce a modulating AC signal for a pair of ferromagnetic toroid \cite{ndcct_gsi}. Currently a Novel DCCT (NDCCT) based on modern magnetic field sensors is under development at $GSI Helmholtz Centre for Heavy Ion Research$. The closed-loop NDCCT Design can be considered as an extension to the primary design proposed by GSI \cite{ndcct_gsi}. A feedback loop was designed to improve the linearity and sensitivity of the NDCCT. Figure.\ref{fig:HRDCCT} shows the closed loop NDCCT structure \cite{hrdcct}. The main objective is to provide a feedback current that cancels the magnetic field of the ion-beam inside the air gap. This measurement principle is referred to as "Zero-flux" and it is currently used in commercial DCCT.
-This zero-flux results in improvement of the linearity and sensitivity of the current transformer.
+DC Current Transformers (DCCTs) are known as  non-intercepting  standard  tools  for online beam current measurement in synchrotrons and storage rings \cite{sensor_ndcct_gsi}. In general, the measurement principle of commonly used DCCTs is to introduce a modulating AC signal for a pair of ferromagnetic toroid \cite{ndcct_gsi}. Currently a Novel DCCT (NDCCT) based on modern magnetic field sensors is under development at GSI Helmholtz Centre for Heavy Ion Research. The closed-loop NDCCT Design can be considered as an extension to the primary design proposed by GSI \cite{ndcct_gsi}. A feedback loop was designed to improve the linearity and sensitivity of the NDCCT. Figure.\ref{fig:HRDCCT} shows the closed loop NDCCT structure \cite{hrdcct}. The main objective is to provide a feedback current that cancels the magnetic field of the ion-beam inside the air gap. This measurement principle is referred to as "Zero-flux" and is currently used in commercial DCCT. This zero-flux results in improvement of the linearity and sensitivity of the current transformer.
 
-The change in magnetic field will be sensed by the TMR (Tunneling Magneto Resistance) sensor and a proportional small volage is produced. This voltage is amplified by a Voltage amplifier and is converted to a feedback current $I_{FB}$ by the OTA. This current flows through the N turns winding wire terminated with a resistive load. The main task of the OTA is to amplify a small AC voltage and produce a high current that drives a resistive load and cancels the magnetic field of the ion-beam.
+The change in magnetic field will be sensed by the TMR (Tunneling Magneto Resistance) sensor and a proportional small volage is produced. This voltage is amplified by a Voltage amplifier and is converted to a feedback current $I_{FB}$ by the OTA. This current flows through the $N$ turns winding wire terminated with a resistive load. The main task of the OTA is to amplify a small AC voltage and produce a high current that drives a resistive load and cancels the magnetic field of the ion-beam.
 
-Prior to this thesis, as a proof of concept \cite{hrdcct}, a Closed Loop NDCCT was constructed with the commercial OTAs - OPA860 and OPA861 \cite{opa861}. 4 of those these ICs in parallel to get a good understanding of the requirements from the OTA in terms of specifications and results with a dual bipolar power supply of 5V and -5V.
+Prior to this thesis, as a proof of concept \cite{hrdcct}, a Closed Loop NDCCT was constructed on a PCB with the commercial OTAs - OPA860 and OPA861 \cite{opa861}. 4 of these ICs were connected in parallel to provide a high current that drives a resistive load. After the success of implementing a closed-loop NDCCT using discrete components, the next research idea to be investigated is designing the system in one ASIC.
 
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/System_Level/HRDCCT.pdf}
-\caption{Closed Loop Novel-DC Current Transformer \cite{hrdcct}}
+\caption{Closed Loop Novel-DC Current Transformer}
 \label{fig:HRDCCT}
+\cite{hrdcct}
 \end{figure}
 
 \vfill
 \clearpage
 
 \section{Specification}
-As the transconductance amplfier will be a part of the NDCCT, the specifications of the design were obtained from the commercial OTAs OPA860 and OPA861, which were simulated as on a PCB with a power supply of 5V and -5V as part of the N-DCCT in a closed loop. Since the OTA is being targetted for multiple applications - a closed loop DCCT and also for an Analog to Digial Converter (ADC), it is important to make the design programmable. The specifications are tabulated in detail in Table.\ref{tab:Specs}.
+As the transconductance amplfier will be a part of the NDCCT, the specifications of the design were obtained from the commercial OTAs OPA860 and OPA861, which were simulated as on a PCB with a power supply of 5V and -5V. Since the OTA is being targetted for multiple applications - a closed loop DCCT and also for an Analog to Digial Converter (ADC), it is important to make the design programmable. The specifications are tabulated in detail in Table.\ref{tab:Specs}.
 
 \begin{table} [H]
 \centering

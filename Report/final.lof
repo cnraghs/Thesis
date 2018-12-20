@@ -1,7 +1,7 @@
 \select@language {ngerman}
 \select@language {english}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Closed Loop Novel-DC Current Transformer \cite {hrdcct}\relax }}{2}{figure.caption.22}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Closed Loop Novel-DC Current Transformer\relax }}{2}{figure.caption.22}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Symbol of an OTA\relax }}{5}{figure.caption.25}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Schematic of a Conventional Current Mirror OTA\relax }}{6}{figure.caption.26}
@@ -22,9 +22,9 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Block Diagram of Feed Forward OTA without Miller Capacitor\relax }}{20}{figure.caption.44}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Super Class-AB OTA with a Cascode Voltage Flipped Follower\relax }}{21}{figure.caption.46}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Schematic of the OTA Designed\relax }}{24}{figure.caption.50}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Test bench setup for OTA\relax }}{26}{figure.caption.53}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Test bench setup for OTA\relax }}{25}{figure.caption.52}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces OTA Plot of Gain vs Frequency for different Vbias\relax }}{27}{figure.caption.55}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces OTA Plot of Gain vs Vbias\relax }}{28}{figure.caption.57}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces OTA Plot of Gain vs Vbias\relax }}{27}{figure.caption.57}
 \contentsline {figure}{\numberline {3.10}{\ignorespaces OTA Output Voltage for vs time for different Vbias\relax }}{30}{figure.caption.67}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Behavior Modelling of Ideal OP AMP\relax }}{33}{figure.caption.73}

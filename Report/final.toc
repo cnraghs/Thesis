@@ -28,18 +28,18 @@
 \contentsline {subsubsection}{Comparison of Topologies}{23}{subsubsection*.48}
 \contentsline {subsection}{\numberline {3.1.1}Schematic}{23}{subsection.3.1.1}
 \contentsline {section}{\numberline {3.2}Test Setup}{24}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}DC Analysis}{25}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}AC Analysis}{25}{subsection.3.2.2}
-\contentsline {subsubsection}{Gain, Bandwidth and Phase Margin}{27}{subsubsection*.54}
+\contentsline {subsection}{\numberline {3.2.1}DC Analysis}{26}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}AC Analysis}{26}{subsection.3.2.2}
+\contentsline {subsubsection}{Gain, Bandwidth and Phase Margin}{26}{subsubsection*.54}
 \contentsline {subsubsection}{PSRR}{28}{subsubsection*.59}
-\contentsline {subsubsection}{Input Impedance}{29}{subsubsection*.61}
+\contentsline {subsubsection}{Input Impedance}{28}{subsubsection*.61}
 \contentsline {subsubsection}{Output Impedance}{29}{subsubsection*.63}
 \contentsline {subsection}{\numberline {3.2.3}Noise Analysis}{29}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Transient Analysis}{30}{subsection.3.2.4}
-\contentsline {subsubsection}{Sine Input}{30}{subsubsection*.66}
-\contentsline {subsubsection}{Square Input}{31}{subsubsection*.69}
+\contentsline {subsection}{\numberline {3.2.4}Transient Analysis}{29}{subsection.3.2.4}
+\contentsline {subsubsection}{Sine Input}{29}{subsubsection*.66}
+\contentsline {subsubsection}{Square Input}{30}{subsubsection*.69}
 \contentsline {section}{\numberline {3.3}Summary}{31}{section.3.3}
-\contentsline {subsubsection}{Conclusion}{32}{subsubsection*.72}
+\contentsline {subsubsection}{Conclusion}{31}{subsubsection*.72}
 \contentsline {chapter}{\numberline {4}Operational Amplifier}{33}{chapter.4}
 \contentsline {section}{\numberline {4.1}Design and Implementation}{33}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Schematic}{34}{subsection.4.1.1}

@@ -1,5 +1,5 @@
 \chapter{Overall System}
-With the OTA and OP AMP already designed, the overall system is merely a cascade of the two stages. In this chapter, the architecture of the overall system is presented and the simulations are carried out in a way similar to that of the previous two chapters. Two design approaches are presented for the programmability of theoverall system. The first of which, as discussed is with an external voltage, $V_{bias}$ being the programmable variable with a fixed load resistance. And the second design approach with a fixed value of $V_{bias}$ and the programmable variable being the load resistance $R_L$.
+With the OTA and OP AMP already designed, the overall system is merely a cascade of the two stages. In this chapter, the architecture of the overall system is presented and the simulations are carried out in a way similar to that of the previous two chapters. Two design approaches are presented for the programmability of the overall system. The first of which, as discussed, is with an external voltage, $V_{bias}$ being the programmable variable with a fixed load resistance. And the second design approach with a fixed value of $V_{bias}$ and the programmable variable being the load resistance $R_L$.
 
 The block diagram of the two stage design with an OTA and an OP AMP is as shown in Figure.\ref{fig:System_Block_Diagram}. The other end of the capacitor of the first stage is connected to the negative power supply instead of ground since we have only two levels of power supply in the IC (-2.5V and 2.5V). Both the stages use the same power supply. The output of the OTA is directly connected to the non-inverting terminal of the OP AMP without any DC isolation.
 
@@ -101,7 +101,7 @@ $V_{bias}$ (mV)			& DC Gain (dB) 	& Bandwidth (MHz) 	& Phase Margin \\ \midrule
 \caption{DC Gain, Bandwidth and Phase Margin of the Overall System}
 \label{tab:GAIN_GBW_PM}
 \end{table}
-The results of the AC analysis are tabulated in Table.\ref{tab:GAIN_GBW_PM}. The bandwidth is fairly constant at around 14MHz. But the phase margin starting to drop just a tad below 30 with a $V_{bias}$ of 700mV and beyond. 
+The results of the AC analysis are tabulated in Table.\ref{tab:GAIN_GBW_PM}. The bandwidth is fairly constant at around 14MHz. But the phase margin starts to drop just below 30 degrees for a $V_{bias}$ of 700mV and beyond. 
 
 \subsubsection{Input Impedance}
 The test bench in Figure.\ref{fig:TB}(e) is used to measure the input impedance of the system. The concept for measurement is same as in the case of the OTA. The voltage at the non-inverting terminal will be the magnitude of the input impedance of the overall system because the magnitude of the current from the AC source is 1A.
@@ -230,7 +230,7 @@ $V_{bias}$ (mV)		& Iout Max(mA)		& Iout Min(mA)	 & Iout p2p(mA) & HD2 (dBc)	&HD3
 
 Table.\ref{tab:SINE} gives a better picture of the sinusoidal plots shown above. The HD2 and HD3 values are less than 30 dBc. However, the HD3 seems to take a turn towards the worse with increase in $V_{bias}$. So for $V_{bias}$ values beyond 700mV, the output starts clipping at the trough of the current wave.
 
-Once the peak-to-peak value of current is obtained, we can use that to calculate the transconductance of the system for different $V_{bias}$ values. Since the output current is not symmetric around 0A, the the value half of peak-to-peak current is considered. That divided by the input voltage (100mV peak) would give us the required transconductance value. Figure.\ref{fig:GM} shows the plot of transconductance against $V_{bias}$.
+Once the peak-to-peak value of current is obtained, we can use that to calculate the transconductance of the system for different $V_{bias}$ values. Since the output current is not symmetric around 0A, the value half of peak-to-peak current is considered. That divided by the input voltage (100mV peak) would give us the required transconductance value. Figure.\ref{fig:GM} shows the plot of transconductance against $V_{bias}$.
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Plots/Ov_Gm.pdf}
@@ -299,7 +299,7 @@ The test bench to perform the noise analysis is same as the test bench used for 
 \label{fig:NOISE}
 \end{figure}
 
-The Bode plot of the input referred noise for different values of $V_{bias}$ is shown in the Figure.\ref{fig:NOISE}. It is clear that the type of noise is 1/f noise or the Flicker noise. The magnitude of the input referred noise is very high for low frequencies and it reduces significantly in moderate and high frequencies when White noise starts to dominate. The value of input referred noise at 1MHz for different $V_{bias}$ is tabulated in the Table.\ref{tab:NOISE}.
+The Bode plot of the input referred noise for different values of $V_{bias}$ is shown in the Figure.\ref{fig:NOISE}. It is clear that the type of noise is 1/f noise or the Flicker noise. The magnitude of the input referred noise is very high for low frequencies and it reduces significantly in moderate and high frequencies because White noise starts to dominate. The value of input referred noise at 1MHz for different $V_{bias}$ is tabulated in the Table.\ref{tab:NOISE}.
 
 \begin{table} [H]
 \centering
@@ -327,7 +327,7 @@ $V_{bias}$ (mV)			& Input Referred Noise (nV/sqrt(Hz))	\\ \midrule
 \section{Programmable Load}
 Another way to make the overall system programmable is to have a programmable load. Having a Resistive load that varies would imply that the current flowing through the load is controlled. So, for the following analyses, the $V_{bias}$ is made constant and set a value of 425mV.
 
-Table.\ref{tab:RL_AC_1} shows the variation of DC Gain, bandwidth, phase margin and transconductance with varying load. The gain hadly changes with the changing load. The variation in bandwidth is just 1.8MHz between the minimum and maximum load. The transconductance however, shows variation in a range that is expected.
+Table.\ref{tab:RL_AC_1} shows the variation of DC Gain, bandwidth, phase margin and transconductance with varying load. The gain hardly changes with the changing load. The variation in bandwidth is just 1.8MHz between the minimum and maximum load. The transconductance however, shows variation in a range that is expected.
  
 \begin{table} [H]
 \centering

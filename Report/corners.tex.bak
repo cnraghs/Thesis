@@ -1,5 +1,5 @@
 \chapter{Corner Simulations}
-Corner analysis is performed to simulate the circuit's performance against a set of parameters belonging to extreme manufacturing variations. Corner simulations are performed to verify that the circuit works at all possible conditions of process, supply voltage and temperature. Analog circuit designs that perform sufficiently well across these corners are to be considered a robust design.
+Corner analysis is performed to simulate the circuit's performance against a set of parameters belonging to extreme manufacturing variations. Corner simulations are performed to verify that the circuit works at all possible conditions of process, supply voltage and temperature. An analog circuit designs that perform sufficiently well across these corners are to be considered a robust design.
 
 \section{Process Variation}
 

@@ -47,7 +47,6 @@
 \usepackage[acronym,nomain]{glossaries}
 \usepackage[american,arrowmos]{circuitikz}
 \usepackage[]{appendix}
-\usepackage{verbatim}
 
 \usepackage{tikz}
 \def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
@@ -118,7 +117,6 @@ This thesis details the design and implementation of a radiation hardened high o
 
 \addcontentsline{toc}{chapter}{Zusammenfassung}
 \chapter*{Zusammenfassung}
-
 In dieser Arbeit wird der Entwurf und die Implementierung eines strahlungsgeh\"arteten Transkonduktanzverst\"arkers mit hohem Ausgangsstrom beschrieben, der Schiene-zu-Schiene-Str\"ome zwischen 15 mA und 30 mA \"uber einen 50$\Omega$ Lastwiderstand f\"ur einen linearen Eingangsspannungsbereich von 100 mV liefern kann. Eine externe Spannung, die den Vorstrom steuert, ist der programmierbare Parameter des Systems und reicht von 150 mV bis 700 mV. Das Design und die Impelementation wurden in Cadence Virtuoso Design Environment unter Verwendung der XT018 SOI-Technologie von XFAB durchgef\"uhrt, um die Designstrahlung zu erschweren. Das System besteht aus zwei Stufen - dem konventionellen, auf einem Stromspiegel basierenden, betrieblichen Transkonduktanzverst\"arker, der als programmierbare Stufe verwendet wird, gefolgt von einem zweistufigen Miller-kompensierten Operationsverst\"arker, der als Spannungspuffer verwendet wird, der hohe Str\"ome erzeugt. Es werden zwei unterschiedliche Designansätze vorgestellt. Die erste davon ist - wobei der Vorspannungsstrom der ersten Stufe der programmierbare Parameter ist. Der Vorspannungsstrom wird von einem PMOS-Transistor gesteuert, dessen Gatespannung ein Eingang des Systems ist. Es werden zwei unterschiedliche Designansätze vorgestellt, wobei die Lastwiederstand ein programmierbarer Parameter ist. In diesem Fall wird die Vorspannung auf einem konstanten Wert von 450 mV gehalten und die Last variiert von 35 $\Omega$ bis 70$\Omega$. Die Betriebsbandbreite des Systems betr\"agt 13 MHz. Das gesamte System ist als Teil eines geschlossenen DC-Stromwandlerkreises mit geschlossenem Regelkreis vorgesehen, indem ein R\"uckkopplungsstrom bereitgestellt wird, der die \"Anderung des Magnetfelds des Ionenstrahls aufhebt. Infolgedessen werden die Linearit\"at und die Empfindlichkeit des Stromwandlers verbessert. Das System wird bei allen Steuereinstellungen und an allen PVT-Ecken simuliert, um seine Robustheit zu \"uberpr\"ufen. Dargestellt werden Simulationsergebnisse basierend auf dem Design der Schmetikebene.
 
 \addcontentsline{toc}{chapter}{Acknowledgments}
@@ -127,9 +125,10 @@ I would like to express my profound gratitude to Prof. Dr.-Ing. Klaus Hofmann fo
  
 To my thesis supervisor M.Sc. Sreekesh Lakshminarayanan, for his constant advice and invaluable feedback that were an integral part of my research. His work ethic and attention to detail is a source of inspiration to say the least. 
 
-To my friends and fellow labmates, for the times we worked together and for all the fun we have had in the last six months. A special mention to Khaleelulla Khan Nazeer who shared his abundant knowledge during the crucial phases of my master thesis. 
+To my friends and fellow labmates, for the time we worked together and for all the fun we had in the last six months. A special mention to Khaleelulla Khan Nazeer who shared his abundant knowledge during the crucial phases of my master thesis. 
 
 To my family, for their everlasting unconditional support and moral fibre.
+
 \tableofcontents
 \listoffigures
 \listoftables
@@ -161,5 +160,4 @@ To my family, for their everlasting unconditional support and moral fibre.
 
 \bibliography{ota}
 \bibliographystyle{ieeetr}
-
 \end{document}

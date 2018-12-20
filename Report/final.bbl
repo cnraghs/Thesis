@@ -1,9 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{hrdcct}
-E.~A.~H. Azab and K.~Hofmann, ``{R\&D Accelerators: Novel-DC Beam Current
-  Transformer}.'' 2015.
-
 \bibitem{baker_book}
 R.~J. Baker, {\em CMOS: circuit design, layout, and simulation}, vol.~1.
 \newblock John Wiley \& Sons, 2008.
@@ -27,6 +23,10 @@ E.~Soliman, K.~Hofmann, H.~Reeg, and M.~Schwickert, ``Sensor studies for dc
 E.~Soliman, H.~Reeg, M.~Schwickert, and K.~Hofmann, ``A novel dc current
   transformer using magneto-resistance sensors for fair,'' tech. rep., IES
   Institute, TU Darmstadt, 2014.
+
+\bibitem{hrdcct}
+E.~A.~H. Azab and K.~Hofmann, ``{R\&D Accelerators: Novel-DC Beam Current
+  Transformer}.'' 2015.
 
 \bibitem{opa861}
 T.~Instruments, ``Wide bandwidth operational transconductance amplifier opa861
@@ -52,6 +52,11 @@ J.~R. Schwank, V.~Ferlet-Cavrois, M.~R. Shaneyfelt, P.~Paillet, and P.~E. Dodd,
   ``Radiation effects in soi technologies,'' {\em IEEE Transactions on Nuclear
   Science}, vol.~50, pp.~522--538, June 2003.
 
+\bibitem{lcmfb_ota}
+M.~L. Holmes, ``{Application of local common mode feedback techniques to
+  enhance slew rate and gain-bandwidth of CMOS Operational Amplifiers},''
+  Master's thesis, New Mexico State University, 2002.
+
 \bibitem{folded_cascode}
 M.~J. Cabebe, C.~D. Gallego, J.~R. Hizon, and L.~Alarcon, ``Design tradeoffs in
   a 0.5v 65nm cmos folded cascode ota,'' in {\em IEEE 2013 Tencon - Spring},
@@ -62,11 +67,6 @@ O.~A. Abu-El-ela, A.~A. Aldaly, Y.~Abd-El-azim, and H.~A. Omran, ``Design
   automation of a fully differential switched capacitor amplifier using a
   telescopic cascode ota,'' in {\em 2018 35th National Radio Science Conference
   (NRSC)}, pp.~385--392, March 2018.
-
-\bibitem{lcmfb_ota}
-M.~L. Holmes, ``{Application of local common mode feedback techniques to
-  enhance slew rate and gain-bandwidth of CMOS Operational Amplifiers},''
-  Master's thesis, New Mexico State University, 2002.
 
 \bibitem{super_class_ab}
 S.~Pourashraf, J.~Ramirez-Angulo, A.~J. Lopez-Martin, and R.~Gonzalez-Carvajal,

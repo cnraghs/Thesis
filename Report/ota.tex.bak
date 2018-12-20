@@ -4,7 +4,7 @@
 OTAs are versatile building blocks that offer a wide bandwidth for many types of amplifiers. OTA can work in a voltage mode as well as a current mode. As part of this work, the OTA is used in voltage mode. Most circuits for the OTA of a given application consists of variation on a few basic types. And because OTAs have a wide range of applications, there are several different topologies that are useful for these applications. The typical topologies were studied as part of this thesis and an overview at a system level for each of them is provided in the subsequent sections.
 
 \subsubsection{Commercial OTA}
-OPA860 by Texas Instruments is one of the most popular commercial OTA in the market. The design document \cite{opa860} of OPA860 compares OTA to a 3 terminal transistor - a high impedance input(base), low impedance inout(emitter) and a current output(collector). OTA is therefore bipolar and self-biased. Being self-biased simplifies the design process and reduces component count. The overview of the OTA is as shown in Figure.\ref{fig:OPA}. The transconductance of the OTA can be adjusted using an external resistor, allowing bandwidth, quiscent current and gain trade-offs to be optimized. Reducing or increasing the size of the OTA controls the bandwidth, AC behavior and transconductance. With a fixed external resistor, the quiscent current increases with increase in temperature. The variation of the current with temperature holds the transconductance of the OTA relatively constant with temperature.
+OPA860 by Texas Instruments is one of the most popular commercial OTAs in the market. The design document \cite{opa860} of OPA860 compares OTA to a 3 terminal transistor - a high impedance input(base), low impedance inout(emitter) and a current output(collector). OTA is therefore bipolar and self-biased. Being self-biased simplifies the design process and reduces the component count. The overview of this OTA is shown in Figure.\ref{fig:OPA}. The transconductance of the OTA can be adjusted using an external resistor, allowing bandwidth, quiscent current and gain trade-offs to be optimized. Reducing or increasing the size of the OTA controls the bandwidth, AC behavior and transconductance. With a fixed external resistor, the quiscent current increases with increase in temperature. The variation of the current with temperature holds the transconductance of the OTA relatively constant with temperature.
 
 \begin{figure} [H]
 \centering
@@ -13,7 +13,7 @@ OPA860 by Texas Instruments is one of the most popular commercial OTA in the mar
 \label{fig:OPA}
 \end{figure}
 
-The commercial OTA in review, can operate in 2 modes - Voltage mode and Current mode. In voltage mode, it can operate in 3 states - common emitter, common base and common collector. In current mode, it is useful for analog communication such as current amplifier, current differentiator, current integrator and current summer. The output offset voltage is usually very close to zero for an OTA.
+The commercial OTA in subject, can operate in 2 modes - Voltage mode and Current mode. In voltage mode, it can operate in 3 states - common emitter, common base and common collector. In current mode, it is useful for analog communication such as current amplifier, current differentiator, current integrator and current summer. The output offset voltage is usually very close to zero for an OTA.
 
 Having stated all these facts, this commercial OTA is an amplifier based on BJTs. Considering the high power dissipation and high input current noise of a BJT based amplifier, it is not suitable for our system. However, the concept of having an OTA and an output buffer \cite{lt1228} is something that can be pondered upon.
 
@@ -28,13 +28,13 @@ An SCMOS is formed where a regular MOSFET will be replaced by two transistors wh
 \label{fig:SCMOS}
 \end{figure}
 
-In the context of an OTA, consider a conventional OTA with their regular MOSFETs replaced by SCMOS. To improve the gain of the OTA, positive feedback is created by cross coupling the bulk terminals of the input stage load transistors. Smaller channel length CMOS requires scaling down of power supply to maintain reliability of the circuit. A dual function gate MOSFET with a focus on increasing output resistance and transconductance is equivalent to a self cascode structure. A floating gate MOSFET is another alternative to the conventional techniques used to enhance DC gain. But, both these techniques require complicated fabrication steps. On the other hand, a current shunt technique can be applied to a self-cascode OTA to increase its gain. But this has reduced phase margin and requires compensation circuit even for a single stage.
+In the context of an OTA, consider a conventional OTA with their regular MOSFETs replaced by SCMOS. To improve the gain of the OTA, positive feedback is created by cross coupling the bulk terminals of the input stage load transistors. Smaller channel length CMOS requires scaling down of power supply to maintain reliability of the circuit. A dual function gate MOSFET with a focus on increasing output resistance and transconductance is equivalent to a self cascode structure. A floating gate MOSFET is another alternative to the conventional techniques used to enhance the DC gain. But, both these techniques require complicated fabrication steps. On the other hand, a current shunt technique can be applied to a self-cascode OTA to increase its gain. But this has reduced phase margin and requires compensation circuit even for a single stage.
 
-A self-cascode OTA is very hekpful in achieving a high gain for low power supplies. But give the nature of our system, and the fact that the OTA to be designed as part of this system is to be an open loop amplifier, a very high gain is something that is suitable for the system in order to avoid saturation at the output as the headroom for output transistors would be very less. Another possible drawback is that the self-cascode OTA exhibits a slew rate that is lesser than the conventional OTA because the output current is low. But in case our system had to work in a closed loop, then this concept of self-cascode would have been a better fit.
+A self-cascode OTA is very helpful in achieving a high gain for low power supplies. But given the nature of our system, and the fact that the OTA to be designed as part of this system is configured in an open loop, a very high gain is something that is suitable for the system in order to avoid saturation at the output as the headroom for the output transistors would be less. Another possible drawback is that the self-cascode OTA exhibits a slew rate that is lesser than the conventional OTA because the output current is low. But in case our system had to work in a closed loop, then this concept of self-cascode would have been a better fit.
 
 \subsubsection{2-stage Feed Forward Miller Compensation OTA}
 
-The system level diagram of a feed-forward Miller compensated OTA is shown in Figure.\ref{fig:FFMCO}. The $g_{m1}$ and $g_{m2}$ are input and output stage of the OTA and $g_{mf}$ is the feed-forward path from input to output node. The implementation is based on feed-forward technique proposed in \cite{feed_fwd_miller}. There is no concept of pole spiltting. The location of poles is mainly dependent on the internal node impedance and parasitic capacitance. It is difficult to estimate the parasitic capacitances and it makes the design complex. Therefore the dominant and non-dominant pole locations will change when the OTA is configured in a closed loop. But using Miller compensation, the poles can be placed at desired locations.
+The system level diagram of a feed-forward Miller compensated OTA is shown in Figure.\ref{fig:FFMCO}. The $g_{m1}$ and $g_{m2}$ are input and output stage of the OTA and $g_{mf}$ is the feed-forward path from input to output node. The implementation is based on the feed-forward technique proposed in \cite{feed_fwd_miller}. There is no concept of pole spiltting. The location of poles is mainly dependent on the internal node impedance and parasitic capacitance. It is difficult to estimate the parasitic capacitances and it makes the design complex. Therefore the dominant and non-dominant pole locations will change when the OTA is configured in a closed loop. But using Miller compensation, the poles can be placed at desired locations.
 
 \begin{figure} [H]
 \centering
@@ -43,9 +43,9 @@ The system level diagram of a feed-forward Miller compensated OTA is shown in Fi
 \label{fig:FFMCO}
 \end{figure}
 
-This topology of OTA is considered to consume less power than the conventional Miller compensation OTA. Feed forward compensation technique gives wider bandwidth as compared to the Miller OTA and is much more easier to stabilize.  However the overall bandwidth is lesser than what a conventional current mirror based OTA can provide. Current replicating branch with scaled down transistors can be used to implement a push-pull output stage that gives the maximum output current several times higher than that of bias current. Cascoding and gain boosting are conventional techniques for gain enhancement. But for low voltage designs, these techniques are not suitable due to limited head room. Cascading multiple gain stages is another alternative for the gain enhancement. But in a closed loop, the amplifier becomes unstable due to high impedance nodes at each stage, which produces negative phase shift and degrades the overall phase margin. To overcome this, the multi-stage amplifier needs a compensation circuit to achieve a minimum phase margin for stability.
+This topology of OTA is considered to consume less power than the conventional Miller compensation OTA. Feed forward compensation technique gives wider bandwidth as compared to the Miller OTA and is much more easier to stabilize.  However the overall bandwidth is lesser than what a conventional current mirror based OTA can provide. Current replicating branch with scaled down transistors can be used to implement a push-pull output stage that gives the maximum output current several times higher than that of the bias current. Cascoding and gain boosting are conventional techniques for gain enhancement. But for low voltage designs, these techniques are not suitable due to limited head room. Cascading multiple gain stages is another alternative for the gain enhancement. But in a closed loop, the amplifier becomes unstable due to high impedance nodes at each stage, which produces negative phase shift and degrades the overall phase margin. To overcome this, the multi-stage amplifier needs a compensation circuit to achieve a minimum phase margin for stability.
 
-The results of this topology were interesting and encouraging. But that fact that needs multiple stages and compensation circuitry just for a OTA without a buffer, makes it complex in spite of the encouraging remedies. So weighing the pros and cons of the topology and comparing it with other OTAs in review, this topology was deemed to be a bit too much for our requirements and question of feasibility comes into picture.
+The results of this topology were interesting and encouraging. But that fact that needs multiple stages and compensation circuitry just for an OTA without a buffer, makes it complex in spite of the encouraging remedies. So weighing the pros and cons of the topology and comparing it with other OTAs in review, this topology was deemed to be a bit too much for our requirements and question of feasibility comes into picture.
 
 \subsubsection{A robust Feed Forward scheme without Miller capacitance}
 
@@ -58,11 +58,11 @@ This scheme uses a positive phase shift of left hand plane (LHP) zeros caused by
 \label{fig:FFMNCO}
 \end{figure}
 
-Amplifiers with high-gain generally use multi-stage designs. And trasistors with long channgel length are chosen and biased at low current levels. Amplifiers with high-bandwidth use single-stage designs with short channel length transistors biased at high current levels. In a Miller compensated amplifier, due to the Miller effect, the dominant pole is pushed towards lower frequencies, resulting in lower bandwidth. Along with this, the phase response is degraded with a RHP zero. A nulling resistor is used to cancel the effect of this RHP zero. The pole-zero pair is created at high frequencies to acoid the slow settling components associated with pole-zero cancellation at low frequencies. 
+Amplifiers with high-gain generally use multi-stage designs. And trasistors with long channel length are chosen and biased at low current levels. Amplifiers with high-bandwidth use single-stage designs with short channel length transistors biased at high current levels. In a Miller compensated amplifier, due to the Miller effect, the dominant pole is pushed towards lower frequencies, resulting in lower bandwidth. Along with this, the phase response is degraded with a RHP zero. A nulling resistor is used to cancel the effect of this RHP zero. The pole-zero pair is created at high frequencies to avoid the slow settling components associated with pole-zero cancellation at low frequencies. 
 
-This scheme results in an amplifier with high gain and fast respsone. Bandwidth improvement is due to the fact that poles are not split. There could be substantial reduction in the area and power as there is no Miller compensation capacitor. As part of the circuit realization, the second andd feed-forward stage should not have any dominant pole before overal frequency for gain bandwidth. Pole-zero cancellation should occur at high frequencies for best settling time performance. The first stage in this scheme is usually designed to have a high gain and a small load capacitance. The second and feedforward stages should be optimized for high bandwidth and medium gain performance.
+This scheme results in an amplifier with a high gain and fast respsone. Bandwidth improvement is due to the fact that poles are not split. There could be substantial reduction in the area and power as there is no Miller compensation capacitor. As part of the circuit realization, the second and feed-forward stage should not have any dominant pole before overal frequency for gain bandwidth. Pole-zero cancellation should occur at high frequencies for best settling time performance. The first stage in this scheme is usually designed to have a high gain and a small load capacitance. The second and feedforward stages should be optimized for high bandwidth and medium gain performance.
 
-This topology offers several advantages over the other topologies reviewed during the design phase. Some aspects to be careful about are - the feed-forward stage has to be optimized to make sure the pole-zero cancellation occurs at high frequency otherwise there is a possibility of having an unstable system. Another drawback as in the previous case is the complexity of the circuit given that this scheme was initially intended to work for a single input design. Having two different pairs to transistors that need biasing at its gate terminals along with the complexity of the design, makes the programmability of the circuit a mystery. And since that is an integral part of our specification, this scheme might not be entirely suitable for our design despite offering more advantages than disadvantages.
+This topology offers several advantages over the other topologies reviewed until this point during the design phase. Some aspects to be careful about are - the feed-forward stage has to be optimized to make sure the pole-zero cancellation occurs at high frequency otherwise there is a possibility of having an unstable system. Another drawback as in the previous case is the complexity of the circuit given that this scheme was initially intended to work for a single input design. Having two different pairs of transistors that need biasing at its gate terminals along with the complexity of the design makes the programmability of the circuit a mystery. And since that is an integral part of our specification, this scheme might not be entirely suitable for our design despite offering more advantages than disadvantages.
 
 \subsubsection{Super Class AB OTA}
 \begin{figure} [H]
@@ -81,9 +81,9 @@ Two separate designs - OTA with PMOS Differential pair and OTA with NMOS Differe
 
 Generally, amplifiers with PMOS transistors used as differential input offer high linearity, low flicker (1/f) noise. A possible reason to choose PMOS transistors as a differential pair comes from the necessity to reduce the influence of the substrate noise. The two transistors are in an N-well and the well is connected to the supply voltage that any substrate interference coupled via the parasitic capacitance to substrate is decoupled to the VDD line \cite{ota_hf}. P-channels typically have less flicker noise (1/f noise) caused by the carriers randomly enterring and leaving traps introduced by defects near the semiconductor surface. Since the majority charge carriers are holes in PMOS, there are less potential to be trapped in surface states.
 
-Having stated all these facts, NMOS input transistors would be better in terms of transconductance gain, and hence thermal noise and the bandwidth of the amplifier. An important fact considered in the selection of the type of differential pair is that the OTA in this system is being used in an open loop. This means that the gain of the OTA has to be limited in order to avoid saturation at the crests and troughs at the output of the OTA.
+Having stated all these facts, NMOS input transistors would be better in terms of transconductance gain, and hence thermal noise and the bandwidth of the amplifier. An important fact considered in the selection of the type of differential pair is that the OTA in this system is being used in an open loop. This means that the gain of the OTA has to be limited in order to avoid saturation at the crests and troughs of the output of the OTA.
 
-PMOS transistors exhibit their low noise behaviour due to the fact that PMOS transistors are usually bigger (higher W/L ratio) than an NMOS pair. Since we need a small open loop gain, we cannot afford to have big transistors at the input that cause the output to saturate. Along with this, it was also seen that, the range of bias currents needed to obtain a similar range of voltage swing was much wider in case of PMOS than NMOS. Since this indirectly results in a high power dissipation in the 1st stage itself, it was concluded to use the NMOS based design as part of this Thesis work.
+PMOS transistors exhibit their low noise behaviour because they are usually larger (higher W/L ratio) than an NMOS pair. Since we need a small open loop gain, we cannot afford to have big transistors at the input that cause the output to saturate. Along with this, it was also seen that the range of bias currents needed to obtain a similar range of voltage swing was much wider in case of PMOS than NMOS. Since this indirectly results in a high power dissipation in the 1st stage itself, it was concluded to use the NMOS based design as part of this Thesis work.
 \vfill
 \clearpage
 
@@ -107,14 +107,16 @@ Conventional Current Mirror OTA & Simple Design; Easy to achieve programmability
 \end{table}
 \subsection{Schematic}
 
-Figure.\ref{fig:OTA_Schematic} \cite{lcmfb_ota} shows the schematic of the OTA used as part of this Thesis. As mentioned above, the differential amplifier is formed by the NMOS pair $M_{1}$ and $M_{2}$ and dimensions of the differential pair was fixed using the figures of merit of the ${G_m/I_D}$ methodology. The bias current $I_{bias}$ to the differential pair is provided by the current mirror formed by $M_{nB1}$ and $M_{nB2}$ which is in turn controlled by the PMOS transistor $M_9$ whose gate voltage $V_{bias}$ is the programmable variable of the OTA and the entire system. This bias voltage is inversely proportional to the bias current flowing through each branch of the OTA.
+Figure.\ref{fig:OTA_Schematic} \cite{lcmfb_ota} shows the schematic of the OTA used as part of this thesis. As mentioned above, the differential amplifier is formed by the NMOS pair $M_{1}$ and $M_{2}$ and dimensions of the differential pair was fixed using the figures of merit of the ${G_m/I_D}$ methodology. The bias current $I_{bias}$ to the differential pair is provided by the current mirror formed by $M_{nB1}$ and $M_{nB2}$ which is in turn controlled by the PMOS transistor $M_9$ whose gate voltage $V_{bias}$ is the programmable variable of the OTA and the entire system. This bias voltage is inversely proportional to the bias current flowing through each branch of the OTA.
+
+From the Table.\ref{tab:OTA_dimensions}, it can be seen that the current mirror gain for the current mirrors formed by $M_{3}$, $M_{5}$ and $M_{4}$, $M_{6}$ is 3. It can also be noted that the transistors $M_{5}$ and $M_{8}$ are not symmetric with respect to their counterparts. This is designed so to make sure the DC level at the output of the OTA is close to 0V, which is the mid point of $V_{DD}$ and $V_{SS}$. Changing the bias current of an amplifier, will automatically change the DC level at its output. Since we are using the OTA as a programmable block, it is important to have an output which is symmetric over 0V. Even though it is not entirely possible, making these two transistors a little assymetric or uneven would close the gap between the bias levels for highest and lowest bias currents. Initailly during the design phase, the load capacitance value was set at 1pF. Since it was necessary to have a second stage for the OTA, it only made sense to have a smaller capacitor as it would be a part of the IC. Keeping that in mind and simulating the OTA with the OP AMP, the load capacitance is set at 50fF in order to achieve the required bandwidth and a stable enough system across various $V_{bias}$.
+
 \begin{figure} [H]
 \centering
 \includegraphics[scale=1]{Figures/Schematics/OTA_NMOS_Vbias.pdf}
 \caption{Schematic of the OTA Designed}
 \label{fig:OTA_Schematic}
 \end{figure}
-
 
 \begin{table} [H]
 \centering
@@ -134,13 +136,19 @@ MnB1, MnB2			& 20				& 500n				& 8			\\
 \caption{Dimensions of the Transistors of the designed OTA}
 \label{tab:OTA_dimensions}
 \end{table}
-From the Table.\ref{tab:OTA_dimensions}, it can be seen that the current mirror gain for the current mirrors formed by $M_{3}$, $M_{5}$ and $M_{4}$, $M_{6}$ is 3. It can also be noted that the transistors $M_{5}$ and $M_{8}$ are not symmetric with respect to their counterparts. This is designed so to make sure the DC bias point at the output of the OTA is close to 0V, which is the mid point of $V_{DD}$ and $V_{SS}$. Changing the bias current of an amplifier, will automatically change the DC bias point at its output. Since we are using the OTA as a programmable block, it is important to have an output which is symmetric over 0. Even though it is not entirely possible, making these two transistors a little assymetric or uneven would close the gap between the bias points for highest and lowest bias currents. Initailly during the design phase, the load capacitance value was set at 1pF. Since it was necessary to have a second stage for the OTA, it only made sense to have a smaller capacitor as it would be going as part of the IC. Keeping that in mind and simulating the OTA with the OP AMP, the load capacitance is set at 50fF in order to achieve the required bandwidth and a stable enough system across various values of $V_{bias}$.
 
 \section{Test Setup}
 The test bench setup for the operation transconductance amplifier is as shown in Figure.\ref{fig:OTA_TB}. All the analyses are carried out under a standard temperature of $27^0C$, typical mean conditions for the NMOS transistors, PMOS transistors, capacitors and resistors unless explicitly mentioned otherwise. The $ocean$ script containing all the expressions to measure the various parameters of the OTA are attached in the Appendix. In the following subsections, the results of these parameters are discussed using DC Analysis, AC Analysis, Transient Analysis and Noise Analysis separately.
+\begin{figure} [H]
+\centering
+\includegraphics[scale=0.78]{Figures/Test_Benches/OTA_TB.pdf}
+\caption{Test bench setup for OTA}
+\label{fig:OTA_TB}
+(a)Bias, Gain, Bandiwdth, Input Referred Noise; (b)Offset; (c)PSRR($V_{DD}$); (d)PSRR($V_{SS}$); (e)Transient - Sine; (f)Transient - Square; (g)Input Impedance; (h)Output Impedance
+\end{figure}
 
 \subsection{DC Analysis}
-The test bench in Figure.\ref{fig:OTA_TB}(a) and (b) are used to perform the DC analysis. The test bench in (a) is used to meausre the DC bias point at the output of the OTA. Since the programmable input indirectly controls the bias current, the DC bias at the output consequentially changes as the current flowing through the output branches is a function of a bias current due to the current mirror configuration between the adaptive load and the output shell. So for large bias currents, the DC bias point is a higher value and vice versa.
+The test bench in Figure.\ref{fig:OTA_TB}(a) and (b) are used to perform the DC analysis. The test bench in (a) is used to meausre the DC level at the output of the OTA. Since the programmable input indirectly controls the bias current, the DC level at the output consequentially changes as the current flowing through the output branches is a function of a bias current due to the current mirror configuration between the adaptive load and the output shell. So for large bias currents, the DC level is a higher value and vice versa.
  
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV;   $C_{L}$ = 50fF.
 
@@ -161,14 +169,6 @@ The output DC bias points for various values of $V_{bias}$ is tabulated in Table
 \subsection{AC Analysis}
 The test bench in Figure.\ref{fig:OTA_TB}(a),(c),(d),(g) and (h) is used to analyse the small signal parameters of the OTA.
 
-\begin{figure} [H]
-\centering
-\includegraphics[scale=0.78]{Figures/Test_Benches/OTA_TB.pdf}
-\caption{Test bench setup for OTA}
-\label{fig:OTA_TB}
-(a)Bias, Gain, Bandiwdth, Input Referred Noise; (b)Offset; (c)PSRR($V_{DD}$); (d)PSRR($V_{SS}$); (e)Transient - Sine; (f)Transient - Square; (g)Input Impedance; (h)Output Impedance
-\end{figure}
-
 \subsubsection{Gain, Bandwidth and Phase Margin}
 Consider the Figure.\ref{fig:OTA_TB}(a) with the circuit condtions:
 
@@ -176,14 +176,14 @@ $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV
 $$Gain in dB = 20 log_{10}\frac{V_{out}}{V_{in}}$$
 Figure\ref{fig:OTA_Gain} shows the semilog plot of Gain for maximum and minimum $V_{bias}$. The plots for the other values of $V_{bias}$ are not shown here for simplicity.
 
+The variation of open loop gain of the OTA, its bandwidth and the phase margin with respect to $V_{bias}$ is tabulated in Table.\ref{tab:OTA_gain_bw_pm}. The bandwidth is kept at a high value in order to make sure that the dominant poles of the first and second stages are sufficiently far from each other so as to obtain a stable system for operation. The maximum open loop gain for this system is 23.7dB. Any value beyond this will cause the amplifier to saturate at the crests and troughs of the output voltage.
+
 \begin{figure} [H]
 \centering
-\includegraphics[scale=1]{Figures/Plots/OTA_Gain.pdf}
+\includegraphics[scale=0.95]{Figures/Plots/OTA_Gain.pdf}
 \caption{OTA Plot of Gain vs Frequency for different Vbias}
 \label{fig:OTA_Gain}
 \end{figure}
-
-The variation of open loop gain of the OTA, its bandwidth and the phase margin with respect to $V_{bias}$ is tabulated in Table.\ref{tab:OTA_gain_bw_pm}. The bandwidth is kept at a high value in order to make sure that the dominant poles of the first and second stages are sufficiently far from each other so as to obtain a stable system for operation. The maximum open loop gain for this system is 23.7dB. Any value beyond this will cause the amplifier to saturate at the crests and troughs of the output voltage.
 
 \begin{table} [H]
 \centering
@@ -201,12 +201,12 @@ Bandwidth (MHz)				& 135		& 130.7		& 122.2		& 113.7		& 105		& 96.63		& 89.19 \\
 
 \begin{figure} [H]
 \centering
-\includegraphics[scale=1]{Figures/Plots/OTA_Gain_Abs.pdf}
+\includegraphics[scale=0.95]{Figures/Plots/OTA_Gain_Abs.pdf}
 \caption{OTA Plot of Gain vs Vbias}
 \label{fig:OTA_gain_abs}
 \end{figure}
 
-On the same lines, the variation of absolute value of gain with respect to different values of $V_{bias}$ is seen in Figure\ref{fig:OTA_gain_abs} tabulated in Table.\ref{tab:OTA_gain_abs}. The reason to choose the values of $V_{bias}$ are evident from this table and that is because it provides us a gain in the ratio of almost 1:2 for those values of $V_{bias}$. As seen from the table of specifications that we need a transconductance in the ratio of 1:1.8 or something close to that.
+On the same lines, the variation of absolute value of gain with respect to different values of $V_{bias}$ is seen in Figure.\ref{fig:OTA_gain_abs} tabulated in Table.\ref{tab:OTA_gain_abs}. The reason to choose the values of $V_{bias}$ are evident from this table and that is because it provides us a gain in the ratio of almost 1:2 for those values of $V_{bias}$. As seen from the table of specifications, we need a transconductance in the ratio of 1:1.8 or at least something close to that.
 
 \begin{table} [H]
 \centering
@@ -260,7 +260,7 @@ Input Impedance (M$\Omega$)			& 3.38		& 3.388		& 3.403		& 3.419		& 3.434		& 3.45
 \end{table}
 
 \subsubsection{Output Impedance}
-The output impedance is measured with a help of a current source with unity magnitude at the output instead of a Capacitive load. The differential inputs are connected in a common mode configutation. The test bench to measure the output impedance of the OTA is as shown in Figure.\ref{fig:OTA_TB}(h).
+The output impedance is measured with a help of a current source with unity magnitude at the output instead of a capacitive load. The differential inputs are connected in a common mode configutation. The test bench to measure the output impedance of the OTA is as shown in Figure.\ref{fig:OTA_TB}(h).
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V $V_{bias}$ = 150mV to 700mV; $I_{sin} magnitude$ = 1A. 
  
@@ -279,7 +279,7 @@ Output Impedance (k$\Omega$)			& 1.262		& 1.3		& 1.382		& 1.473		& 1.577		& 1.69
 
 \subsection{Noise Analysis}
 
-Once again, we use the same test bench as shown in Figure.\ref{fig:OTA_TB}(a) to perform the noise analysis. As mentioned in the previous sections of this chapter, the NMOS differential pair exhibits high flicker noise, also known as 1/f noise. This noise is significant at low frequencies. At moderate and high frequencies, the effect of thermal or white noise is much more dominant and hence flicker noise becomes less significant at those frequencies.
+We use the same test bench as shown in Figure.\ref{fig:OTA_TB}(a) to perform the noise analysis. As mentioned in the previous sections of this chapter, the NMOS differential pair exhibits high flicker noise, also known as 1/f noise. This noise is significant at low frequencies. At moderate and high frequencies, the effect of thermal or white noise is much more dominant and hence flicker noise becomes less significant at those frequencies.
 
 The variation of the input referred noise with respect to $V_{bias}$ is tabulated in Table.\ref{tab:OTA_Noise}. With increase in $V_{bias}$, the input referred noise decreases. This is because the gain increases with increase in $V_{bias}$ and consequently input referred noise decreases. This also converges to the fact that the input referred noise decreases with bigger dimensions of the differential pair, and thereby contributing to a higher gain.
 
@@ -296,14 +296,14 @@ Input Referred Noise (nV/$\sqrt{Hz}$)			& 46.36		& 43.73		& 39.83		& 37.29		& 35
 \end{table}
 
 \subsection{Transient Analysis}
-For the OTA designed, the transient analysis is performed for sine wave input and square wave input. The test bench in Figure.\ref{fig:OTA_TB}(e) and (f) is used to perform the transient analysis of the designed OTA.
+For the OTA designed, the transient analysis is performed for a sine wave input and a square wave input. The test bench in Figure.\ref{fig:OTA_TB}(e) and (f) is used to perform the transient analysis of the designed OTA.
 
 \subsubsection{Sine Input}
-The test bench in Figure.\ref{fig:OTA_TB}(e) is used to measure the transient parameters for a sine wave input with the circuit conditions as shown below. An ideal balun is used at the input to provide a differential voltage to the terminals. The voltages are 180$^0$ out of phase with each other. 
+The test bench in Figure.\ref{fig:OTA_TB}(e) is used to measure the transient parameters for a sine wave input with the circuit conditions as shown below. An ideal balun is used at the input to provide a differential voltage to the terminals. The signals are 180$^0$ out of phase with each other. 
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV;  $V_{sin} amplitude$ = 100mV; $frequency = 1MHz$ $C_{L}$ = 50fF.
 
-The transient simulation is carried out for 3$\mu $s. The sinusoidal output with respect to time is shown in Figure.\ref{fig:OTA_Sine} for different values of $V_{bias}$. As we know from the AC analysis, the gain varies in the ratio of 1:2 and thereby, here we have the peak-to-peak voltages varying in the same ratio. And as discussed in the DC Analysis, the DC bias points at the output are close to zero but not exactly at 0 for all the $V_{bias}$ values.
+The transient simulation is carried out for 3$\mu $s. The sinusoidal output with respect to time is shown in Figure.\ref{fig:OTA_Sine} for different values of $V_{bias}$. As we know from the AC analysis, the gain varies in the ratio of 1:2 and thereby, here we have the peak-to-peak voltages varying in the same ratio. And as discussed in the DC Analysis, the DC levels at the output are close to zero but not exactly at 0 for all the $V_{bias}$ values.
 
 \begin{figure} [H]
 \centering
@@ -312,7 +312,7 @@ The transient simulation is carried out for 3$\mu $s. The sinusoidal output with
 \label{fig:OTA_Sine}
 \end{figure}
 
-Table\ref{tab:OTA_Sine_Params} shows the variation of different transient parameters with respect to $V_{bias}$. The voltage swing varies from 1.639 to 3.014 which is almost in the ratio of 1:2. HD3 worsens with increase in $V_{bias}$ and on the contrart, improves. Although, it is seen that the HD2 again starts to worsen beyond 600mV of $V_{bias}$.
+Table\ref{tab:OTA_Sine_Params} shows the variation of different transient parameters with respect to $V_{bias}$. The voltage swing varies from 1.639 to 3.014 which is almost in the ratio of 1:2. HD2 and HD3 worsen with increase in $V_{bias}$ initially but it is seen that the HD2 impvoes again 600mV of $V_{bias}$.
 
 \begin{table} [H]
 \centering
@@ -331,11 +331,11 @@ HD3 (dBc) 				& -52.15		& -49.69		& -46.13		& -43.87		& -42.24		& -40.78		& -39.
 \end{table}
 
 \subsubsection{Square Input}
-The test bench in Figure.(f) is used to measure the transient parameters for a square wave input. Slew rate is the rate of change of output voltage. It is also defined as the ratio of bias current to load capacitance.
+The test bench in Figure.\ref{fig:OTA_TB}(f) is used to measure the transient parameters for a square wave input. Slew rate is the rate of change of output voltage. It is also the ratio of bias current to the load capacitance.
 
 $V_{DD}$ = 2.5V; $V_{SS}$ = -2.5V; $V_{cm}$ = 1.95V; $V_{bias}$ = 150mV to 700mV;  $V_{pulse} V_1$ = 100mV; $V_2$ = -100mV; $Pulse Width$ = 49.7ns; $Period$ = 100ns; $Rise Time$ = 300ps; $Fall time$ = 300ps; $C_{L}$ = 50fF.
 
-The slew rate, both for the rising edge and the falling edge is tabulated in the Table.\ref{tab:OTA_Slew}. The OTA is reasonably fast enough high $V_{bias}$ voltages.
+The slew rate, both for the rising edge and the falling edge is tabulated in the Table.\ref{tab:OTA_Slew}. The OTA is reasonably fast high $V_{bias}$ voltages.
 
 \begin{table} [H]
 \centering
